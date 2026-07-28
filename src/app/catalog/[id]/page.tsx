@@ -1,0 +1,47 @@
+import Link from "next/link";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { Header } from "@/components/Header";
+import { PageBackground } from "@/components/PageBackground";
+import { CarDetailActions } from "@/components/CarDetailActions";
+import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
+import { getCarsCatalog } from "@/lib/storage/cars-store";
+
+const specLabels: Record<string, string> = { engine: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043b\u044c", power: "\u041c\u043e\u0449\u043d\u043e\u0441\u0442\u044c", transmission: "\u041a\u041f\u041f", drive: "\u041f\u0440\u0438\u0432\u043e\u0434", fuel: "\u0422\u043e\u043f\u043b\u0438\u0432\u043e", consumption: "\u0420\u0430\u0441\u0445\u043e\u0434" };
+
+export default async function CarDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const cars = await getCarsCatalog();
+  const car = cars.find((item) => item.id === id);
+  if (!car) notFound();
+  const total = getTotalPrice(car);
+  const photo = car.sync?.photos?.[0];
+
+  return (
+    <main className="relative min-h-screen bg-ved-navy">
+      <PageBackground />
+      <Header />
+      <div className="relative z-10 mx-auto max-w-6xl px-8 pb-16 md:px-12">
+        <Link href="/catalog" className="mb-8 inline-block text-xs uppercase tracking-widest text-white/50 transition hover:text-white">{"\u2190 \u041d\u0430\u0437\u0430\u0434 \u0432 \u043a\u0430\u0442\u0430\u043b\u043e\u0433"}</Link>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="relative flex h-72 items-center justify-center overflow-hidden lg:h-96" style={{ background: photo ? undefined : `linear-gradient(135deg, ${car.imageColor}, #0a1628)` }}>
+            {photo ? <Image src={photo} alt={car.brand + " " + car.model} fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" /> : <span className="text-5xl font-light tracking-widest text-white/20">{car.brand}</span>}
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-widest text-white/50">{carTypeLabels[car.type]} · {car.country}{car.sync ? " · Autohome" : ""}</p>
+            <h1 className="mt-2 text-3xl font-light tracking-wide md:text-4xl">{car.brand} {car.model} {car.year}</h1>
+            <p className="mt-4 text-sm leading-relaxed text-white/60">{car.description}</p>
+            <div className="mt-8 space-y-3 border border-white/10 bg-white/5 p-6">
+              <h2 className="text-xs uppercase tracking-[0.2em] text-white/60">{"\u0420\u0430\u0441\u0447\u0451\u0442 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u0438"}</h2>
+              {car.sync && (<><div className="flex justify-between text-sm"><span className="text-white/60">{"\u0426\u0435\u043d\u0430 \u0432 \u044e\u0430\u043d\u044f\u0445"}</span><span>{car.sync.priceCny.toLocaleString("ru-RU")} CNY</span></div><div className="flex justify-between text-sm"><span className="text-white/60">{"\u041a\u0443\u0440\u0441 \u0412\u0422\u0411"}</span><span>{car.sync.exchangeRate} {"\u20bd/CNY"}</span></div></>)}
+              <div className="flex justify-between text-sm"><span className="text-white/60">{"\u0426\u0435\u043d\u0430 \u0430\u0432\u0442\u043e"}</span><span>{formatPrice(car.price)}</span></div>
+              <div className="flex justify-between text-sm"><span className="text-white/60">{"\u0422\u0430\u043c\u043e\u0436\u043d\u044f"}</span><span>{formatPrice(car.customsCost)}</span></div>
+              <div className="flex justify-between border-t border-white/10 pt-3 text-base font-medium"><span>{"\u0418\u0442\u043e\u0433\u043e"}</span><span>{formatPrice(total)}</span></div>
+            </div>
+            <CarDetailActions carId={car.id} totalAmount={total} />
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}

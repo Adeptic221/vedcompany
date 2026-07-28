@@ -1,0 +1,5 @@
+export type CarType = "sedan" | "crossover" | "suv" | "hatchback" | "coupe";
+export interface CarSpecs { engine: string; power: string; transmission: string; drive: string; fuel: string; consumption: string; }
+export interface CarSyncMeta { source: "autohome"; sourceId: string; sourceUrl: string; photos: string[]; priceCny: number; exchangeRate: number; exchangeBank: "VTB"; exchangeRateAt: string; customsSource: "tks.ru"; syncedAt: string; }
+export interface Car { id: string; brand: string; brandSlug: string; model: string; year: number; type: CarType; price: number; customsCost: number; deliveryDays: number; country: string; imageColor: string; specs: CarSpecs; description: string; sync?: CarSyncMeta; }
+export interface SyncLogEntry { startedAt: string; finishedAt: string; success: boolean; carsUpdated: number; exchangeRate: number; error?: string; }

@@ -1,0 +1,59 @@
+================================================================================
+  VED (vedcompany.ru) — INSTRUKCIYA PO DEPLOY
+================================================================================
+
+SPOSOB 1: VERCEL (proshche vsego dlya Next.js)
+----------------------------------------------
+1. Ustanovite Git: https://git-scm.com/download/win
+2. Perezagruzite kompyuter
+3. Zaregistrirujtes na https://github.com — sozдайte repozitorij "vedcompany"
+4. Zaregistrirujtes na https://vercel.com (mozhno cherez GitHub)
+5. V Cursor otkrojte terminal (Ctrl+~) v papke C:\Projects\vedcompany:
+
+   git init
+   git add .
+   git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Initial VED website"
+   git branch -M main
+   git remote add origin https://github.com/VASH_LOGIN/vedcompany.git
+   git push -u origin main
+
+6. Na vercel.com: Add New Project -> Import repozitorij vedcompany
+7. Deploy (knopka po umolchaniyu)
+8. Settings -> Domains -> dobavte: vedcompany.ru i www.vedcompany.ru
+9. Vercel pokazhet DNS-zapisi — dobavte ih u registratora domena
+
+   Obichno:
+   - A-zapis: 76.76.21.21  (ili chto ukazhet Vercel)
+   - CNAME www -> cname.vercel-dns.com
+
+10. Settings -> Environment Variables:
+    SYNC_CRON_SECRET = lyuboj-dlinnyj-parol
+    (opcionalno) VTB_RATE_CNY = 12.45
+
+11. Ezhenedelnaya sinhronizaciya: na https://cron-job.org
+    URL: https://vedcompany.ru/api/cron/sync-cars
+    Header: Authorization: Bearer VASH_SYNC_CRON_SECRET
+    Raspisanie: kazhdoe voskresene 03:00
+
+
+SPOSOB 2: TIMEWEB / VPS (dlya polnogo kontrolya)
+-------------------------------------------------
+1. Zakazhite VPS ili Node.js hosting na timeweb.com
+2. Ustanovite Node.js 20+ na servere
+3. Zagruzite papku proekta (FTP ili Git)
+4. Na servere:
+   npm install
+   npm run build
+   npm run start
+   (ili PM2: pm2 start npm --name ved -- start)
+
+5. Nastroyte Nginx + SSL (Let's Encrypt)
+6. DNS: A-zapis domena -> IP vashego servera
+
+
+POSLE DEPLOYA
+-------------
+- Otkrojte https://vedcompany.ru
+- Proverka sinhronizacii: /api/cron/sync-cars (s secret v production)
+
+================================================================================

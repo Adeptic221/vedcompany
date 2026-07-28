@@ -1,0 +1,34 @@
+export interface CartItem {
+  carId: string;
+  addedAt: string;
+}
+
+export type OrderStatus =
+  | "new"
+  | "manager"
+  | "documents"
+  | "customs"
+  | "shipping"
+  | "done";
+
+export interface Order {
+  id: string;
+  carId: string;
+  status: OrderStatus;
+  createdAt: string;
+  paidAmount: number;
+  totalAmount: number;
+}
+
+export interface ChatMessage {
+  id: string;
+  text: string;
+  from: "client" | "manager";
+  createdAt: string;
+}
+
+export interface UploadedDoc {
+  id: string;
+  name: string;
+  uploadedAt: string;
+}

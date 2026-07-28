@@ -1,0 +1,21 @@
+========================================
+  ZAGRUZKA KODA NA GITHUB (2 sposoba)
+========================================
+
+Repozitorij: https://github.com/Adeptic221/vedcompany
+
+SPOSOB 1 - GitHub Desktop (rekomenduetsya)
+------------------------------------------
+1. Zavershite vse git.exe v Dispetchere zadach (Ctrl+Shift+Esc)
+2. GitHub Desktop -> File -> Add local repository
+3. Papka: C:\Projects\vedcompany
+4. Commit message: VED website vedcompany.ru -> Commit
+5. Publish repository / Push origin -> Adeptic221 / vedcompany
+
+SPOSOB 2 - GITHUB-UPLOAD.bat
+----------------------------
+1. Zavershite git.exe, udalite .git\index.lock esli est
+2. Zapustite GITHUB-UPLOAD.bat
+3. Login: Adeptic221, parol: Personal Access Token (scope repo)
+
+Dalshe: DEPLOY-REG-RU.txt -> Vercel + Reg.ru DNS

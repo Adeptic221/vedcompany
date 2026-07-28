@@ -1,0 +1,1 @@
+export { cars, carTypeLabels, formatPrice, getTotalPrice, filterCars } from "./cars.static";

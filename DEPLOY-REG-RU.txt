@@ -1,0 +1,104 @@
+================================================================================
+  VED - DEPLOY s GitHub + Vercel + Reg.ru (vedcompany.ru)
+================================================================================
+
+SHAG 0 - USTANOVITE GIT (esli eshche ne sdelali)
+-------------------------------------------------
+1. https://git-scm.com/download/win
+2. Ustanovka -> Next -> Next (vse po umolchaniyu)
+3. PEREZAGRUZITE kompyuter
+4. Proverka v terminale Cursor: git --version
+
+
+SHAG 1 - REPOZITORIJ NA GITHUB
+-------------------------------
+1. Vojdite na https://github.com
+2. Knopka "+" -> New repository
+3. Imya: vedcompany
+4. Public
+5. BEZ galochki "Add README" (repozitorij pustoj)
+6. Create repository
+7. Skopiruyte ssylku (primer):
+   https://github.com/VASH_LOGIN/vedcompany.git
+
+
+SHAG 2 - ZAGRUZKA KODA (terminal Cursor, Ctrl+~)
+------------------------------------------------
+cd C:\Projects\vedcompany
+git init
+git add .
+git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "VED website - vedcompany.ru"
+git branch -M main
+git remote add origin https://github.com/VASH_LOGIN/vedcompany.git
+git push -u origin main
+
+(Pri pervom push GitHub poprosit login i parol/token)
+
+
+SHAG 3 - VERCEL
+---------------
+1. https://vercel.com -> Sign Up -> Continue with GitHub
+2. Add New... -> Project
+3. Import vedcompany
+4. Deploy (zhdat 2-3 min)
+5. Settings -> Environment Variables:
+   SYNC_CRON_SECRET = lyuboj-dlinnyj-parol-12345
+6. Settings -> Domains -> Add:
+   vedcompany.ru
+   www.vedcompany.ru
+7. Vercel pokazhet chto dobavit v DNS - sm. SHAG 4
+
+
+SHAG 4 - REG.RU (DNS dlya domena)
+---------------------------------
+1. Vojdite na https://www.reg.ru
+2. Moj akkaunt -> Domeny -> vedcompany.ru
+3. Upravlenie domenom -> DNS-servera i upravlenie zonoj
+   (ili "Resursnye zapisi DNS")
+4. Dobavte zapisi (znacheniya mozhet dat Vercel v razdele Domains):
+
+   Tip A:
+   Imya/Host: @  (ili pustoe)
+   Znachenie: 76.76.21.21
+
+   Tip CNAME:
+   Imya/Host: www
+   Znachenie: cname.vercel-dns.com
+
+5. Sohranite. Obnovlenie DNS: 15 min - 24 chasa
+6. V Vercel domen stanet zelenym (Active)
+
+
+SHAG 4 ALT - NS-SERVERY VERCEL (proshche na Reg.ru)
+---------------------------------------------------
+Vmesto A/CNAME mozhno smenit DNS-servery domena na Vercel:
+   ns1.vercel-dns.com
+   ns2.vercel-dns.com
+(Togda vse DNS upravlyaetsya v Vercel)
+
+
+SHAG 5 - PROVERKA
+-----------------
+Otkrojte https://vedcompany.ru
+Sinhronizaciya (posle deploy):
+   https://vedcompany.ru/api/cron/sync-cars
+   (v production nuzhen header Authorization)
+
+
+ESLI NUZHNA POMOSH
+------------------
+Napishite v chat:
+- vash login GitHub
+- skrin Reg.ru DNS
+- oshibku iz terminala pri git push
+
+================================================================================
+VASH GITHUB:
+  Login: Adeptic221
+  Repozitorij: https://github.com/Adeptic221/vedcompany
+
+Sozдайte repozitorij vedcompany na github.com (pustoj, bez README)
+Zatem zapustite GITHUB-UPLOAD.bat
+
+Posle push -> vercel.com -> Import Adeptic221/vedcompany
+Reg.ru -> DNS dlya vedcompany.ru

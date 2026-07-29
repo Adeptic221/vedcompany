@@ -1,1 +1,2 @@
-export { cars, carTypeLabels, formatPrice, getTotalPrice, filterCars } from "./cars.static";
+export { cars, carTypeLabels, fuelLabels, sortLabels, formatPrice, getTotalPrice, filterCars, sortCars, getCatalogFilterMeta, countActiveFilters } from "./cars.static";
+export type { CatalogSort, CatalogSearchParams, CatalogFilterMeta } from "./cars.static";

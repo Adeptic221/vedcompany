@@ -59,13 +59,19 @@
 }
 
 @layer components {
-  .ved-select {
+  .ved-select,
+  .ved-input {
     @apply w-full rounded-none border border-white/30 bg-white/10 px-4 py-3.5 text-sm text-white transition-colors hover:border-white/50 focus:border-white focus:outline-none focus:ring-1 focus:ring-white/40;
     background-color: rgba(255, 255, 255, 0.1);
   }
 
+  .ved-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
   @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-    .ved-select {
+    .ved-select,
+    .ved-input {
       -webkit-backdrop-filter: blur(4px);
       backdrop-filter: blur(4px);
     }

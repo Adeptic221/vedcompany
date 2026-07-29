@@ -1,40 +1,86 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { PageBackground } from "@/components/PageBackground";
 import { CarCard } from "@/components/CarCard";
 import { CatalogFilters } from "@/components/CatalogFilters";
-import { filterCars } from "@/data/cars";
+import {
+  countActiveFilters,
+  filterCars,
+  getCatalogFilterMeta,
+  sortCars,
+  type CatalogSearchParams,
+} from "@/data/cars";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 
 export default async function CatalogPage({
   searchParams,
 }: {
-  searchParams: Promise<{ brand?: string; model?: string; year?: string; budget?: string; type?: string }>;
+  searchParams: Promise<CatalogSearchParams>;
 }) {
   const params = await searchParams;
   const cars = await getCarsCatalog();
-  const filtered = filterCars(cars, params);
+  const meta = getCatalogFilterMeta(cars);
+  const filtered = sortCars(filterCars(cars, params), params.sort);
+  const activeFilters = countActiveFilters(params);
 
   return (
     <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
       <Header />
       <div className="relative z-10 mx-auto max-w-7xl px-8 pb-16 md:px-12">
-        <div className="mb-10">
+        <div className="mb-8 md:mb-10">
           <h1 className="text-2xl font-light uppercase tracking-[0.15em] md:text-3xl">Каталог автомобилей</h1>
-          <p className="mt-2 text-sm text-white/50">Найдено: {filtered.length} из {cars.length}</p>
+          <p className="mt-2 text-sm text-white/50">
+            Найдено: <span className="text-white/80">{filtered.length}</span> из {cars.length}
+            {activeFilters > 0 && (
+              <span className="text-white/40">
+                {" "}
+                · активных фильтров: {activeFilters}
+              </span>
+            )}
+          </p>
         </div>
-        <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
+
+        <div className="grid gap-6 lg:grid-cols-[280px_1fr] lg:gap-8">
           <Suspense fallback={<div className="h-64 animate-pulse bg-white/5" />}>
-            <CatalogFilters />
+            <CatalogFilters meta={meta} />
           </Suspense>
+
           {filtered.length > 0 ? (
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {filtered.map((car) => (<CarCard key={car.id} car={car} />))}
+              {filtered.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
             </div>
           ) : (
-            <div className="flex items-center justify-center border border-white/10 bg-white/5 p-16 text-white/50">
-              По вашим фильтрам ничего не найдено
+            <div className="ved-glass flex flex-col items-center justify-center border border-white/10 px-8 py-16 text-center">
+              <p className="text-lg font-light tracking-wide text-white/80">
+                {activeFilters > 0 || params.q?.trim()
+                  ? "По вашим фильтрам ничего не найдено"
+                  : "Каталог пока пуст"}
+              </p>
+              <p className="mt-2 max-w-md text-sm text-white/50">
+                {activeFilters > 0 || params.q?.trim()
+                  ? "Попробуйте изменить параметры поиска или сбросить фильтры."
+                  : "Скоро здесь появятся автомобили. А пока вы можете вернуться на главную."}
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                {(activeFilters > 0 || params.q?.trim()) && (
+                  <Link
+                    href="/catalog"
+                    className="border border-white/30 px-6 py-3 text-xs uppercase tracking-widest transition hover:bg-white hover:text-ved-navy"
+                  >
+                    Сбросить фильтры
+                  </Link>
+                )}
+                <Link
+                  href="/"
+                  className="border border-white/30 px-6 py-3 text-xs uppercase tracking-widest transition hover:bg-white hover:text-ved-navy"
+                >
+                  На главную
+                </Link>
+              </div>
             </div>
           )}
         </div>

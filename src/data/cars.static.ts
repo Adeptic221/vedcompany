@@ -27,13 +27,151 @@ export function getTotalPrice(car: Car): number {
   return car.price + car.customsCost;
 }
 
-export function filterCars(items: Car[], filters: { brand?: string; model?: string; year?: string; budget?: string; type?: string }): Car[] {
+export type CatalogSort = "price-asc" | "price-desc" | "year-desc" | "year-asc" | "newest";
+
+export interface CatalogSearchParams {
+  brand?: string;
+  model?: string;
+  year?: string;
+  budget?: string;
+  priceMin?: string;
+  priceMax?: string;
+  type?: string;
+  fuel?: string;
+  q?: string;
+  sort?: string;
+}
+
+export const fuelLabels: Record<string, string> = {
+  Petrol: "Бензин",
+  Diesel: "Дизель",
+  Hybrid: "Гибрид",
+  Electric: "Электро",
+};
+
+export const sortLabels: Record<CatalogSort, string> = {
+  newest: "Сначала новые",
+  "price-asc": "Цена: по возрастанию",
+  "price-desc": "Цена: по убыванию",
+  "year-desc": "Год: новее",
+  "year-asc": "Год: старше",
+};
+
+function normalizeSearch(value: string): string {
+  return value.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function matchesSearch(car: Car, query: string): boolean {
+  const q = normalizeSearch(query);
+  if (!q) return true;
+  const title = normalizeSearch(`${car.brand} ${car.model}`);
+  return (
+    title.includes(q) ||
+    normalizeSearch(car.brand).includes(q) ||
+    normalizeSearch(car.model).includes(q) ||
+    car.id.toLowerCase().includes(q.replace(/\s+/g, "-"))
+  );
+}
+
+export function filterCars(items: Car[], filters: CatalogSearchParams): Car[] {
+  const priceMax = filters.priceMax || filters.budget;
+  const priceMin = filters.priceMin;
+
   return items.filter((car) => {
     if (filters.brand && car.brandSlug !== filters.brand) return false;
-    if (filters.model && filters.model !== "any" && car.model.toLowerCase() !== filters.model) return false;
+    if (filters.model && filters.model !== "any" && car.model.toLowerCase() !== filters.model.toLowerCase()) return false;
     if (filters.year && car.year !== Number(filters.year)) return false;
     if (filters.type && car.type !== filters.type) return false;
-    if (filters.budget && getTotalPrice(car) > Number(filters.budget)) return false;
+    if (filters.fuel && car.specs.fuel !== filters.fuel) return false;
+    if (filters.q && !matchesSearch(car, filters.q)) return false;
+
+    const total = getTotalPrice(car);
+    if (priceMax && total > Number(priceMax)) return false;
+    if (priceMin && total < Number(priceMin)) return false;
+
     return true;
   });
+}
+
+export function sortCars(items: Car[], sort?: string): Car[] {
+  const mode = (sort as CatalogSort) || "newest";
+  const sorted = [...items];
+
+  sorted.sort((a, b) => {
+    const priceA = getTotalPrice(a);
+    const priceB = getTotalPrice(b);
+
+    switch (mode) {
+      case "price-asc":
+        return priceA - priceB;
+      case "price-desc":
+        return priceB - priceA;
+      case "year-asc":
+        return a.year - b.year || priceA - priceB;
+      case "year-desc":
+        return b.year - a.year || priceB - priceA;
+      case "newest":
+      default: {
+        const syncedA = a.sync?.syncedAt ? Date.parse(a.sync.syncedAt) : 0;
+        const syncedB = b.sync?.syncedAt ? Date.parse(b.sync.syncedAt) : 0;
+        if (syncedA !== syncedB) return syncedB - syncedA;
+        return b.year - a.year || priceB - priceA;
+      }
+    }
+  });
+
+  return sorted;
+}
+
+export interface CatalogFilterMeta {
+  brands: { value: string; label: string }[];
+  years: number[];
+  fuels: string[];
+  types: string[];
+  priceMin: number;
+  priceMax: number;
+}
+
+export function getCatalogFilterMeta(items: Car[]): CatalogFilterMeta {
+  const brandMap = new Map<string, string>();
+  const fuels = new Set<string>();
+  const types = new Set<string>();
+  const years = new Set<number>();
+  let priceMin = Infinity;
+  let priceMax = 0;
+
+  for (const car of items) {
+    brandMap.set(car.brandSlug, car.brand);
+    fuels.add(car.specs.fuel);
+    types.add(car.type);
+    years.add(car.year);
+    const total = getTotalPrice(car);
+    priceMin = Math.min(priceMin, total);
+    priceMax = Math.max(priceMax, total);
+  }
+
+  const brands = Array.from(brandMap.entries())
+    .sort((a, b) => a[1].localeCompare(b[1], "ru"))
+    .map(([value, label]) => ({ value, label }));
+
+  return {
+    brands,
+    years: Array.from(years).sort((a, b) => b - a),
+    fuels: Array.from(fuels).sort((a, b) => a.localeCompare(b, "ru")),
+    types: Array.from(types),
+    priceMin: priceMin === Infinity ? 0 : priceMin,
+    priceMax,
+  };
+}
+
+export function countActiveFilters(filters: CatalogSearchParams): number {
+  let count = 0;
+  if (filters.q?.trim()) count++;
+  if (filters.brand) count++;
+  if (filters.type) count++;
+  if (filters.year) count++;
+  if (filters.fuel) count++;
+  if (filters.priceMin || filters.priceMax || filters.budget) count++;
+  if (filters.model && filters.model !== "any") count++;
+  return count;
 }

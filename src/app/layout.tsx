@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   title: "ВЭД — Онлайн автосалон",
   description: "ВЭД — импорт автомобилей под ключ. Каталог, расчёт таможни, доставка.",
   metadataBase: new URL("https://vedcompany.ru"),
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   formatDetection: {
     telephone: false,
     email: false,

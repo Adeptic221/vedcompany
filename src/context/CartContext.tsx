@@ -36,7 +36,12 @@ function load<T>(key: string, fallback: T): T {
 }
 
 function save(key: string, value: unknown) {
-  localStorage.setItem(key, JSON.stringify(value));
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    /* Safari private mode, quota exceeded, or storage disabled */
+  }
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {

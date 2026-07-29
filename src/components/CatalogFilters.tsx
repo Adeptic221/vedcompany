@@ -13,7 +13,7 @@ export function CatalogFilters() {
   }
   const current = { brand: searchParams.get("brand") ?? "", type: searchParams.get("type") ?? "", year: searchParams.get("year") ?? "", budget: searchParams.get("budget") ?? "" };
   return (
-    <aside className="space-y-4 border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+    <aside className="ved-glass space-y-4 border border-white/10 p-5">
       <h2 className="text-xs uppercase tracking-[0.2em] text-white/60">{"\u0424\u0438\u043b\u044c\u0442\u0440\u044b"}</h2>
       <label className="block"><span className="mb-1 block text-xs text-white/50">{"\u041c\u0430\u0440\u043a\u0430"}</span><select className="ved-select" value={current.brand} onChange={(e) => updateFilter("brand", e.target.value)}>{brands.map((b) => (<option key={b.value} value={b.value}>{b.label}</option>))}</select></label>
       <label className="block"><span className="mb-1 block text-xs text-white/50">{"\u0422\u0438\u043f \u043a\u0443\u0437\u043e\u0432\u0430"}</span><select className="ved-select" value={current.type} onChange={(e) => updateFilter("type", e.target.value)}><option value="">{"\u0412\u0441\u0435 \u0442\u0438\u043f\u044b"}</option>{Object.entries(carTypeLabels).map(([value, label]) => (<option key={value} value={value}>{label}</option>))}</select></label>

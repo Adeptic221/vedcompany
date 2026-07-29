@@ -3,7 +3,7 @@ import { PageBackground } from "@/components/PageBackground";
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen bg-ved-navy">
+    <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
       <Header />
       <div className="relative z-10 mx-auto max-w-3xl px-8 py-12 md:px-12">

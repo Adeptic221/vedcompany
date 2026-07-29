@@ -8,13 +8,87 @@
   --ved-accent: #1e3a5f;
 }
 
-body {
-  background: var(--ved-navy);
-  color: #ffffff;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--ved-navy);
+    color: #ffffff;
+    min-height: 100vh;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
 }
 
 @layer components {
   .ved-select {
-    @apply w-full appearance-none rounded-none border border-white/30 bg-white/10 px-4 py-3.5 text-sm text-white backdrop-blur-sm transition-colors hover:border-white/50 focus:border-white focus:outline-none focus:ring-1 focus:ring-white/40;
+    @apply w-full rounded-none border border-white/30 bg-white/10 px-4 py-3.5 text-sm text-white transition-colors hover:border-white/50 focus:border-white focus:outline-none focus:ring-1 focus:ring-white/40;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .ved-select {
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  .ved-select option {
+    background-color: #122240;
+    color: #ffffff;
+  }
+
+  .ved-glass {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .ved-glass {
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  .ved-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 }

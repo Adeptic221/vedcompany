@@ -8,7 +8,7 @@ export function CarCard({ car }: { car: Car }) {
   const total = getTotalPrice(car);
   const photo = car.sync?.photos?.[0];
   return (
-    <article className="group flex flex-col overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm transition hover:border-white/25 hover:bg-white/10">
+    <article className="group flex flex-col overflow-hidden border border-white/10 ved-glass transition hover:border-white/25 hover:bg-white/10">
       <Link href={"/catalog/" + car.id} className="block">
         <div className="relative flex h-44 items-center justify-center overflow-hidden" style={{ background: photo ? undefined : "linear-gradient(135deg, " + car.imageColor + ", #0a1628)" }}>
           {photo ? <Image src={photo} alt={car.brand} fill className="object-cover transition group-hover:scale-105" sizes="400px" /> : <span className="text-4xl font-light tracking-widest text-white/20">{car.brand}</span>}

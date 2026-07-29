@@ -4,7 +4,7 @@ import { PageBackground } from "@/components/PageBackground";
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-ved-navy">
+    <main className="relative ved-screen overflow-hidden bg-ved-navy">
       <PageBackground />
       <Header />
 

@@ -8,7 +8,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-[#0a1628] px-6 text-white">
+    <main className="flex ved-screen flex-col items-center justify-center bg-[#0a1628] px-6 text-white">
       <h1 className="text-2xl font-light">\u041e\u0448\u0438\u0431\u043a\u0430</h1>
       <p className="mt-4 max-w-md text-center text-sm text-white/60">{error.message}</p>
       <button

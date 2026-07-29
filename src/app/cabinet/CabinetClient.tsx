@@ -78,7 +78,7 @@ function CabinetContent() {
   const paidFinance = orders.reduce((s, o) => s + o.paidAmount, 0);
 
   return (
-    <main className="relative min-h-screen bg-ved-navy">
+    <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
       <Header />
 
@@ -108,7 +108,7 @@ function CabinetContent() {
             ))}
           </nav>
 
-          <div className="min-w-0 flex-1 border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+          <div className="ved-glass min-w-0 flex-1 border border-white/10 p-6">
             {tab === "cart" && (
               <div>
                 <h2 className="mb-6 text-xs uppercase tracking-[0.2em] text-white/60">
@@ -306,7 +306,7 @@ function CabinetContent() {
 
 export default function CabinetPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-ved-navy" />}>
+    <Suspense fallback={<div className="ved-screen bg-ved-navy" />}>
       <CabinetContent />
     </Suspense>
   );

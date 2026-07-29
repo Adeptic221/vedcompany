@@ -16,7 +16,7 @@ export default async function CatalogPage({
   const filtered = filterCars(cars, params);
 
   return (
-    <main className="relative min-h-screen bg-ved-navy">
+    <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
       <Header />
       <div className="relative z-10 mx-auto max-w-7xl px-8 pb-16 md:px-12">

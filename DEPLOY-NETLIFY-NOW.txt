@@ -1,0 +1,54 @@
+================================================================================
+  VED - DEPLOY NA NETLIFY (bez SMS, cherez GitHub)
+================================================================================
+
+Pochemu ne Vercel: nomer telefona vremenno zablokirovan na 12 chasov.
+Netlify ne trebuet SMS - tolko GitHub.
+
+--------------------------------------------------------------------------------
+SHAG 1 - NETLIFY
+--------------------------------------------------------------------------------
+1. Otkrojte: https://app.netlify.com/signup
+2. "Sign up with GitHub" -> Adeptic221
+3. Posle vhoda: Add new site -> Import an existing project
+4. GitHub -> vyberite repozitorij: vedcompany
+5. Build settings (avtomat):
+   Build command:  npm run build
+   Publish directory: .next
+   (Netlify sam opredelit Next.js - esli sprosit, ostavte po umolchaniyu)
+6. Environment variables -> Add:
+   SYNC_CRON_SECRET = ved-sync-2026-Adeptic221-K7mN9pQ2
+7. Deploy site
+8. Zhdite 3-5 minut
+
+Posle deploy poluchite URL: https://vedcompany-xxxxx.netlify.app
+
+--------------------------------------------------------------------------------
+SHAG 2 - DOMEN vedcompany.ru (Reg.ru)
+--------------------------------------------------------------------------------
+V Netlify: Site settings -> Domain management -> Add custom domain:
+   vedcompany.ru
+   www.vedcompany.ru
+
+Netlify pokazhet chto dobavit v DNS. Obychno:
+
+   A-zapis:
+   @  ->  75.2.60.5
+
+   CNAME:
+   www  ->  vash-sait.netlify.app
+
+(Ili ispolzujte DNS Netlify - smenite NS na Reg.ru)
+
+Reg.ru: Domeny -> vedcompany.ru -> DNS-zapisi -> dobavte i sohranite.
+
+--------------------------------------------------------------------------------
+SHAG 3 - PROVERKA
+--------------------------------------------------------------------------------
+Sajt:  https://vedcompany.ru
+API:  https://vedcompany.ru/api/cars
+
+================================================================================
+SSYLKA DLYA BYSTROGO STARTA:
+https://app.netlify.com/start/deploy?repository=https://github.com/Adeptic221/vedcompany
+================================================================================

@@ -1,0 +1,60 @@
+================================================================================
+  VED - DEPLOY NA VERCEL (byistro)
+================================================================================
+
+Proverka: npm run build - USPESHNO (mozhno deployit)
+
+SSYLKA (otkrojte v brauzere):
+https://vercel.com/new/import?s=https://github.com/Adeptic221/vedcompany
+
+--------------------------------------------------------------------------------
+SHAG 1 - VERCEL
+--------------------------------------------------------------------------------
+1. Otkrojte ssylku vyshe
+2. Vojdite cherez GitHub (Continue with GitHub -> Adeptic221)
+3. Import Git Repository -> vedcompany
+4. Framework Preset: Next.js (avtomat)
+5. Root Directory: ./
+6. NE MENYAITE Build Command i Output Directory
+7. Raskroyte "Environment Variables" i dobavte:
+
+   Name:  SYNC_CRON_SECRET
+   Value: ved-sync-2026-Adeptic221-K7mN9pQ2
+
+8. Nazhmite DEPLOY
+9. Zhdite 2-3 minuty
+
+Posle deploy Vercel daet vremennyj URL, naprimer:
+   https://vedcompany-xxxx.vercel.app
+Otkrojte ego - dolzhen otkrytsya sajt VED.
+
+--------------------------------------------------------------------------------
+SHAG 2 - DOMEN vedcompany.ru
+--------------------------------------------------------------------------------
+V Vercel: Project -> Settings -> Domains -> Add:
+   vedcompany.ru
+   www.vedcompany.ru
+
+V Reg.ru (https://www.reg.ru):
+   Domeny -> vedcompany.ru -> DNS-zapisi
+
+   A-zapis:
+   @  ->  76.76.21.21
+
+   CNAME:
+   www  ->  cname.vercel-dns.com
+
+Sohranite. DNS obnovitsya za 15 min - 24 chasa.
+
+--------------------------------------------------------------------------------
+SHAG 3 - PROVERKA
+--------------------------------------------------------------------------------
+Sajt:     https://vedcompany.ru
+API:      https://vedcompany.ru/api/cars
+Sync:     GET https://vedcompany.ru/api/cron/sync-cars
+          Header: Authorization: Bearer ved-sync-2026-Adeptic221-K7mN9pQ2
+
+Esli cron na besplatnom tarife ne rabotaet - ispolzujte cron-job.org
+(raz v nedelyu, voskresene 03:00 MSK)
+
+================================================================================

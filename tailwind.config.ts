@@ -25,6 +25,14 @@ const config: Config = {
           "sans-serif",
         ],
       },
+      keyframes: {
+        "ved-spin": {
+          to: { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        "ved-spin": "ved-spin 1.4s linear infinite",
+      },
     },
   },
   plugins: [],

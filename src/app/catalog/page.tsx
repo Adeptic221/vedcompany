@@ -13,7 +13,9 @@ import {
   sortCars,
   type CatalogSearchParams,
 } from "@/data/cars";
+import { findAnalogCars } from "@/lib/catalog/analogs";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
+import { CarCardMini } from "@/components/CarCardMini";
 
 export const metadata: Metadata = {
   title: "Каталог автомобилей",
@@ -41,6 +43,19 @@ export default async function CatalogPage({
   const filtered = sortCars(filterCars(cars, params), params.sort);
   const activeFilters = countActiveFilters(params);
 
+  const filteredIds = new Set(filtered.map((car) => car.id));
+  const showAnalogs =
+    filtered.length < 8 &&
+    Boolean(params.type && (params.budget || params.priceMax));
+  const analogs = showAnalogs
+    ? findAnalogCars(cars, {
+        type: params.type,
+        budget: Number(params.budget || params.priceMax),
+        brand: params.brand,
+        year: params.year ? Number(params.year) : undefined,
+      }).filter((car) => !filteredIds.has(car.id))
+    : [];
+
   return (
     <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
@@ -65,10 +80,25 @@ export default async function CatalogPage({
           </Suspense>
 
           {filtered.length > 0 ? (
-            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {filtered.map((car) => (
-                <CarCard key={car.id} car={car} />
-              ))}
+            <div className="space-y-8">
+              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                {filtered.map((car) => (
+                  <CarCard key={car.id} car={car} />
+                ))}
+              </div>
+
+              {analogs.length > 0 && (
+                <section className="border-t border-white/10 pt-8">
+                  <h2 className="mb-4 text-sm uppercase tracking-[0.15em] text-white/60">
+                    Похожие автомобили
+                  </h2>
+                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                    {analogs.map((car) => (
+                      <CarCardMini key={car.id} car={car} />
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
           ) : (
             <div className="ved-glass flex flex-col items-center justify-center border border-white/10 px-8 py-16 text-center">

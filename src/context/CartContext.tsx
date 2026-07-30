@@ -1,18 +1,31 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
-import type { CartItem, Order, ChatMessage, UploadedDoc } from "@/types/cart";
+import type {
+  CartItem,
+  Order,
+  ChatMessage,
+  UploadedDoc,
+  UserProfile,
+  FavoriteItem,
+} from "@/types/cart";
 
 const CART_KEY = "ved-cart";
 const ORDERS_KEY = "ved-orders";
 const CHAT_KEY = "ved-chat";
 const DOCS_KEY = "ved-docs";
+const PROFILE_KEY = "ved-profile";
+const FAVORITES_KEY = "ved-favorites";
+
+const DEFAULT_PROFILE: UserProfile = { name: "", phone: "" };
 
 interface CartContextValue {
   items: CartItem[];
   orders: Order[];
   messages: ChatMessage[];
   documents: UploadedDoc[];
+  profile: UserProfile;
+  favorites: FavoriteItem[];
   addToCart: (carId: string) => void;
   removeFromCart: (carId: string) => void;
   clearCart: () => void;
@@ -21,6 +34,12 @@ interface CartContextValue {
   checkout: (carId: string, totalAmount: number) => Order;
   sendMessage: (text: string) => void;
   addDocument: (name: string) => void;
+  removeDocument: (id: string) => void;
+  updateProfile: (profile: UserProfile) => void;
+  toggleFavorite: (carId: string) => void;
+  removeFavorite: (carId: string) => void;
+  isFavorite: (carId: string) => boolean;
+  favoritesCount: number;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -49,6 +68,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [orders, setOrders] = useState<Order[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [documents, setDocuments] = useState<UploadedDoc[]>([]);
+  const [profile, setProfile] = useState<UserProfile>(DEFAULT_PROFILE);
+  const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -58,13 +79,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       load(CHAT_KEY, [
         {
           id: "welcome",
-          text: "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435! \u042f \u0432\u0430\u0448 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u0412\u042d\u0414.",
+          text: "Здравствуйте! Я ваш менеджер ВЭД. Помогу с выбором авто, документами и отслеживанием заказа.",
           from: "manager",
           createdAt: new Date().toISOString(),
         },
       ])
     );
     setDocuments(load(DOCS_KEY, []));
+    setProfile(load(PROFILE_KEY, DEFAULT_PROFILE));
+    setFavorites(load(FAVORITES_KEY, []));
     setReady(true);
   }, []);
 
@@ -80,6 +103,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (ready) save(DOCS_KEY, documents);
   }, [documents, ready]);
+  useEffect(() => {
+    if (ready) save(PROFILE_KEY, profile);
+  }, [profile, ready]);
+  useEffect(() => {
+    if (ready) save(FAVORITES_KEY, favorites);
+  }, [favorites, ready]);
 
   const addToCart = useCallback((carId: string) => {
     setItems((prev) =>
@@ -131,7 +160,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         ...prev,
         {
           id: `msg-${Date.now()}-r`,
-          text: "\u0421\u043f\u0430\u0441\u0438\u0431\u043e! \u0421\u043a\u043e\u0440\u043e \u043e\u0442\u0432\u0435\u0447\u0443.",
+          text: "Спасибо за сообщение! Скоро отвечу. Если вопрос срочный — позвоните по телефону на сайте.",
           from: "manager",
           createdAt: new Date().toISOString(),
         },
@@ -146,6 +175,31 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     ]);
   }, []);
 
+  const removeDocument = useCallback((id: string) => {
+    setDocuments((prev) => prev.filter((d) => d.id !== id));
+  }, []);
+
+  const updateProfile = useCallback((next: UserProfile) => {
+    setProfile(next);
+  }, []);
+
+  const toggleFavorite = useCallback((carId: string) => {
+    setFavorites((prev) => {
+      const exists = prev.some((f) => f.carId === carId);
+      if (exists) return prev.filter((f) => f.carId !== carId);
+      return [...prev, { carId, addedAt: new Date().toISOString() }];
+    });
+  }, []);
+
+  const removeFavorite = useCallback((carId: string) => {
+    setFavorites((prev) => prev.filter((f) => f.carId !== carId));
+  }, []);
+
+  const isFavorite = useCallback(
+    (carId: string) => favorites.some((f) => f.carId === carId),
+    [favorites]
+  );
+
   return (
     <CartContext.Provider
       value={{
@@ -153,6 +207,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         orders,
         messages,
         documents,
+        profile,
+        favorites,
         addToCart,
         removeFromCart,
         clearCart,
@@ -161,6 +217,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         checkout,
         sendMessage,
         addDocument,
+        removeDocument,
+        updateProfile,
+        toggleFavorite,
+        removeFavorite,
+        isFavorite,
+        favoritesCount: favorites.length,
       }}
     >
       {children}

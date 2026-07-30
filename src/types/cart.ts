@@ -32,3 +32,13 @@ export interface UploadedDoc {
   name: string;
   uploadedAt: string;
 }
+
+export interface UserProfile {
+  name: string;
+  phone: string;
+}
+
+export interface FavoriteItem {
+  carId: string;
+  addedAt: string;
+}

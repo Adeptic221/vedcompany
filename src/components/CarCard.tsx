@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Car } from "@/types/car";
 import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
 import { AddToCartButton } from "@/components/AddToCartButton";
+import { AddToFavoritesButton } from "@/components/AddToFavoritesButton";
 
 export function CarCard({ car }: { car: Car }) {
   const total = getTotalPrice(car);
@@ -23,6 +24,7 @@ export function CarCard({ car }: { car: Car }) {
         </div>
         <div className="mt-auto flex gap-2 pt-5">
           <Link href={"/catalog/" + car.id} className="flex-1 border border-white/30 px-3 py-2 text-center text-xs uppercase tracking-wider transition hover:bg-white hover:text-ved-navy">{"\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435"}</Link>
+          <AddToFavoritesButton carId={car.id} compact />
           <AddToCartButton carId={car.id} />
         </div>
       </div>

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "node scripts/write-lib-files.cjs && next build",
     "start": "next start",
-    "sync:cars": "node --experimental-strip-types scripts/sync-cars-cli.ts",
+    "sync:cars": "node scripts/sync-cars.mjs",
     "sync:cars:api": "node -e \"fetch(process.env.SYNC_API_URL||'http://localhost:3000/api/cron/sync-cars',{headers:{Authorization:'Bearer '+process.env.SYNC_CRON_SECRET}}).then(r=>r.json()).then(console.log).catch(console.error)\"",
     "generate:demo-cars": "node scripts/generate-autohome-demo.cjs"
   },

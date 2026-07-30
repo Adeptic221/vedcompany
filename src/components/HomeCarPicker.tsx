@@ -42,17 +42,15 @@ export function HomeCarPicker({
   }, [cars, brand]);
 
   const analogs = useMemo(() => {
-    if (!type && !budget && !brand) return [];
+    if (!type && !budget) return [];
     return findAnalogCars(cars, {
       budget: budget ? Number(budget) : undefined,
       type: type || undefined,
       brand: brand || undefined,
-      year: year ? Number(year) : undefined,
-      model: model && model !== "any" ? model : undefined,
     });
-  }, [cars, brand, model, year, budget, type]);
+  }, [cars, brand, budget, type]);
 
-  const showPreview = Boolean(type || budget || brand);
+  const showAnalogs = Boolean(type || budget);
 
   return (
     <div className="flex flex-col gap-6">
@@ -152,12 +150,12 @@ export function HomeCarPicker({
         </button>
       </form>
 
-      {showPreview && (
+      {showAnalogs && (
         <section aria-live="polite">
           <h2 className="mb-3 text-xs uppercase tracking-[0.2em] text-white/60">
             {analogs.length > 0
-              ? "Аналоги по вашим параметрам"
-              : "Подходящие автомобили"}
+              ? "Аналоги других марок"
+              : "Аналоги по типу и бюджету"}
           </h2>
 
           {analogs.length > 0 ? (
@@ -173,7 +171,9 @@ export function HomeCarPicker({
             </>
           ) : (
             <p className="text-sm text-white/50">
-              По выбранным параметрам аналоги не найдены. Попробуйте увеличить бюджет или изменить тип.
+              {type && budget
+                ? "По выбранным типу и бюджету аналоги других марок не найдены. Попробуйте увеличить бюджет или изменить тип."
+                : "Выберите тип автомобиля и бюджет — покажем альтернативы других марок."}
             </p>
           )}
         </section>

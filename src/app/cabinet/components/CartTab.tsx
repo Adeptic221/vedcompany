@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Car } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
 import { formatPrice, getTotalPrice } from "@/data/cars";
-import { getDeliveryCost } from "@/lib/delivery/calculate";
+import { getDeliveryCost, getDeliveryDays, formatDeliveryDays } from "@/lib/delivery/calculate";
 import { DeliverySelector } from "@/components/DeliverySelector";
 import { useCart } from "@/context/CartContext";
 
@@ -54,6 +54,7 @@ export function CartTab({ cars }: { cars: Car[] }) {
           const base = getTotalPrice(car);
           const delivery = getDeliveryCost(destination, car.price);
           const total = base + delivery;
+          const deliveryDays = getDeliveryDays(destination, car.deliveryDays);
 
           return (
             <div
@@ -77,6 +78,9 @@ export function CartTab({ cars }: { cars: Car[] }) {
                       </span>
                     )}
                   </p>
+                  <p className="mt-1 text-xs text-white/35">
+                    Срок: ~{formatDeliveryDays(deliveryDays)}
+                  </p>
                 </div>
                 <div className="flex shrink-0 gap-2">
                   <button
@@ -99,6 +103,7 @@ export function CartTab({ cars }: { cars: Car[] }) {
                 destination={destination}
                 onChange={(dest) => updateCartDelivery(car.id, dest)}
                 carPriceRub={car.price}
+                baseDeliveryDays={car.deliveryDays}
               />
             </div>
           );

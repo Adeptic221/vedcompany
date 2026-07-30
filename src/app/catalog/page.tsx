@@ -90,7 +90,7 @@ export default async function CatalogPage({
               {analogs.length > 0 && (
                 <section className="border-t border-white/10 pt-8">
                   <h2 className="mb-4 text-sm uppercase tracking-[0.15em] text-white/60">
-                    Похожие автомобили
+                    Аналоги других марок
                   </h2>
                   <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                     {analogs.map((car) => (

@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Car } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
 import { formatPrice, getTotalPrice } from "@/data/cars";
-import { getDeliveryCost } from "@/lib/delivery/calculate";
+import { getDeliveryCost, getDeliveryDays, formatDeliveryDays } from "@/lib/delivery/calculate";
 import { DeliverySelector } from "@/components/DeliverySelector";
 import { CarDetailActions } from "@/components/CarDetailActions";
 
@@ -15,6 +15,7 @@ export function CarDetailPricing({ car }: { car: Car }) {
   const base = getTotalPrice(car);
   const delivery = getDeliveryCost(destination, car.price);
   const total = base + delivery;
+  const deliveryDays = getDeliveryDays(destination, car.deliveryDays);
 
   return (
     <>
@@ -48,6 +49,7 @@ export function CarDetailPricing({ car }: { car: Car }) {
           destination={destination}
           onChange={setDestination}
           carPriceRub={car.price}
+          baseDeliveryDays={car.deliveryDays}
           className="border-t border-white/10 pt-4"
         />
         {delivery > 0 && (
@@ -56,9 +58,9 @@ export function CarDetailPricing({ car }: { car: Car }) {
             <span>{formatPrice(delivery)}</span>
           </div>
         )}
-        {car.deliveryDays > 0 && (
+        {deliveryDays > 0 && (
           <p className="text-xs text-white/40">
-            Срок доставки: ~{car.deliveryDays} дней
+            Срок поставки: ~{formatDeliveryDays(deliveryDays)}
           </p>
         )}
         <div className="flex justify-between border-t border-white/10 pt-3 text-base font-medium">

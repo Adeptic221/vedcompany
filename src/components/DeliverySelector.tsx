@@ -2,8 +2,9 @@
 
 import type { DeliveryDestination } from "@/types/cart";
 import {
-  DELIVERY_OPTIONS,
+  DELIVERY_DESTINATIONS,
   getDeliveryCost,
+  getDeliveryOptionMeta,
 } from "@/lib/delivery/calculate";
 import { formatPrice } from "@/data/cars";
 
@@ -11,11 +12,13 @@ export function DeliverySelector({
   destination,
   onChange,
   carPriceRub,
+  baseDeliveryDays,
   className = "",
 }: {
   destination: DeliveryDestination;
   onChange: (value: DeliveryDestination) => void;
   carPriceRub: number;
+  baseDeliveryDays: number;
   className?: string;
 }) {
   return (
@@ -24,12 +27,13 @@ export function DeliverySelector({
         Доставка
       </p>
       <div className="space-y-2">
-        {DELIVERY_OPTIONS.map((opt) => {
-          const cost = getDeliveryCost(opt.value, carPriceRub);
-          const selected = destination === opt.value;
+        {DELIVERY_DESTINATIONS.map((value) => {
+          const meta = getDeliveryOptionMeta(value, baseDeliveryDays);
+          const cost = getDeliveryCost(value, carPriceRub);
+          const selected = destination === value;
           return (
             <label
-              key={opt.value}
+              key={value}
               className={`flex cursor-pointer items-start gap-3 border p-3 transition ${
                 selected
                   ? "border-white/40 bg-white/10"
@@ -39,15 +43,15 @@ export function DeliverySelector({
               <input
                 type="radio"
                 name="delivery"
-                value={opt.value}
+                value={value}
                 checked={selected}
-                onChange={() => onChange(opt.value)}
+                onChange={() => onChange(value)}
                 className="mt-1"
               />
               <span className="flex-1">
-                <span className="block text-sm">{opt.label}</span>
+                <span className="block text-sm">{meta.label}</span>
                 <span className="mt-0.5 block text-xs text-white/50">
-                  {opt.hint} · {formatPrice(cost)}
+                  {meta.hint} · {formatPrice(cost)}
                 </span>
               </span>
             </label>

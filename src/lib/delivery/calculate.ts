@@ -6,6 +6,7 @@ export const DELIVERY_DEFAULTS = {
   vladivostokBase: 180_000,
   moscowTransport: 350_000,
   insurancePercent: 0.008,
+  moscowExtraDays: 14,
 } as const;
 
 function readNumber(
@@ -36,6 +37,11 @@ export function getDeliveryConfig() {
       process.env.DELIVERY_INSURANCE_PERCENT,
       DELIVERY_DEFAULTS.insurancePercent
     ),
+    moscowExtraDays: readNumber(
+      process.env.NEXT_PUBLIC_DELIVERY_MOSCOW_EXTRA_DAYS,
+      process.env.DELIVERY_MOSCOW_EXTRA_DAYS,
+      DELIVERY_DEFAULTS.moscowExtraDays
+    ),
   };
 }
 
@@ -65,19 +71,47 @@ export function getGrandTotal(
   return getTotalPrice(car) + getDeliveryCost(destination, car.price);
 }
 
-export const DELIVERY_OPTIONS: {
-  value: Exclude<DeliveryDestination, "none">;
-  label: string;
-  hint: string;
-}[] = [
-  {
-    value: "vladivostok",
-    label: "Доставка во Владивосток",
-    hint: "Растаможка и передача на стоянку",
-  },
-  {
-    value: "moscow",
+export function getDeliveryDays(
+  destination: DeliveryDestination,
+  baseDays: number
+): number {
+  if (destination === "none") return baseDays;
+  if (destination === "vladivostok") return baseDays;
+  if (destination === "moscow") {
+    return baseDays + getDeliveryConfig().moscowExtraDays;
+  }
+  return baseDays;
+}
+
+export function formatDeliveryDays(days: number): string {
+  const mod10 = days % 10;
+  const mod100 = days % 100;
+  if (mod10 === 1 && mod100 !== 11) return `${days} день`;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) {
+    return `${days} дня`;
+  }
+  return `${days} дней`;
+}
+
+export function getDeliveryOptionMeta(
+  destination: Exclude<DeliveryDestination, "none">,
+  baseDays: number
+) {
+  const days = getDeliveryDays(destination, baseDays);
+  const daysLabel = formatDeliveryDays(days);
+  if (destination === "vladivostok") {
+    return {
+      label: "Доставка во Владивосток",
+      hint: `Растаможка и передача на стоянку · ~${daysLabel}`,
+    };
+  }
+  return {
     label: "Доставка до Москвы",
-    hint: "Автовоз Владивосток → Москва",
-  },
+    hint: `Автовоз Владивосток → Москва · ~${daysLabel}`,
+  };
+}
+
+export const DELIVERY_DESTINATIONS: Exclude<DeliveryDestination, "none">[] = [
+  "vladivostok",
+  "moscow",
 ];

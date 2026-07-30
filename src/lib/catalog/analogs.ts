@@ -4,14 +4,15 @@ import { getTotalPrice } from "@/data/cars";
 export interface AnalogSearchParams {
   type?: string;
   budget?: number;
+  /** Selected brand — excluded from results (cross-brand analogs). */
   brand?: string;
   year?: number;
   model?: string;
 }
 
-const MIN_ANALOGS = 4;
-const MAX_ANALOGS = 10;
-const BUDGET_RELAX_FACTOR = 1.35;
+const MIN_ANALOGS = 3;
+const MAX_ANALOGS = 6;
+const BUDGET_RELAX_FACTOR = 1.15;
 
 const SIMILAR_TYPES: Record<CarType, CarType[]> = {
   crossover: ["crossover", "suv"],
@@ -46,107 +47,122 @@ function filterPool(pool: Car[], types: CarType[], maxBudget?: number): Car[] {
   return sortByBudgetFit(filtered, maxBudget);
 }
 
-function collectUnique(
+function buildPool(cars: Car[], params: AnalogSearchParams): Car[] {
+  let pool = [...cars];
+
+  if (params.brand) {
+    pool = pool.filter((car) => car.brandSlug !== params.brand);
+  }
+
+  return pool;
+}
+
+/** Prefer one car per brand so analogs span different manufacturers. */
+function collectDiverse(
   target: Car[],
   seen: Set<string>,
   source: Car[],
-  limit = MAX_ANALOGS
+  limit: number,
+  budget?: number
 ): void {
-  for (const car of source) {
-    if (target.length >= limit) break;
+  const candidates = sortByBudgetFit(
+    source.filter((car) => !seen.has(car.id)),
+    budget
+  );
+  const usedBrands = new Set(target.map((car) => car.brandSlug));
+
+  for (const car of candidates) {
+    if (target.length >= limit) return;
+    if (usedBrands.has(car.brandSlug)) continue;
+    seen.add(car.id);
+    usedBrands.add(car.brandSlug);
+    target.push(car);
+  }
+
+  for (const car of candidates) {
+    if (target.length >= limit) return;
     if (seen.has(car.id)) continue;
     seen.add(car.id);
     target.push(car);
   }
 }
 
-function buildPool(cars: Car[], params: AnalogSearchParams): Car[] {
-  let pool = [...cars];
-
-  if (params.brand) {
-    pool = pool.filter((car) => car.brandSlug === params.brand);
-  }
-  if (params.model && params.model !== "any") {
-    const modelLower = params.model.toLowerCase();
-    const byModel = pool.filter((car) =>
-      car.model.toLowerCase().includes(modelLower)
-    );
-    if (byModel.length >= MIN_ANALOGS) pool = byModel;
-  }
-  if (params.year) {
-    const byYear = pool.filter((car) => car.year === params.year);
-    if (byYear.length >= MIN_ANALOGS) pool = byYear;
-  }
-
-  return pool.length > 0 ? pool : [...cars];
-}
-
 export function findAnalogCars(cars: Car[], params: AnalogSearchParams): Car[] {
   const budget = params.budget;
   const type = params.type as CarType | undefined;
 
-  if (!budget && !type && !params.brand) return [];
+  if (!budget && !type) return [];
 
   const pool = buildPool(cars, params);
-
-  if (!type && !budget) {
-    return sortByBudgetFit(pool).slice(0, MAX_ANALOGS);
-  }
+  if (pool.length === 0) return [];
 
   const result: Car[] = [];
   const seen = new Set<string>();
-  const types: CarType[] = type ? [type] : [];
   const similarTypes = type
     ? [...new Set(SIMILAR_TYPES[type] ?? [type])]
-    : (["crossover", "suv", "sedan"] as CarType[]);
+    : (["crossover", "suv", "sedan", "hatchback", "coupe"] as CarType[]);
 
   if (type && budget) {
-    collectUnique(result, seen, filterPool(pool, [type], budget));
+    collectDiverse(
+      result,
+      seen,
+      filterPool(pool, [type], budget),
+      MAX_ANALOGS,
+      budget
+    );
     if (result.length < MIN_ANALOGS) {
-      collectUnique(
+      collectDiverse(
         result,
         seen,
-        filterPool(pool, [type], Math.round(budget * BUDGET_RELAX_FACTOR))
+        filterPool(pool, [type], Math.round(budget * BUDGET_RELAX_FACTOR)),
+        MAX_ANALOGS,
+        budget
       );
     }
     if (result.length < MIN_ANALOGS) {
-      collectUnique(result, seen, filterPool(pool, [type]));
+      collectDiverse(
+        result,
+        seen,
+        filterPool(pool, similarTypes, budget),
+        MAX_ANALOGS,
+        budget
+      );
     }
     if (result.length < MIN_ANALOGS) {
-      collectUnique(
+      collectDiverse(
         result,
         seen,
         filterPool(
           pool,
           similarTypes,
-          budget ? Math.round(budget * BUDGET_RELAX_FACTOR) : undefined
-        )
+          Math.round(budget * BUDGET_RELAX_FACTOR)
+        ),
+        MAX_ANALOGS,
+        budget
       );
-    }
-    if (result.length < MIN_ANALOGS) {
-      collectUnique(result, seen, filterPool(pool, similarTypes));
     }
   } else if (type) {
-    collectUnique(result, seen, filterPool(pool, [type]));
+    collectDiverse(result, seen, filterPool(pool, [type]), MAX_ANALOGS);
     if (result.length < MIN_ANALOGS) {
-      collectUnique(result, seen, filterPool(pool, similarTypes));
+      collectDiverse(result, seen, filterPool(pool, similarTypes), MAX_ANALOGS);
     }
   } else if (budget) {
-    collectUnique(result, seen, filterPool(pool, [], budget));
+    collectDiverse(
+      result,
+      seen,
+      filterPool(pool, [], budget),
+      MAX_ANALOGS,
+      budget
+    );
     if (result.length < MIN_ANALOGS) {
-      collectUnique(
+      collectDiverse(
         result,
         seen,
-        filterPool(pool, [], Math.round(budget * BUDGET_RELAX_FACTOR))
+        filterPool(pool, [], Math.round(budget * BUDGET_RELAX_FACTOR)),
+        MAX_ANALOGS,
+        budget
       );
     }
-    if (result.length < MIN_ANALOGS) {
-      collectUnique(result, seen, sortByBudgetFit(pool));
-    }
-  }
-
-  if (result.length === 0) {
-    return sortByBudgetFit(pool).slice(0, MAX_ANALOGS);
   }
 
   return result.slice(0, MAX_ANALOGS);

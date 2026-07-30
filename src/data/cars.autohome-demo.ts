@@ -2,20 +2,52 @@ import type { Car, CarType } from "@/types/car";
 
 const RATE = 12.5;
 const SYNCED_AT = "2026-01-15T00:00:00.000Z";
-const PHOTOS = [
-  "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80",
-  "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
-  "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
-  "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80",
-  "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-  "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-  "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",
-  "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80",
-  "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80",
-  "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
-  "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80",
-  "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80",
-];
+/** Curated Unsplash pools — each URL matches the body type it lives in. */
+const PHOTOS_BY_TYPE: Record<CarType, string[]> = {
+  sedan: [
+    "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80", // BMW 5 Series
+    "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80", // Mercedes E-Class
+    "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800&q=80", // Tesla Model 3
+    "https://images.unsplash.com/photo-1605559424843-efef323f3179?w=800&q=80", // Audi A4
+    "https://images.unsplash.com/photo-1621007945112-4c2d9b86e9b2?w=800&q=80", // Toyota Camry
+  ],
+  crossover: [
+    "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80", // Tesla Model Y
+    "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80", // Range Rover Evoque
+    "https://images.unsplash.com/photo-1517177646-9e4998a1e996?w=800&q=80", // Honda CR-V
+    "https://images.unsplash.com/photo-1549395162-2f0adf235b2e?w=800&q=80", // compact crossover
+    "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80", // Volvo XC90
+  ],
+  suv: [
+    "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80", // large SUV
+    "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80", // Jeep 4x4
+    "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80", // Mercedes GLE
+    "https://images.unsplash.com/photo-1533474712522-2740e1c96c4e?w=800&q=80", // Land Rover
+    "https://images.unsplash.com/photo-1590362896012-4d7a484eaa84?w=800&q=80", // BMW X5
+  ],
+  hatchback: [
+    "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80", // VW Golf
+    "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&q=80", // Honda Civic hatch
+    "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80", // compact hatch
+    "https://images.unsplash.com/photo-1562145161-47612b5a5b4b?w=800&q=80", // Mini hatchback
+  ],
+  coupe: [
+    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80", // Porsche 911
+    "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80", // Ford Mustang
+    "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80", // Porsche 911 (alt)
+    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80", // Chevrolet Camaro
+  ],
+};
+
+export function photoForDemoCar(type: CarType, brandSlug: string, model: string): string {
+  const pool = PHOTOS_BY_TYPE[type] ?? PHOTOS_BY_TYPE.crossover;
+  const key = `${brandSlug}:${model.toLowerCase()}`;
+  let hash = 0;
+  for (let i = 0; i < key.length; i++) {
+    hash = (hash * 31 + key.charCodeAt(i)) >>> 0;
+  }
+  return pool[hash % pool.length]!;
+}
 
 type RawListing = [string, string, string, number, CarType, number, string, string, string, string, number];
 
@@ -111,17 +143,18 @@ function estimateCustoms(priceRub: number, engine: string, year: number): number
   return duty + vat + (ageYears <= 3 ? 5200 : 2600);
 }
 
-function buildOne(entry: RawListing, index: number): Car {
+function buildOne(entry: RawListing): Car {
   const [brandSlug, brand, model, year, type, priceCny, engine, power, fuel, consumption, deliveryDays] = entry;
   const id = `ah-${slugify(brand)}-${slugify(model)}-${year}`;
   const price = Math.round(priceCny * RATE);
+  const photo = photoForDemoCar(type, brandSlug, model);
   return {
     id, brand, brandSlug, model, year, type, price,
     customsCost: estimateCustoms(price, engine, year),
     deliveryDays, country: countryFor(brandSlug), imageColor: "#1a3a5c",
     specs: { engine, power, transmission: "Auto", drive: type === "suv" || type === "crossover" ? "AWD" : "FWD", fuel, consumption },
     description: `${brand} ${model} ${year} — импорт под ключ с расчётом таможни и доставкой.`,
-    sync: { source: "autohome", sourceId: id, sourceUrl: "https://www.autohome.com.cn/", photos: [PHOTOS[index % PHOTOS.length]], priceCny, exchangeRate: RATE, exchangeBank: "VTB", exchangeRateAt: SYNCED_AT, customsSource: "tks.ru", syncedAt: SYNCED_AT },
+    sync: { source: "autohome", sourceId: id, sourceUrl: "https://www.autohome.com.cn/", photos: [photo], priceCny, exchangeRate: RATE, exchangeBank: "VTB", exchangeRateAt: SYNCED_AT, customsSource: "tks.ru", syncedAt: SYNCED_AT },
   };
 }
 
@@ -138,9 +171,9 @@ function altListing(entry: RawListing): RawListing {
 
 function buildDemoCars(): Car[] {
   const cars: Car[] = [];
-  LISTINGS.forEach((entry, index) => {
-    cars.push(buildOne(entry, index));
-    cars.push(buildOne(altListing(entry), index + LISTINGS.length));
+  LISTINGS.forEach((entry) => {
+    cars.push(buildOne(entry));
+    cars.push(buildOne(altListing(entry)));
   });
   return cars;
 }

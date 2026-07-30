@@ -6,7 +6,7 @@ import {
   carTypeLabels,
   type CatalogFilterMeta,
 } from "@/data/cars";
-import { findAnalogCars } from "@/lib/catalog/analogs";
+import { findAnalogCars, findSelectedCar } from "@/lib/catalog/analogs";
 import { CarCardMini } from "@/components/CarCardMini";
 
 const BUDGET_OPTIONS = [
@@ -41,16 +41,22 @@ export function HomeCarPicker({
     return Array.from(models).sort((a, b) => a.localeCompare(b, "ru"));
   }, [cars, brand]);
 
+  const selectedCar = useMemo(
+    () => findSelectedCar(cars, { brand, model, year, type }),
+    [cars, brand, model, year, type]
+  );
+
   const analogs = useMemo(() => {
-    if (!type || !budget) return [];
+    if (!type || !budget || !selectedCar) return [];
     return findAnalogCars(cars, {
       budget: Number(budget),
       type,
-      brand: brand || undefined,
+      brand: selectedCar.brandSlug,
+      excludeId: selectedCar.id,
     });
-  }, [cars, brand, budget, type]);
+  }, [cars, budget, type, selectedCar]);
 
-  const showAnalogs = Boolean(type && budget);
+  const showPreview = Boolean(selectedCar && type && budget);
 
   return (
     <div className="flex flex-col gap-6">
@@ -150,33 +156,18 @@ export function HomeCarPicker({
         </button>
       </form>
 
-      {showAnalogs && (
-        <section aria-live="polite">
-          <h2 className="mb-3 text-xs uppercase tracking-[0.2em] text-white/60">
-            {analogs.length > 0
-              ? "Аналоги других марок"
-              : "Аналоги по типу и бюджету"}
-          </h2>
+      {showPreview && selectedCar && (
+        <div className="flex flex-col gap-2" aria-live="polite">
+          <CarCardMini car={selectedCar} highlight />
 
-          {analogs.length > 0 ? (
-            <>
-              <div className="grid max-h-[420px] grid-cols-1 gap-2 overflow-y-auto pr-1 sm:grid-cols-2 sm:max-h-none">
-                {analogs.map((car) => (
-                  <CarCardMini key={car.id} car={car} />
-                ))}
-              </div>
-              <p className="mt-2 text-xs text-white/40">
-                Показано {analogs.length} из каталога · нажмите «Смотреть каталог» для полного списка
-              </p>
-            </>
-          ) : (
-            <p className="text-sm text-white/50">
-              {brand
-                ? "По выбранным типу и бюджету аналоги других марок не найдены. Попробуйте увеличить бюджет или изменить тип."
-                : "По выбранным типу и бюджету аналоги не найдены. Выберите марку, чтобы исключить её из подбора, или измените фильтры."}
-            </p>
+          {analogs.length > 0 && (
+            <div className="mt-1 flex flex-col gap-2">
+              {analogs.map((car) => (
+                <CarCardMini key={car.id} car={car} />
+              ))}
+            </div>
           )}
-        </section>
+        </div>
       )}
     </div>
   );

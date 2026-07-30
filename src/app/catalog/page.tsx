@@ -44,15 +44,15 @@ export default async function CatalogPage({
   const activeFilters = countActiveFilters(params);
 
   const filteredIds = new Set(filtered.map((car) => car.id));
+  const primaryCar = filtered.length === 1 ? filtered[0] : null;
   const showAnalogs =
-    filtered.length < 8 &&
-    Boolean(params.type && (params.budget || params.priceMax));
+    Boolean(primaryCar && params.type && (params.budget || params.priceMax));
   const analogs = showAnalogs
     ? findAnalogCars(cars, {
         type: params.type,
         budget: Number(params.budget || params.priceMax),
-        brand: params.brand,
-        year: params.year ? Number(params.year) : undefined,
+        brand: primaryCar!.brandSlug,
+        excludeId: primaryCar!.id,
       }).filter((car) => !filteredIds.has(car.id))
     : [];
 
@@ -81,23 +81,19 @@ export default async function CatalogPage({
 
           {filtered.length > 0 ? (
             <div className="space-y-8">
-              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-                {filtered.map((car) => (
-                  <CarCard key={car.id} car={car} />
-                ))}
-              </div>
-
-              {analogs.length > 0 && (
-                <section className="border-t border-white/10 pt-8">
-                  <h2 className="mb-4 text-sm uppercase tracking-[0.15em] text-white/60">
-                    Аналоги других марок
-                  </h2>
-                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                    {analogs.map((car) => (
-                      <CarCardMini key={car.id} car={car} />
-                    ))}
-                  </div>
-                </section>
+              {primaryCar ? (
+                <div className="mx-auto max-w-md space-y-2">
+                  <CarCard car={primaryCar} />
+                  {analogs.map((car) => (
+                    <CarCardMini key={car.id} car={car} />
+                  ))}
+                </div>
+              ) : (
+                <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                  {filtered.map((car) => (
+                    <CarCard key={car.id} car={car} />
+                  ))}
+                </div>
               )}
             </div>
           ) : (

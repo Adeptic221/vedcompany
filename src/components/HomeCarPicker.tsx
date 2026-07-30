@@ -42,15 +42,15 @@ export function HomeCarPicker({
   }, [cars, brand]);
 
   const analogs = useMemo(() => {
-    if (!type && !budget) return [];
+    if (!type || !budget) return [];
     return findAnalogCars(cars, {
-      budget: budget ? Number(budget) : undefined,
-      type: type || undefined,
+      budget: Number(budget),
+      type,
       brand: brand || undefined,
     });
   }, [cars, brand, budget, type]);
 
-  const showAnalogs = Boolean(type || budget);
+  const showAnalogs = Boolean(type && budget);
 
   return (
     <div className="flex flex-col gap-6">
@@ -171,9 +171,9 @@ export function HomeCarPicker({
             </>
           ) : (
             <p className="text-sm text-white/50">
-              {type && budget
+              {brand
                 ? "По выбранным типу и бюджету аналоги других марок не найдены. Попробуйте увеличить бюджет или изменить тип."
-                : "Выберите тип автомобиля и бюджет — покажем альтернативы других марок."}
+                : "По выбранным типу и бюджету аналоги не найдены. Выберите марку, чтобы исключить её из подбора, или измените фильтры."}
             </p>
           )}
         </section>

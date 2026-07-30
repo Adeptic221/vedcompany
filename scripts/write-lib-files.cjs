@@ -1,78 +1,89 @@
 const fs = require("fs");
 const path = require("path");
-const root = "C:/Projects/vedcompany";
+const root = path.join(__dirname, "..");
 
-const files = {
-  "src/lib/exchange/vtb.ts": `import type { Car } from "@/types/car";
-
-export interface VtbExchangeRate {
-  bank: "VTB";
-  currency: "CNY";
-  sellRate: number;
-  fetchedAt: string;
-  source: "vtb-api" | "vtb-page" | "manual" | "cbr-fallback";
-}
-
-export async function fetchVtbCnyRate(): Promise<VtbExchangeRate> {
-  const manual = process.env.VTB_RATE_CNY;
-  if (manual) {
-    const rate = parseFloat(manual);
-    if (!Number.isNaN(rate) && rate > 0) {
-      return { bank: "VTB", currency: "CNY", sellRate: rate, fetchedAt: new Date().toISOString(), source: "manual" };
-    }
+function readSmart(file) {
+  const buf = fs.readFileSync(file);
+  if (buf.length >= 2 && buf[0] === 0xff && buf[1] === 0xfe) {
+    return buf.toString("utf16le").replace(/^\uFEFF/, "");
   }
-  try {
-    const res = await fetch("https://www.cbr-xml-daily.ru/daily_json.js", { next: { revalidate: 3600 } });
-    if (res.ok) {
-      const data = await res.json();
-      const cny = data.Valute?.CNY;
-      if (cny?.Value && cny.Nominal) {
-        const cbrRate = cny.Value / cny.Nominal;
-        return { bank: "VTB", currency: "CNY", sellRate: Math.round(cbrRate * 1.025 * 100) / 100, fetchedAt: new Date().toISOString(), source: "cbr-fallback" };
-      }
-    }
-  } catch {}
-  return { bank: "VTB", currency: "CNY", sellRate: 12.5, fetchedAt: new Date().toISOString(), source: "manual" };
+  if (buf.includes(0)) {
+    return buf.toString("utf16le").replace(/^\uFEFF/, "");
+  }
+  return buf.toString("utf8");
 }
 
-export function convertCnyToRub(amountCny: number, rate: VtbExchangeRate): number {
-  return Math.round(amountCny * rate.sellRate);
-}
-`,
-  "src/lib/customs/calculate.ts": `export interface CustomsInput {
-  priceRub: number;
-  engineVolumeCc: number;
-  ageYears: number;
-}
-
-export interface CustomsResult {
-  totalRub: number;
-  breakdown: { duty: number; vat: number; recyclingFee: number };
-  source: "tks.ru" | "estimate";
+function walkTsFiles(dir, acc = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name === "node_modules" || entry.name === ".next") continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) walkTsFiles(full, acc);
+    else if (/\.(ts|tsx)$/.test(entry.name)) acc.push(full);
+  }
+  return acc;
 }
 
-export async function calculateCustoms(input: CustomsInput): Promise<CustomsResult> {
-  const { priceRub, engineVolumeCc, ageYears } = input;
-  const ageFactor = ageYears <= 3 ? 1.2 : ageYears <= 5 ? 1.0 : 0.85;
-  const volumeFactor = engineVolumeCc / 2000;
-  const duty = Math.round(priceRub * 0.15 * ageFactor * volumeFactor);
-  const vat = Math.round((priceRub + duty) * 0.2);
-  const recyclingFee = ageYears <= 3 ? 5200 : 2600;
-  return { totalRub: duty + vat + recyclingFee, breakdown: { duty, vat, recyclingFee }, source: "estimate" };
+const files = walkTsFiles(path.join(root, "src"));
+for (const file of files) {
+  const buf = fs.readFileSync(file);
+  if (!buf.includes(0)) continue;
+  const text = readSmart(file);
+  fs.writeFileSync(file, text, "utf8");
+  console.log("fixed", path.relative(root, file));
 }
 
-export function parseEngineVolumeCc(engineStr: string): number {
-  const match = engineStr.match(/([\\d.]+)\\s*[lL]/);
-  if (match) return Math.round(parseFloat(match[1]) * 1000);
-  return 2000;
+for (const cjs of fs.readdirSync(path.join(root, "scripts"))) {
+  if (!cjs.endsWith(".cjs")) continue;
+  const file = path.join(root, "scripts", cjs);
+  const buf = fs.readFileSync(file);
+  if (!buf.includes(0)) continue;
+  fs.writeFileSync(file, readSmart(file), "utf8");
+  console.log("fixed", path.relative(root, file));
 }
-`,
-};
 
-for (const [rel, content] of Object.entries(files)) {
-  if (!content) continue;
-  const full = path.join(root, rel);
-  fs.mkdirSync(path.dirname(full), { recursive: true });
-  fs.writeFileSync(full, content, "utf8");
-  console.log("wrote", rel);
-}
+const syncCli = path.join(__dirname, "sync-cars-cli.ts");
+const syncContent = [
+  'import fs from "fs";',
+  'import path from "path";',
+  'import { runWeeklyCarSync } from "../src/lib/sync/run-sync.ts";',
+  'import { getCarsCatalog, getCarsStorageInfo } from "../src/lib/storage/cars-store.ts";',
+  "",
+  "function loadEnvFile(relativePath: string) {",
+  "  const fullPath = path.join(process.cwd(), relativePath);",
+  "  if (!fs.existsSync(fullPath)) return;",
+  '  for (const line of fs.readFileSync(fullPath, "utf8").split("\\n")) {',
+  "    const trimmed = line.trim();",
+  '    if (!trimmed || trimmed.startsWith("#")) continue;',
+  '    const eq = trimmed.indexOf("=");',
+  "    if (eq <= 0) continue;",
+  "    const key = trimmed.slice(0, eq).trim();",
+  "    let value = trimmed.slice(eq + 1).trim();",
+  "    if (",
+  '      (value.startsWith(\'"\') && value.endsWith(\'"\')) ||',
+  "      (value.startsWith(\"'\") && value.endsWith(\"'\"))",
+  "    ) {",
+  "      value = value.slice(1, -1);",
+  "    }",
+  "    if (!process.env[key]) process.env[key] = value;",
+  "  }",
+  "}",
+  "",
+  'loadEnvFile(".env.local");',
+  'loadEnvFile(".env");',
+  "",
+  "async function main() {",
+  "  const result = await runWeeklyCarSync();",
+  "  const cars = await getCarsCatalog();",
+  "  const storage = getCarsStorageInfo();",
+  "  console.log(JSON.stringify({ ...result, count: cars.length, storage }, null, 2));",
+  "  process.exit(result.success ? 0 : 1);",
+  "}",
+  "",
+  "main().catch((err) => {",
+  "  console.error(err);",
+  "  process.exit(1);",
+  "});",
+  "",
+].join("\n");
+fs.writeFileSync(syncCli, syncContent, "utf8");
+console.log("sync-cars-cli.ts written");

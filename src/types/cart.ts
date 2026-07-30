@@ -1,6 +1,9 @@
+export type DeliveryDestination = "none" | "vladivostok" | "moscow";
+
 export interface CartItem {
   carId: string;
   addedAt: string;
+  deliveryDestination: DeliveryDestination;
 }
 
 export type OrderStatus =

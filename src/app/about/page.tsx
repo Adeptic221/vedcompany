@@ -40,6 +40,21 @@ export default function AboutPage() {
         <p className="mt-4 leading-relaxed text-white/70">
           Сайт vedcompany.ru — личный кабинет, чат с менеджером и отслеживание заказа.
         </p>
+        <div className="mt-10 border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-white/55">
+          <h2 className="text-xs uppercase tracking-[0.2em] text-white/60">Источники данных</h2>
+          <p className="mt-3">
+            VED (vedcompany.ru) не является официальным партнёром, дилером или представителем Autohome
+            (汽车之家) и других зарубежных площадок. Мы не используем их товарные знаки в рекламных целях.
+          </p>
+          <p className="mt-3">
+            Сведения об автомобилях публикуются в справочных целях на основе лицензированных API-партнёров
+            или демонстрационных данных. Цены и комплектация не являются публичной офертой.
+            Актуальные условие покупки и импорта уточняйте у менеджера.
+          </p>
+          <p className="mt-3 text-white/40">
+            Прямой парсинг и копирование контента Autohome без разрешения правообладателя не применяется.
+          </p>
+        </div>
       </div>
     </main>
   );

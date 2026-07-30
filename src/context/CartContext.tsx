@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import type {
   CartItem,
+  DeliveryDestination,
   Order,
   ChatMessage,
   UploadedDoc,
@@ -28,6 +29,7 @@ interface CartContextValue {
   favorites: FavoriteItem[];
   addToCart: (carId: string) => void;
   removeFromCart: (carId: string) => void;
+  updateCartDelivery: (carId: string, destination: DeliveryDestination) => void;
   clearCart: () => void;
   cartCount: number;
   isInCart: (carId: string) => boolean;
@@ -73,7 +75,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setItems(load(CART_KEY, []));
+    setItems(
+      load<CartItem[]>(CART_KEY, []).map((item) => ({
+        ...item,
+        deliveryDestination: item.deliveryDestination ?? "none",
+      }))
+    );
     setOrders(load(ORDERS_KEY, []));
     setMessages(
       load(CHAT_KEY, [
@@ -114,9 +121,27 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setItems((prev) =>
       prev.some((i) => i.carId === carId)
         ? prev
-        : [...prev, { carId, addedAt: new Date().toISOString() }]
+        : [
+            ...prev,
+            {
+              carId,
+              addedAt: new Date().toISOString(),
+              deliveryDestination: "none" as DeliveryDestination,
+            },
+          ]
     );
   }, []);
+
+  const updateCartDelivery = useCallback(
+    (carId: string, destination: DeliveryDestination) => {
+      setItems((prev) =>
+        prev.map((item) =>
+          item.carId === carId ? { ...item, deliveryDestination: destination } : item
+        )
+      );
+    },
+    []
+  );
 
   const removeFromCart = useCallback((carId: string) => {
     setItems((prev) => prev.filter((i) => i.carId !== carId));
@@ -211,6 +236,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         favorites,
         addToCart,
         removeFromCart,
+        updateCartDelivery,
         clearCart,
         cartCount: items.length,
         isInCart,

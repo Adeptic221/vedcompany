@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { HomeCarPicker } from "@/components/HomeCarPicker";
+import { ContactButtons } from "@/components/ContactButtons";
 import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
 import { getCatalogFilterMeta } from "@/data/cars";
@@ -53,6 +54,13 @@ export default async function HomePage() {
             </h1>
 
             <HomeCarPicker cars={cars} meta={meta} />
+
+            <div className="mt-10 border-t border-white/10 pt-8">
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-white/50">
+                Связь с менеджером
+              </p>
+              <ContactButtons size="sm" />
+            </div>
           </div>
         </section>
 

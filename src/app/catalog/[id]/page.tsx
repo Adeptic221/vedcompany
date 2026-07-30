@@ -5,9 +5,9 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
-import { CarDetailActions } from "@/components/CarDetailActions";
+import { CarDetailPricing } from "@/components/CarDetailPricing";
 import { CarRequestSection } from "@/components/CarRequestSection";
-import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
+import { carTypeLabels, getTotalPrice } from "@/data/cars";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/seo/site";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 
@@ -67,8 +67,8 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
   const cars = await getCarsCatalog();
   const car = cars.find((item) => item.id === id);
   if (!car) notFound();
-  const total = getTotalPrice(car);
   const photo = car.sync?.photos?.[0];
+  const baseTotal = getTotalPrice(car);
   const carJsonLd = {
     "@context": "https://schema.org",
     "@type": "Car",
@@ -83,7 +83,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
     image: photo ? [photo] : [`${SITE_URL}${DEFAULT_OG_IMAGE}`],
     offers: {
       "@type": "Offer",
-      price: total,
+      price: baseTotal,
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
       url: `${SITE_URL}/catalog/${car.id}`,
@@ -106,14 +106,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
             <p className="text-xs uppercase tracking-widest text-white/50">{carTypeLabels[car.type]} · {car.country}{car.sync ? " · Autohome" : ""}</p>
             <h1 className="mt-2 text-3xl font-light tracking-wide md:text-4xl">{car.brand} {car.model} {car.year}</h1>
             <p className="mt-4 text-sm leading-relaxed text-white/60">{car.description}</p>
-            <div className="mt-8 space-y-3 border border-white/10 bg-white/5 p-6">
-              <h2 className="text-xs uppercase tracking-[0.2em] text-white/60">{"\u0420\u0430\u0441\u0447\u0451\u0442 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u0438"}</h2>
-              {car.sync && (<><div className="flex justify-between text-sm"><span className="text-white/60">{"\u0426\u0435\u043d\u0430 \u0432 \u044e\u0430\u043d\u044f\u0445"}</span><span>{car.sync.priceCny.toLocaleString("ru-RU")} CNY</span></div><div className="flex justify-between text-sm"><span className="text-white/60">{"\u041a\u0443\u0440\u0441 \u0412\u0422\u0411"}</span><span>{car.sync.exchangeRate} {"\u20bd/CNY"}</span></div></>)}
-              <div className="flex justify-between text-sm"><span className="text-white/60">{"\u0426\u0435\u043d\u0430 \u0430\u0432\u0442\u043e"}</span><span>{formatPrice(car.price)}</span></div>
-              <div className="flex justify-between text-sm"><span className="text-white/60">{"\u0422\u0430\u043c\u043e\u0436\u043d\u044f"}</span><span>{formatPrice(car.customsCost)}</span></div>
-              <div className="flex justify-between border-t border-white/10 pt-3 text-base font-medium"><span>{"\u0418\u0442\u043e\u0433\u043e"}</span><span>{formatPrice(total)}</span></div>
-            </div>
-            <CarDetailActions carId={car.id} totalAmount={total} />
+            <CarDetailPricing car={car} />
             <CarRequestSection carId={car.id} carLabel={`${car.brand} ${car.model} ${car.year}`} />
           </div>
         </div>

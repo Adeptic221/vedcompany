@@ -29,9 +29,13 @@ const config: Config = {
         "ved-spin": {
           to: { transform: "rotate(360deg)" },
         },
+        "ved-spin-reverse": {
+          to: { transform: "rotate(-360deg)" },
+        },
       },
       animation: {
-        "ved-spin": "ved-spin 1.4s linear infinite",
+        "ved-spin": "ved-spin 2.2s linear infinite",
+        "ved-spin-reverse": "ved-spin-reverse 1.4s linear infinite",
       },
     },
   },

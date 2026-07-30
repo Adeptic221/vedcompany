@@ -32,18 +32,27 @@ export function HomeCarPicker({
   const [budget, setBudget] = useState("");
   const [type, setType] = useState("");
 
+  const modelOptions = useMemo(() => {
+    if (!brand) return [];
+    const models = new Set<string>();
+    for (const car of cars) {
+      if (car.brandSlug === brand) models.add(car.model);
+    }
+    return Array.from(models).sort((a, b) => a.localeCompare(b, "ru"));
+  }, [cars, brand]);
+
   const analogs = useMemo(() => {
-    if (!budget || !type) return [];
+    if (!type && !budget && !brand) return [];
     return findAnalogCars(cars, {
-      budget: Number(budget),
-      type,
+      budget: budget ? Number(budget) : undefined,
+      type: type || undefined,
       brand: brand || undefined,
       year: year ? Number(year) : undefined,
       model: model && model !== "any" ? model : undefined,
     });
   }, [cars, brand, model, year, budget, type]);
 
-  const showPreview = Boolean(budget && type);
+  const showPreview = Boolean(type || budget || brand);
 
   return (
     <div className="flex flex-col gap-6">
@@ -80,6 +89,11 @@ export function HomeCarPicker({
             {brand ? "Выберите модель" : "Сначала выберите марку"}
           </option>
           <option value="any">Любая модель</option>
+          {modelOptions.map((m) => (
+            <option key={m} value={m}>
+              {m}
+            </option>
+          ))}
         </select>
 
         <select

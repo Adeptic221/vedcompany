@@ -111,20 +111,38 @@ function estimateCustoms(priceRub: number, engine: string, year: number): number
   return duty + vat + (ageYears <= 3 ? 5200 : 2600);
 }
 
+function buildOne(entry: RawListing, index: number): Car {
+  const [brandSlug, brand, model, year, type, priceCny, engine, power, fuel, consumption, deliveryDays] = entry;
+  const id = `ah-${slugify(brand)}-${slugify(model)}-${year}`;
+  const price = Math.round(priceCny * RATE);
+  return {
+    id, brand, brandSlug, model, year, type, price,
+    customsCost: estimateCustoms(price, engine, year),
+    deliveryDays, country: countryFor(brandSlug), imageColor: "#1a3a5c",
+    specs: { engine, power, transmission: "Auto", drive: type === "suv" || type === "crossover" ? "AWD" : "FWD", fuel, consumption },
+    description: `${brand} ${model} ${year} — импорт под ключ с расчётом таможни и доставкой.`,
+    sync: { source: "autohome", sourceId: id, sourceUrl: "https://www.autohome.com.cn/", photos: [PHOTOS[index % PHOTOS.length]], priceCny, exchangeRate: RATE, exchangeBank: "VTB", exchangeRateAt: SYNCED_AT, customsSource: "tks.ru", syncedAt: SYNCED_AT },
+  };
+}
+
+function altListing(entry: RawListing): RawListing {
+  const year = entry[3];
+  const altYear = year >= 2024 ? 2023 : 2024;
+  const priceFactor = altYear < year ? 0.88 : 1.06;
+  return [
+    entry[0], entry[1], entry[2], altYear, entry[4],
+    Math.round(entry[5] * priceFactor), entry[6], entry[7], entry[8], entry[9],
+    entry[10] + (altYear === 2023 ? 2 : 0),
+  ];
+}
+
 function buildDemoCars(): Car[] {
-  return LISTINGS.map((entry, index) => {
-    const [brandSlug, brand, model, year, type, priceCny, engine, power, fuel, consumption, deliveryDays] = entry;
-    const id = `ah-${slugify(brand)}-${slugify(model)}-${year}`;
-    const price = Math.round(priceCny * RATE);
-    return {
-      id, brand, brandSlug, model, year, type, price,
-      customsCost: estimateCustoms(price, engine, year),
-      deliveryDays, country: countryFor(brandSlug), imageColor: "#1a3a5c",
-      specs: { engine, power, transmission: "Auto", drive: type === "suv" || type === "crossover" ? "AWD" : "FWD", fuel, consumption },
-      description: `${brand} ${model} ${year} - import turnkey with customs and delivery.`,
-      sync: { source: "autohome", sourceId: id, sourceUrl: "https://www.autohome.com.cn/", photos: [PHOTOS[index % PHOTOS.length]], priceCny, exchangeRate: RATE, exchangeBank: "VTB", exchangeRateAt: SYNCED_AT, customsSource: "tks.ru", syncedAt: SYNCED_AT },
-    };
+  const cars: Car[] = [];
+  LISTINGS.forEach((entry, index) => {
+    cars.push(buildOne(entry, index));
+    cars.push(buildOne(altListing(entry), index + LISTINGS.length));
   });
+  return cars;
 }
 
 export const autohomeDemoCars: Car[] = buildDemoCars();

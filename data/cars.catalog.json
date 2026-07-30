@@ -1,0 +1,4858 @@
+[
+  {
+    "id": "ah-byd-han-ev-2024",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Han EV",
+    "year": 2024,
+    "type": "sedan",
+    "price": 2372500,
+    "customsCost": 992160,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "517 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "15.4 kWh/100km"
+    },
+    "description": "BYD Han EV 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-han-ev-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 189800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-han-ev-2023",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Han EV",
+    "year": 2023,
+    "type": "sedan",
+    "price": 2087800,
+    "customsCost": 873725,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "517 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "15.4 kWh/100km"
+    },
+    "description": "BYD Han EV 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-han-ev-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 167024,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-seal-2024",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Seal",
+    "year": 2024,
+    "type": "sedan",
+    "price": 2035000,
+    "customsCost": 851760,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "530 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "14.6 kWh/100km"
+    },
+    "description": "BYD Seal 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-seal-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 162800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-seal-2023",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Seal",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1790800,
+    "customsCost": 750173,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "530 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "14.6 kWh/100km"
+    },
+    "description": "BYD Seal 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-seal-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 143264,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-song-plus-2024",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Song Plus",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1747500,
+    "customsCost": 637796,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "5.3 L/100km"
+    },
+    "description": "BYD Song Plus 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-song-plus-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 139800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-song-plus-2023",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Song Plus",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1537800,
+    "customsCost": 561884,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "5.3 L/100km"
+    },
+    "description": "BYD Song Plus 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-song-plus-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 123024,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-tang-2023",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Tang",
+    "year": 2023,
+    "type": "suv",
+    "price": 2747500,
+    "customsCost": 1148160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "431 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "BYD Tang 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-tang-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 219800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-byd-tang-2024",
+    "brand": "BYD",
+    "brandSlug": "byd",
+    "model": "Tang",
+    "year": 2024,
+    "type": "suv",
+    "price": 2912350,
+    "customsCost": 1216738,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "431 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "BYD Tang 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-byd-tang-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 232988,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-geely-coolray-2024",
+    "brand": "Geely",
+    "brandSlug": "geely",
+    "model": "Coolray",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1197500,
+    "customsCost": 438696,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "177 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Geely Coolray 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-geely-coolray-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 95800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-geely-coolray-2023",
+    "brand": "Geely",
+    "brandSlug": "geely",
+    "model": "Coolray",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1053800,
+    "customsCost": 386676,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "177 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Geely Coolray 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-geely-coolray-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 84304,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-geely-monjaro-2024",
+    "brand": "Geely",
+    "brandSlug": "geely",
+    "model": "Monjaro",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2110000,
+    "customsCost": 882960,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "238 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.8 L/100km"
+    },
+    "description": "Geely Monjaro 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-geely-monjaro-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 168800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-geely-monjaro-2023",
+    "brand": "Geely",
+    "brandSlug": "geely",
+    "model": "Monjaro",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1856800,
+    "customsCost": 777629,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "238 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.8 L/100km"
+    },
+    "description": "Geely Monjaro 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-geely-monjaro-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 148544,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-geely-galaxy-l7-2024",
+    "brand": "Geely",
+    "brandSlug": "geely",
+    "model": "Galaxy L7",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1622500,
+    "customsCost": 592546,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "390 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "5.2 L/100km"
+    },
+    "description": "Geely Galaxy L7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-geely-galaxy-l7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 129800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-geely-galaxy-l7-2023",
+    "brand": "Geely",
+    "brandSlug": "geely",
+    "model": "Galaxy L7",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1427800,
+    "customsCost": 522064,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "390 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "5.2 L/100km"
+    },
+    "description": "Geely Galaxy L7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-geely-galaxy-l7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 114224,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-chery-tiggo-8-pro-2023",
+    "brand": "Chery",
+    "brandSlug": "chery",
+    "model": "Tiggo 8 Pro",
+    "year": 2023,
+    "type": "suv",
+    "price": 1623750,
+    "customsCost": 680680,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "254 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.5 L/100km"
+    },
+    "description": "Chery Tiggo 8 Pro 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-chery-tiggo-8-pro-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 129900,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-chery-tiggo-8-pro-2024",
+    "brand": "Chery",
+    "brandSlug": "chery",
+    "model": "Tiggo 8 Pro",
+    "year": 2024,
+    "type": "suv",
+    "price": 1721175,
+    "customsCost": 721209,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "254 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.5 L/100km"
+    },
+    "description": "Chery Tiggo 8 Pro 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-chery-tiggo-8-pro-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 137694,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-chery-tiggo-7-pro-2024",
+    "brand": "Chery",
+    "brandSlug": "chery",
+    "model": "Tiggo 7 Pro",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1373750,
+    "customsCost": 517334,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Chery Tiggo 7 Pro 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-chery-tiggo-7-pro-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 109900,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-chery-tiggo-7-pro-2023",
+    "brand": "Chery",
+    "brandSlug": "chery",
+    "model": "Tiggo 7 Pro",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1208900,
+    "customsCost": 455878,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Chery Tiggo 7 Pro 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-chery-tiggo-7-pro-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 96712,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-chery-arrizo-8-2024",
+    "brand": "Chery",
+    "brandSlug": "chery",
+    "model": "Arrizo 8",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1247500,
+    "customsCost": 470268,
+    "deliveryDays": 37,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Chery Arrizo 8 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-chery-arrizo-8-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 99800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-chery-arrizo-8-2023",
+    "brand": "Chery",
+    "brandSlug": "chery",
+    "model": "Arrizo 8",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1097800,
+    "customsCost": 414460,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Chery Arrizo 8 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-chery-arrizo-8-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 87824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-haval-h6-2024",
+    "brand": "Haval",
+    "brandSlug": "haval",
+    "model": "H6",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1410000,
+    "customsCost": 591760,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "211 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.9 L/100km"
+    },
+    "description": "Haval H6 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-haval-h6-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 112800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-haval-h6-2023",
+    "brand": "Haval",
+    "brandSlug": "haval",
+    "model": "H6",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1240800,
+    "customsCost": 521373,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "211 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.9 L/100km"
+    },
+    "description": "Haval H6 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-haval-h6-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 99264,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-haval-jolion-2024",
+    "brand": "Haval",
+    "brandSlug": "haval",
+    "model": "Jolion",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1122500,
+    "customsCost": 411546,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Haval Jolion 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-haval-jolion-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 89800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-haval-jolion-2023",
+    "brand": "Haval",
+    "brandSlug": "haval",
+    "model": "Jolion",
+    "year": 2023,
+    "type": "crossover",
+    "price": 987800,
+    "customsCost": 362784,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Haval Jolion 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-haval-jolion-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 79024,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-haval-dargo-2023",
+    "brand": "Haval",
+    "brandSlug": "haval",
+    "model": "Dargo",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1872500,
+    "customsCost": 784160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "211 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Haval Dargo 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-haval-dargo-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 149800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-haval-dargo-2024",
+    "brand": "Haval",
+    "brandSlug": "haval",
+    "model": "Dargo",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1984850,
+    "customsCost": 830898,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "211 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Haval Dargo 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-haval-dargo-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 158788,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-changan-uni-v-2024",
+    "brand": "Changan",
+    "brandSlug": "changan",
+    "model": "UNI-V",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1361250,
+    "customsCost": 497973,
+    "deliveryDays": 37,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "188 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "Changan UNI-V 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-changan-uni-v-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 108900,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-changan-uni-v-2023",
+    "brand": "Changan",
+    "brandSlug": "changan",
+    "model": "UNI-V",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1197900,
+    "customsCost": 438840,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "188 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "Changan UNI-V 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-changan-uni-v-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 95832,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-changan-cs75-plus-2024",
+    "brand": "Changan",
+    "brandSlug": "changan",
+    "model": "CS75 Plus",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1497500,
+    "customsCost": 547296,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "188 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.0 L/100km"
+    },
+    "description": "Changan CS75 Plus 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-changan-cs75-plus-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 119800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-changan-cs75-plus-2023",
+    "brand": "Changan",
+    "brandSlug": "changan",
+    "model": "CS75 Plus",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1317800,
+    "customsCost": 482244,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "188 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.0 L/100km"
+    },
+    "description": "Changan CS75 Plus 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-changan-cs75-plus-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 105424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-li-auto-l7-2024",
+    "brand": "Li Auto",
+    "brandSlug": "li-auto",
+    "model": "L7",
+    "year": 2024,
+    "type": "suv",
+    "price": 3997500,
+    "customsCost": 1452296,
+    "deliveryDays": 45,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "449 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.8 L/100km"
+    },
+    "description": "Li Auto L7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-li-auto-l7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 319800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-li-auto-l7-2023",
+    "brand": "Li Auto",
+    "brandSlug": "li-auto",
+    "model": "L7",
+    "year": 2023,
+    "type": "suv",
+    "price": 3517800,
+    "customsCost": 1278644,
+    "deliveryDays": 47,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "449 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.8 L/100km"
+    },
+    "description": "Li Auto L7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-li-auto-l7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 281424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-li-auto-l6-2024",
+    "brand": "Li Auto",
+    "brandSlug": "li-auto",
+    "model": "L6",
+    "year": 2024,
+    "type": "suv",
+    "price": 3122500,
+    "customsCost": 1135546,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "408 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.2 L/100km"
+    },
+    "description": "Li Auto L6 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-li-auto-l6-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 249800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-li-auto-l6-2023",
+    "brand": "Li Auto",
+    "brandSlug": "li-auto",
+    "model": "L6",
+    "year": 2023,
+    "type": "suv",
+    "price": 2747800,
+    "customsCost": 999904,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "408 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.2 L/100km"
+    },
+    "description": "Li Auto L6 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-li-auto-l6-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 219824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-li-auto-l9-2023",
+    "brand": "Li Auto",
+    "brandSlug": "li-auto",
+    "model": "L9",
+    "year": 2023,
+    "type": "suv",
+    "price": 5372500,
+    "customsCost": 1950046,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "449 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "8.1 L/100km"
+    },
+    "description": "Li Auto L9 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-li-auto-l9-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 429800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-li-auto-l9-2024",
+    "brand": "Li Auto",
+    "brandSlug": "li-auto",
+    "model": "L9",
+    "year": 2024,
+    "type": "suv",
+    "price": 5694850,
+    "customsCost": 2066736,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "449 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "8.1 L/100km"
+    },
+    "description": "Li Auto L9 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-li-auto-l9-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 455588,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-zeekr-001-2024",
+    "brand": "Zeekr",
+    "brandSlug": "zeekr",
+    "model": "001",
+    "year": 2024,
+    "type": "crossover",
+    "price": 3362500,
+    "customsCost": 1404000,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "544 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "16.8 kWh/100km"
+    },
+    "description": "Zeekr 001 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-zeekr-001-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 269000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-zeekr-001-2023",
+    "brand": "Zeekr",
+    "brandSlug": "zeekr",
+    "model": "001",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2959000,
+    "customsCost": 1236144,
+    "deliveryDays": 45,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "544 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "16.8 kWh/100km"
+    },
+    "description": "Zeekr 001 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-zeekr-001-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 236720,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-zeekr-007-2024",
+    "brand": "Zeekr",
+    "brandSlug": "zeekr",
+    "model": "007",
+    "year": 2024,
+    "type": "sedan",
+    "price": 2622500,
+    "customsCost": 1096160,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "422 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "14.2 kWh/100km"
+    },
+    "description": "Zeekr 007 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-zeekr-007-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 209800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-zeekr-007-2023",
+    "brand": "Zeekr",
+    "brandSlug": "zeekr",
+    "model": "007",
+    "year": 2023,
+    "type": "sedan",
+    "price": 2307800,
+    "customsCost": 965245,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "422 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "14.2 kWh/100km"
+    },
+    "description": "Zeekr 007 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-zeekr-007-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 184624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hongqi-h9-2023",
+    "brand": "Hongqi",
+    "brandSlug": "hongqi",
+    "model": "H9",
+    "year": 2023,
+    "type": "sedan",
+    "price": 3872500,
+    "customsCost": 1616160,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "252 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "8.0 L/100km"
+    },
+    "description": "Hongqi H9 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hongqi-h9-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 309800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hongqi-h9-2024",
+    "brand": "Hongqi",
+    "brandSlug": "hongqi",
+    "model": "H9",
+    "year": 2024,
+    "type": "sedan",
+    "price": 4104850,
+    "customsCost": 1712818,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "252 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "8.0 L/100km"
+    },
+    "description": "Hongqi H9 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hongqi-h9-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 328388,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hongqi-hs5-2024",
+    "brand": "Hongqi",
+    "brandSlug": "hongqi",
+    "model": "HS5",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2372500,
+    "customsCost": 992160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "224 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.4 L/100km"
+    },
+    "description": "Hongqi HS5 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hongqi-hs5-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 189800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hongqi-hs5-2023",
+    "brand": "Hongqi",
+    "brandSlug": "hongqi",
+    "model": "HS5",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2087800,
+    "customsCost": 873725,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "224 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.4 L/100km"
+    },
+    "description": "Hongqi HS5 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hongqi-hs5-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 167024,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-gac-aion-y-plus-2024",
+    "brand": "GAC Aion",
+    "brandSlug": "gac-aion",
+    "model": "Y Plus",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1497500,
+    "customsCost": 628160,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "204 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "13.1 kWh/100km"
+    },
+    "description": "GAC Aion Y Plus 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-gac-aion-y-plus-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 119800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-gac-aion-y-plus-2023",
+    "brand": "GAC Aion",
+    "brandSlug": "gac-aion",
+    "model": "Y Plus",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1317800,
+    "customsCost": 553405,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "204 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "13.1 kWh/100km"
+    },
+    "description": "GAC Aion Y Plus 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-gac-aion-y-plus-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 105424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-gac-aion-s-plus-2024",
+    "brand": "GAC Aion",
+    "brandSlug": "gac-aion",
+    "model": "S Plus",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1747500,
+    "customsCost": 732160,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "245 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "13.8 kWh/100km"
+    },
+    "description": "GAC Aion S Plus 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-gac-aion-s-plus-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 139800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-gac-aion-s-plus-2023",
+    "brand": "GAC Aion",
+    "brandSlug": "gac-aion",
+    "model": "S Plus",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1537800,
+    "customsCost": 644925,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "245 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "13.8 kWh/100km"
+    },
+    "description": "GAC Aion S Plus 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-gac-aion-s-plus-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 123024,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-wuling-bingo-2024",
+    "brand": "Wuling",
+    "brandSlug": "wuling",
+    "model": "Bingo",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 747500,
+    "customsCost": 316160,
+    "deliveryDays": 35,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "68 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "10.2 kWh/100km"
+    },
+    "description": "Wuling Bingo 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-wuling-bingo-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 59800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-wuling-bingo-2023",
+    "brand": "Wuling",
+    "brandSlug": "wuling",
+    "model": "Bingo",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 657800,
+    "customsCost": 278845,
+    "deliveryDays": 37,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "68 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "10.2 kWh/100km"
+    },
+    "description": "Wuling Bingo 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-wuling-bingo-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 52624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-wuling-starlight-2024",
+    "brand": "Wuling",
+    "brandSlug": "wuling",
+    "model": "Starlight",
+    "year": 2024,
+    "type": "sedan",
+    "price": 997500,
+    "customsCost": 366296,
+    "deliveryDays": 36,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "143 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "5.9 L/100km"
+    },
+    "description": "Wuling Starlight 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-wuling-starlight-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 79800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-wuling-starlight-2023",
+    "brand": "Wuling",
+    "brandSlug": "wuling",
+    "model": "Starlight",
+    "year": 2023,
+    "type": "sedan",
+    "price": 877800,
+    "customsCost": 322964,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "143 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "5.9 L/100km"
+    },
+    "description": "Wuling Starlight 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-wuling-starlight-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 70224,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-tank-300-2024",
+    "brand": "Tank",
+    "brandSlug": "tank",
+    "model": "300",
+    "year": 2024,
+    "type": "suv",
+    "price": 2497500,
+    "customsCost": 1044160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "227 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.5 L/100km"
+    },
+    "description": "Tank 300 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-tank-300-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 199800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-tank-300-2023",
+    "brand": "Tank",
+    "brandSlug": "tank",
+    "model": "300",
+    "year": 2023,
+    "type": "suv",
+    "price": 2197800,
+    "customsCost": 919485,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "227 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.5 L/100km"
+    },
+    "description": "Tank 300 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-tank-300-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 175824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-tank-500-2023",
+    "brand": "Tank",
+    "brandSlug": "tank",
+    "model": "500",
+    "year": 2023,
+    "type": "suv",
+    "price": 4247500,
+    "customsCost": 2230890,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "354 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "10.5 L/100km"
+    },
+    "description": "Tank 500 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-tank-500-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 339800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-tank-500-2024",
+    "brand": "Tank",
+    "brandSlug": "tank",
+    "model": "500",
+    "year": 2024,
+    "type": "suv",
+    "price": 4502350,
+    "customsCost": 2364432,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "354 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "10.5 L/100km"
+    },
+    "description": "Tank 500 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-tank-500-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 360188,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-nio-et5-2024",
+    "brand": "NIO",
+    "brandSlug": "nio",
+    "model": "ET5",
+    "year": 2024,
+    "type": "sedan",
+    "price": 3725000,
+    "customsCost": 1554800,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "490 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "15.1 kWh/100km"
+    },
+    "description": "NIO ET5 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-nio-et5-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 298000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-nio-et5-2023",
+    "brand": "NIO",
+    "brandSlug": "nio",
+    "model": "ET5",
+    "year": 2023,
+    "type": "sedan",
+    "price": 3278000,
+    "customsCost": 1368848,
+    "deliveryDays": 45,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "490 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "15.1 kWh/100km"
+    },
+    "description": "NIO ET5 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-nio-et5-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 262240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-nio-es6-2024",
+    "brand": "NIO",
+    "brandSlug": "nio",
+    "model": "ES6",
+    "year": 2024,
+    "type": "crossover",
+    "price": 4225000,
+    "customsCost": 1762800,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "490 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "16.2 kWh/100km"
+    },
+    "description": "NIO ES6 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-nio-es6-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 338000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-nio-es6-2023",
+    "brand": "NIO",
+    "brandSlug": "nio",
+    "model": "ES6",
+    "year": 2023,
+    "type": "crossover",
+    "price": 3718000,
+    "customsCost": 1551888,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "490 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "16.2 kWh/100km"
+    },
+    "description": "NIO ES6 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-nio-es6-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 297440,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-xpeng-g6-2024",
+    "brand": "XPeng",
+    "brandSlug": "xpeng",
+    "model": "G6",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2622500,
+    "customsCost": 1096160,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "487 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.9 kWh/100km"
+    },
+    "description": "XPeng G6 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-xpeng-g6-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 209800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-xpeng-g6-2023",
+    "brand": "XPeng",
+    "brandSlug": "xpeng",
+    "model": "G6",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2307800,
+    "customsCost": 965245,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "487 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.9 kWh/100km"
+    },
+    "description": "XPeng G6 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-xpeng-g6-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 184624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-xpeng-p7-2023",
+    "brand": "XPeng",
+    "brandSlug": "xpeng",
+    "model": "P7",
+    "year": 2023,
+    "type": "sedan",
+    "price": 2872500,
+    "customsCost": 1200160,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "473 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "15.6 kWh/100km"
+    },
+    "description": "XPeng P7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-xpeng-p7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 229800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-xpeng-p7-2024",
+    "brand": "XPeng",
+    "brandSlug": "xpeng",
+    "model": "P7",
+    "year": 2024,
+    "type": "sedan",
+    "price": 3044850,
+    "customsCost": 1271858,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "473 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "15.6 kWh/100km"
+    },
+    "description": "XPeng P7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-xpeng-p7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 243588,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-voyah-free-2024",
+    "brand": "Voyah",
+    "brandSlug": "voyah",
+    "model": "Free",
+    "year": 2024,
+    "type": "suv",
+    "price": 3372500,
+    "customsCost": 1226046,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "510 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Voyah Free 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-voyah-free-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 269800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-voyah-free-2023",
+    "brand": "Voyah",
+    "brandSlug": "voyah",
+    "model": "Free",
+    "year": 2023,
+    "type": "suv",
+    "price": 2967800,
+    "customsCost": 1079544,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "510 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Voyah Free 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-voyah-free-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 237424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-avatr-11-2024",
+    "brand": "Avatr",
+    "brandSlug": "avatr",
+    "model": "11",
+    "year": 2024,
+    "type": "crossover",
+    "price": 3747500,
+    "customsCost": 1564160,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "578 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "16.5 kWh/100km"
+    },
+    "description": "Avatr 11 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-avatr-11-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 299800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-avatr-11-2023",
+    "brand": "Avatr",
+    "brandSlug": "avatr",
+    "model": "11",
+    "year": 2023,
+    "type": "crossover",
+    "price": 3297800,
+    "customsCost": 1377085,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "578 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "16.5 kWh/100km"
+    },
+    "description": "Avatr 11 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-avatr-11-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 263824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-leapmotor-c11-2024",
+    "brand": "Leapmotor",
+    "brandSlug": "leapmotor",
+    "model": "C11",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1872500,
+    "customsCost": 784160,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "272 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.8 kWh/100km"
+    },
+    "description": "Leapmotor C11 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-leapmotor-c11-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 149800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-leapmotor-c11-2023",
+    "brand": "Leapmotor",
+    "brandSlug": "leapmotor",
+    "model": "C11",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1647800,
+    "customsCost": 690685,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "272 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.8 kWh/100km"
+    },
+    "description": "Leapmotor C11 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-leapmotor-c11-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 131824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-leapmotor-c10-2024",
+    "brand": "Leapmotor",
+    "brandSlug": "leapmotor",
+    "model": "C10",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1610000,
+    "customsCost": 674960,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "231 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.2 kWh/100km"
+    },
+    "description": "Leapmotor C10 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-leapmotor-c10-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 128800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-leapmotor-c10-2023",
+    "brand": "Leapmotor",
+    "brandSlug": "leapmotor",
+    "model": "C10",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1416800,
+    "customsCost": 594589,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "231 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.2 kWh/100km"
+    },
+    "description": "Leapmotor C10 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-leapmotor-c10-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 113344,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-jetour-dashing-2024",
+    "brand": "Jetour",
+    "brandSlug": "jetour",
+    "model": "Dashing",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1372500,
+    "customsCost": 516868,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.3 L/100km"
+    },
+    "description": "Jetour Dashing 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-jetour-dashing-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 109800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-jetour-dashing-2023",
+    "brand": "Jetour",
+    "brandSlug": "jetour",
+    "model": "Dashing",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1207800,
+    "customsCost": 455468,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.3 L/100km"
+    },
+    "description": "Jetour Dashing 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-jetour-dashing-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 96624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-jetour-t2-2024",
+    "brand": "Jetour",
+    "brandSlug": "jetour",
+    "model": "T2",
+    "year": 2024,
+    "type": "suv",
+    "price": 2122500,
+    "customsCost": 888160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "254 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.9 L/100km"
+    },
+    "description": "Jetour T2 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-jetour-t2-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 169800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-jetour-t2-2023",
+    "brand": "Jetour",
+    "brandSlug": "jetour",
+    "model": "T2",
+    "year": 2023,
+    "type": "suv",
+    "price": 1867800,
+    "customsCost": 782205,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "254 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.9 L/100km"
+    },
+    "description": "Jetour T2 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-jetour-t2-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 149424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-omoda-c5-2024",
+    "brand": "Omoda",
+    "brandSlug": "omoda",
+    "model": "C5",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1497500,
+    "customsCost": 563468,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.0 L/100km"
+    },
+    "description": "Omoda C5 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-omoda-c5-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 119800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-omoda-c5-2023",
+    "brand": "Omoda",
+    "brandSlug": "omoda",
+    "model": "C5",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1317800,
+    "customsCost": 496476,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.0 L/100km"
+    },
+    "description": "Omoda C5 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-omoda-c5-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 105424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-jaecoo-j7-2024",
+    "brand": "Jaecoo",
+    "brandSlug": "jaecoo",
+    "model": "J7",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1872500,
+    "customsCost": 703268,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.4 L/100km"
+    },
+    "description": "Jaecoo J7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-jaecoo-j7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 149800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-jaecoo-j7-2023",
+    "brand": "Jaecoo",
+    "brandSlug": "jaecoo",
+    "model": "J7",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1647800,
+    "customsCost": 619500,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.4 L/100km"
+    },
+    "description": "Jaecoo J7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-jaecoo-j7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 131824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mg-mg4-2024",
+    "brand": "MG",
+    "brandSlug": "mg",
+    "model": "MG4",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 1747500,
+    "customsCost": 732160,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "204 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "13.5 kWh/100km"
+    },
+    "description": "MG MG4 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mg-mg4-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 139800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mg-mg4-2023",
+    "brand": "MG",
+    "brandSlug": "mg",
+    "model": "MG4",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 1537800,
+    "customsCost": 644925,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "204 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "13.5 kWh/100km"
+    },
+    "description": "MG MG4 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mg-mg4-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 123024,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mg-mg7-2024",
+    "brand": "MG",
+    "brandSlug": "mg",
+    "model": "MG7",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1497500,
+    "customsCost": 628160,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "231 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.6 L/100km"
+    },
+    "description": "MG MG7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mg-mg7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 119800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mg-mg7-2023",
+    "brand": "MG",
+    "brandSlug": "mg",
+    "model": "MG7",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1317800,
+    "customsCost": 553405,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "231 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.6 L/100km"
+    },
+    "description": "MG MG7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mg-mg7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 105424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-deepal-sl03-2024",
+    "brand": "Deepal",
+    "brandSlug": "deepal",
+    "model": "SL03",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1872500,
+    "customsCost": 784160,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "258 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "13.9 kWh/100km"
+    },
+    "description": "Deepal SL03 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-deepal-sl03-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 149800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-deepal-sl03-2023",
+    "brand": "Deepal",
+    "brandSlug": "deepal",
+    "model": "SL03",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1647800,
+    "customsCost": 690685,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "258 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "13.9 kWh/100km"
+    },
+    "description": "Deepal SL03 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-deepal-sl03-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 131824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-deepal-s7-2024",
+    "brand": "Deepal",
+    "brandSlug": "deepal",
+    "model": "S7",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2122500,
+    "customsCost": 888160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "320 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.4 kWh/100km"
+    },
+    "description": "Deepal S7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-deepal-s7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 169800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-deepal-s7-2023",
+    "brand": "Deepal",
+    "brandSlug": "deepal",
+    "model": "S7",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1867800,
+    "customsCost": 782205,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "320 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "14.4 kWh/100km"
+    },
+    "description": "Deepal S7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-deepal-s7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 149424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-aito-m7-2024",
+    "brand": "AITO",
+    "brandSlug": "aito",
+    "model": "M7",
+    "year": 2024,
+    "type": "suv",
+    "price": 3122500,
+    "customsCost": 1135546,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "449 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.4 L/100km"
+    },
+    "description": "AITO M7 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-aito-m7-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 249800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-aito-m7-2023",
+    "brand": "AITO",
+    "brandSlug": "aito",
+    "model": "M7",
+    "year": 2023,
+    "type": "suv",
+    "price": 2747800,
+    "customsCost": 999904,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "449 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.4 L/100km"
+    },
+    "description": "AITO M7 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-aito-m7-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 219824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-aito-m9-2024",
+    "brand": "AITO",
+    "brandSlug": "aito",
+    "model": "M9",
+    "year": 2024,
+    "type": "suv",
+    "price": 5872500,
+    "customsCost": 2131046,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "496 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.9 L/100km"
+    },
+    "description": "AITO M9 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-aito-m9-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 469800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-aito-m9-2023",
+    "brand": "AITO",
+    "brandSlug": "aito",
+    "model": "M9",
+    "year": 2023,
+    "type": "suv",
+    "price": 5167800,
+    "customsCost": 1875944,
+    "deliveryDays": 48,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "496 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Hybrid",
+      "consumption": "7.9 L/100km"
+    },
+    "description": "AITO M9 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-aito-m9-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 413424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-baic-bj40-2024",
+    "brand": "BAIC",
+    "brandSlug": "baic",
+    "model": "BJ40",
+    "year": 2024,
+    "type": "suv",
+    "price": 2122500,
+    "customsCost": 888160,
+    "deliveryDays": 41,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "224 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.8 L/100km"
+    },
+    "description": "BAIC BJ40 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-baic-bj40-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 169800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-baic-bj40-2023",
+    "brand": "BAIC",
+    "brandSlug": "baic",
+    "model": "BJ40",
+    "year": 2023,
+    "type": "suv",
+    "price": 1867800,
+    "customsCost": 782205,
+    "deliveryDays": 43,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "224 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.8 L/100km"
+    },
+    "description": "BAIC BJ40 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-baic-bj40-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 149424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-neta-s-2024",
+    "brand": "Neta",
+    "brandSlug": "neta",
+    "model": "S",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1997500,
+    "customsCost": 836160,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "340 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "14.1 kWh/100km"
+    },
+    "description": "Neta S 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-neta-s-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 159800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-neta-s-2023",
+    "brand": "Neta",
+    "brandSlug": "neta",
+    "model": "S",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1757800,
+    "customsCost": 736445,
+    "deliveryDays": 42,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "340 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "14.1 kWh/100km"
+    },
+    "description": "Neta S 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-neta-s-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 140624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-roewe-rx5-2024",
+    "brand": "Roewe",
+    "brandSlug": "roewe",
+    "model": "RX5",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1372500,
+    "customsCost": 502046,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.9 L/100km"
+    },
+    "description": "Roewe RX5 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-roewe-rx5-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 109800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-roewe-rx5-2023",
+    "brand": "Roewe",
+    "brandSlug": "roewe",
+    "model": "RX5",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1207800,
+    "customsCost": 442424,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.9 L/100km"
+    },
+    "description": "Roewe RX5 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-roewe-rx5-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 96624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-maxus-mifa-9-2024",
+    "brand": "Maxus",
+    "brandSlug": "maxus",
+    "model": "Mifa 9",
+    "year": 2024,
+    "type": "crossover",
+    "price": 3372500,
+    "customsCost": 1408160,
+    "deliveryDays": 44,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "245 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "17.2 kWh/100km"
+    },
+    "description": "Maxus Mifa 9 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-maxus-mifa-9-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 269800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-maxus-mifa-9-2023",
+    "brand": "Maxus",
+    "brandSlug": "maxus",
+    "model": "Mifa 9",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2967800,
+    "customsCost": 1239805,
+    "deliveryDays": 46,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "245 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "17.2 kWh/100km"
+    },
+    "description": "Maxus Mifa 9 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-maxus-mifa-9-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 237424,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-dongfeng-forthing-t5-evo-2024",
+    "brand": "Dongfeng",
+    "brandSlug": "dongfeng",
+    "model": "Forthing T5 EVO",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1247500,
+    "customsCost": 456796,
+    "deliveryDays": 37,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.2 L/100km"
+    },
+    "description": "Dongfeng Forthing T5 EVO 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-dongfeng-forthing-t5-evo-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 99800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-dongfeng-forthing-t5-evo-2023",
+    "brand": "Dongfeng",
+    "brandSlug": "dongfeng",
+    "model": "Forthing T5 EVO",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1097800,
+    "customsCost": 402604,
+    "deliveryDays": 39,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "197 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.2 L/100km"
+    },
+    "description": "Dongfeng Forthing T5 EVO 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-dongfeng-forthing-t5-evo-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 87824,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-great-wall-ora-good-cat-2024",
+    "brand": "Great Wall",
+    "brandSlug": "great-wall",
+    "model": "Ora Good Cat",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 1372500,
+    "customsCost": 576160,
+    "deliveryDays": 38,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "171 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "12.8 kWh/100km"
+    },
+    "description": "Great Wall Ora Good Cat 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-great-wall-ora-good-cat-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 109800,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-great-wall-ora-good-cat-2023",
+    "brand": "Great Wall",
+    "brandSlug": "great-wall",
+    "model": "Ora Good Cat",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 1207800,
+    "customsCost": 507645,
+    "deliveryDays": 40,
+    "country": "China",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "171 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Electric",
+      "consumption": "12.8 kWh/100km"
+    },
+    "description": "Great Wall Ora Good Cat 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-great-wall-ora-good-cat-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 96624,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-toyota-camry-2024",
+    "brand": "Toyota",
+    "brandSlug": "toyota",
+    "model": "Camry",
+    "year": 2024,
+    "type": "sedan",
+    "price": 2475000,
+    "customsCost": 1168450,
+    "deliveryDays": 45,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Toyota Camry 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-toyota-camry-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 198000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-toyota-camry-2023",
+    "brand": "Toyota",
+    "brandSlug": "toyota",
+    "model": "Camry",
+    "year": 2023,
+    "type": "sedan",
+    "price": 2178000,
+    "customsCost": 1028860,
+    "deliveryDays": 47,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Toyota Camry 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-toyota-camry-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 174240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-bmw-x5-2023",
+    "brand": "BMW",
+    "brandSlug": "bmw",
+    "model": "X5",
+    "year": 2023,
+    "type": "suv",
+    "price": 7225000,
+    "customsCost": 3791100,
+    "deliveryDays": 55,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "340 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.4 L/100km"
+    },
+    "description": "BMW X5 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-bmw-x5-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 578000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-bmw-x5-2024",
+    "brand": "BMW",
+    "brandSlug": "bmw",
+    "model": "X5",
+    "year": 2024,
+    "type": "suv",
+    "price": 7658500,
+    "customsCost": 4018254,
+    "deliveryDays": 55,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "340 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.4 L/100km"
+    },
+    "description": "BMW X5 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-bmw-x5-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 612680,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mercedes-benz-e-class-2024",
+    "brand": "Mercedes-Benz",
+    "brandSlug": "mercedes",
+    "model": "E-Class",
+    "year": 2024,
+    "type": "sedan",
+    "price": 6112500,
+    "customsCost": 2548000,
+    "deliveryDays": 50,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "258 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mercedes-Benz E-Class 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mercedes-benz-e-class-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 489000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mercedes-benz-e-class-2023",
+    "brand": "Mercedes-Benz",
+    "brandSlug": "mercedes",
+    "model": "E-Class",
+    "year": 2023,
+    "type": "sedan",
+    "price": 5379000,
+    "customsCost": 2242864,
+    "deliveryDays": 52,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "258 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mercedes-Benz E-Class 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mercedes-benz-e-class-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 430320,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-audi-q5-2023",
+    "brand": "Audi",
+    "brandSlug": "audi",
+    "model": "Q5",
+    "year": 2023,
+    "type": "crossover",
+    "price": 5400000,
+    "customsCost": 2251600,
+    "deliveryDays": 48,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "249 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.8 L/100km"
+    },
+    "description": "Audi Q5 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-audi-q5-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 432000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-audi-q5-2024",
+    "brand": "Audi",
+    "brandSlug": "audi",
+    "model": "Q5",
+    "year": 2024,
+    "type": "crossover",
+    "price": 5724000,
+    "customsCost": 2386384,
+    "deliveryDays": 48,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "249 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.8 L/100km"
+    },
+    "description": "Audi Q5 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-audi-q5-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 457920,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-lexus-rx-2024",
+    "brand": "Lexus",
+    "brandSlug": "lexus",
+    "model": "RX",
+    "year": 2024,
+    "type": "crossover",
+    "price": 6800000,
+    "customsCost": 3127760,
+    "deliveryDays": 52,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.4 L",
+      "power": "279 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.0 L/100km"
+    },
+    "description": "Lexus RX 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-lexus-rx-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 544000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-lexus-rx-2023",
+    "brand": "Lexus",
+    "brandSlug": "lexus",
+    "model": "RX",
+    "year": 2023,
+    "type": "crossover",
+    "price": 5984000,
+    "customsCost": 2753053,
+    "deliveryDays": 54,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.4 L",
+      "power": "279 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.0 L/100km"
+    },
+    "description": "Lexus RX 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-lexus-rx-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 478720,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-porsche-macan-2023",
+    "brand": "Porsche",
+    "brandSlug": "porsche",
+    "model": "Macan",
+    "year": 2023,
+    "type": "crossover",
+    "price": 8900000,
+    "customsCost": 3707600,
+    "deliveryDays": 60,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "265 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.6 L/100km"
+    },
+    "description": "Porsche Macan 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-porsche-macan-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 712000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-porsche-macan-2024",
+    "brand": "Porsche",
+    "brandSlug": "porsche",
+    "model": "Macan",
+    "year": 2024,
+    "type": "crossover",
+    "price": 9434000,
+    "customsCost": 3929744,
+    "deliveryDays": 60,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "265 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.6 L/100km"
+    },
+    "description": "Porsche Macan 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-porsche-macan-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 754720,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volkswagen-tiguan-2024",
+    "brand": "Volkswagen",
+    "brandSlug": "volkswagen",
+    "model": "Tiguan",
+    "year": 2024,
+    "type": "crossover",
+    "price": 3725000,
+    "customsCost": 1554800,
+    "deliveryDays": 46,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "220 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.0 L/100km"
+    },
+    "description": "Volkswagen Tiguan 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volkswagen-tiguan-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80"
+      ],
+      "priceCny": 298000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volkswagen-tiguan-2023",
+    "brand": "Volkswagen",
+    "brandSlug": "volkswagen",
+    "model": "Tiguan",
+    "year": 2023,
+    "type": "crossover",
+    "price": 3278000,
+    "customsCost": 1368848,
+    "deliveryDays": 48,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "220 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.0 L/100km"
+    },
+    "description": "Volkswagen Tiguan 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volkswagen-tiguan-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 262240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-tucson-2024",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Tucson",
+    "year": 2024,
+    "type": "crossover",
+    "price": 3100000,
+    "customsCost": 1160880,
+    "deliveryDays": 44,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Hyundai Tucson 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-tucson-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1533473353711-1ab7sdf1cb88?w=800&q=80"
+      ],
+      "priceCny": 248000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-tucson-2023",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Tucson",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2728000,
+    "customsCost": 1022198,
+    "deliveryDays": 46,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Hyundai Tucson 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-tucson-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 218240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-kia-sportage-2024",
+    "brand": "Kia",
+    "brandSlug": "kia",
+    "model": "Sportage",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2975000,
+    "customsCost": 1114280,
+    "deliveryDays": 43,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.4 L/100km"
+    },
+    "description": "Kia Sportage 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-kia-sportage-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80"
+      ],
+      "priceCny": 238000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-kia-sportage-2023",
+    "brand": "Kia",
+    "brandSlug": "kia",
+    "model": "Sportage",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2618000,
+    "customsCost": 981190,
+    "deliveryDays": 45,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.4 L/100km"
+    },
+    "description": "Kia Sportage 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-kia-sportage-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80"
+      ],
+      "priceCny": 209440,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volvo-xc60-2024",
+    "brand": "Volvo",
+    "brandSlug": "volvo",
+    "model": "XC60",
+    "year": 2024,
+    "type": "crossover",
+    "price": 5850000,
+    "customsCost": 2438800,
+    "deliveryDays": 50,
+    "country": "Sweden",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "250 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.5 L/100km"
+    },
+    "description": "Volvo XC60 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volvo-xc60-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      ],
+      "priceCny": 468000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volvo-xc60-2023",
+    "brand": "Volvo",
+    "brandSlug": "volvo",
+    "model": "XC60",
+    "year": 2023,
+    "type": "crossover",
+    "price": 5148000,
+    "customsCost": 2146768,
+    "deliveryDays": 52,
+    "country": "Sweden",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "250 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.5 L/100km"
+    },
+    "description": "Volvo XC60 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volvo-xc60-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "priceCny": 411840,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-land-rover-defender-2023",
+    "brand": "Land Rover",
+    "brandSlug": "land-rover",
+    "model": "Defender",
+    "year": 2023,
+    "type": "suv",
+    "price": 8725000,
+    "customsCost": 4577100,
+    "deliveryDays": 58,
+    "country": "UK",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "400 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "11.2 L/100km"
+    },
+    "description": "Land Rover Defender 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-land-rover-defender-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "priceCny": 698000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-land-rover-defender-2024",
+    "brand": "Land Rover",
+    "brandSlug": "land-rover",
+    "model": "Defender",
+    "year": 2024,
+    "type": "suv",
+    "price": 9248500,
+    "customsCost": 4851414,
+    "deliveryDays": 58,
+    "country": "UK",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "400 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "11.2 L/100km"
+    },
+    "description": "Land Rover Defender 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-land-rover-defender-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      ],
+      "priceCny": 739880,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-tesla-model-y-2024",
+    "brand": "Tesla",
+    "brandSlug": "tesla",
+    "model": "Model Y",
+    "year": 2024,
+    "type": "crossover",
+    "price": 4987500,
+    "customsCost": 2080000,
+    "deliveryDays": 48,
+    "country": "USA",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "450 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "15.0 kWh/100km"
+    },
+    "description": "Tesla Model Y 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-tesla-model-y-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80"
+      ],
+      "priceCny": 399000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-tesla-model-y-2023",
+    "brand": "Tesla",
+    "brandSlug": "tesla",
+    "model": "Model Y",
+    "year": 2023,
+    "type": "crossover",
+    "price": 4389000,
+    "customsCost": 1831024,
+    "deliveryDays": 50,
+    "country": "USA",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "450 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Electric",
+      "consumption": "15.0 kWh/100km"
+    },
+    "description": "Tesla Model Y 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-tesla-model-y-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80"
+      ],
+      "priceCny": 351120,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-genesis-gv70-2024",
+    "brand": "Genesis",
+    "brandSlug": "genesis",
+    "model": "GV70",
+    "year": 2024,
+    "type": "crossover",
+    "price": 5350000,
+    "customsCost": 2519700,
+    "deliveryDays": 49,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "304 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.1 L/100km"
+    },
+    "description": "Genesis GV70 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-genesis-gv70-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      ],
+      "priceCny": 428000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-genesis-gv70-2023",
+    "brand": "Genesis",
+    "brandSlug": "genesis",
+    "model": "GV70",
+    "year": 2023,
+    "type": "crossover",
+    "price": 4708000,
+    "customsCost": 2217960,
+    "deliveryDays": 51,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "304 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.1 L/100km"
+    },
+    "description": "Genesis GV70 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-genesis-gv70-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "priceCny": 376640,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "toyota-camry-2024",
+    "brand": "Toyota",
+    "brandSlug": "toyota",
+    "model": "Camry",
+    "year": 2024,
+    "type": "sedan",
+    "price": 2850000,
+    "customsCost": 420000,
+    "deliveryDays": 45,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Reliable business sedan."
+  },
+  {
+    "id": "bmw-x5-2023",
+    "brand": "BMW",
+    "brandSlug": "bmw",
+    "model": "X5",
+    "year": 2023,
+    "type": "suv",
+    "price": 7200000,
+    "customsCost": 980000,
+    "deliveryDays": 55,
+    "country": "Germany",
+    "imageColor": "#2c3e50",
+    "specs": {
+      "engine": "3.0 L",
+      "power": "340 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.4 L/100km"
+    },
+    "description": "Premium SUV with AWD."
+  },
+  {
+    "id": "mercedes-e-class-2024",
+    "brand": "Mercedes-Benz",
+    "brandSlug": "mercedes",
+    "model": "E-Class",
+    "year": 2024,
+    "type": "sedan",
+    "price": 6100000,
+    "customsCost": 850000,
+    "deliveryDays": 50,
+    "country": "Germany",
+    "imageColor": "#1c2833",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "258 hp",
+      "transmission": "Auto",
+      "drive": "RWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Elegant business class sedan."
+  },
+  {
+    "id": "audi-q5-2023",
+    "brand": "Audi",
+    "brandSlug": "audi",
+    "model": "Q5",
+    "year": 2023,
+    "type": "crossover",
+    "price": 5400000,
+    "customsCost": 760000,
+    "deliveryDays": 48,
+    "country": "Germany",
+    "imageColor": "#2e4053",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "249 hp",
+      "transmission": "DSG",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.8 L/100km"
+    },
+    "description": "Stylish crossover with quattro."
+  },
+  {
+    "id": "lexus-rx-2024",
+    "brand": "Lexus",
+    "brandSlug": "lexus",
+    "model": "RX",
+    "year": 2024,
+    "type": "crossover",
+    "price": 6800000,
+    "customsCost": 920000,
+    "deliveryDays": 52,
+    "country": "Japan",
+    "imageColor": "#1b2631",
+    "specs": {
+      "engine": "2.4 L",
+      "power": "279 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.0 L/100km"
+    },
+    "description": "Comfortable premium crossover."
+  },
+  {
+    "id": "porsche-macan-2023",
+    "brand": "Porsche",
+    "brandSlug": "porsche",
+    "model": "Macan",
+    "year": 2023,
+    "type": "crossover",
+    "price": 8900000,
+    "customsCost": 1150000,
+    "deliveryDays": 60,
+    "country": "Germany",
+    "imageColor": "#17202a",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "265 hp",
+      "transmission": "PDK",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "9.6 L/100km"
+    },
+    "description": "Sporty Porsche crossover."
+  },
+  {
+    "id": "toyota-rav4-2024",
+    "brand": "Toyota",
+    "brandSlug": "toyota",
+    "model": "RAV4",
+    "year": 2024,
+    "type": "crossover",
+    "price": 3200000,
+    "customsCost": 480000,
+    "deliveryDays": 42,
+    "country": "Japan",
+    "imageColor": "#1a5276",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "199 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.8 L/100km"
+    },
+    "description": "Popular family crossover."
+  },
+  {
+    "id": "bmw-3-series-2022",
+    "brand": "BMW",
+    "brandSlug": "bmw",
+    "model": "3 Series",
+    "year": 2022,
+    "type": "sedan",
+    "price": 3900000,
+    "customsCost": 560000,
+    "deliveryDays": 40,
+    "country": "Germany",
+    "imageColor": "#212f3d",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "184 hp",
+      "transmission": "Auto",
+      "drive": "RWD",
+      "fuel": "Petrol",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Classic sporty sedan."
+  }
+]

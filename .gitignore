@@ -31,8 +31,9 @@ yarn-error.log*
 .env*.local
 .env
 
-# synced catalog (local / VPS)
-/data/*.json
+# synced runtime data (keep cars.catalog.json in repo for Netlify)
+/data/leads.json
+/data/sync-log.json
 
 # typescript
 *.tsbuildinfo

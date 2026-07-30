@@ -87,3 +87,44 @@ const syncContent = [
 ].join("\n");
 fs.writeFileSync(syncCli, syncContent, "utf8");
 console.log("sync-cars-cli.ts written");
+
+const exportCli = path.join(__dirname, "export-catalog.ts");
+const exportContent = [
+  'import fs from "fs";',
+  'import path from "path";',
+  'import type { Car } from "../src/types/car";',
+  'import { autohomeDemoCars } from "../src/data/cars.autohome-demo";',
+  'import { cars as staticCars } from "../src/data/cars.static";',
+  "",
+  "function mergeCatalogs(...sources: Car[][]): Car[] {",
+  "  const byId = new Map<string, Car>();",
+  "  for (const source of sources) {",
+  "    for (const car of source) {",
+  "      byId.set(car.id, car);",
+  "    }",
+  "  }",
+  "  return Array.from(byId.values());",
+  "}",
+  "",
+  "const catalog = mergeCatalogs(autohomeDemoCars, staticCars);",
+  'const outDir = path.join(process.cwd(), "data");',
+  'const outFile = path.join(outDir, "cars.catalog.json");',
+  "",
+  'fs.mkdirSync(outDir, { recursive: true });',
+  'fs.writeFileSync(outFile, JSON.stringify(catalog, null, 2), "utf-8");',
+  'console.log(`Exported ${catalog.length} cars -> ${outFile}`);',
+  "",
+].join("\n");
+fs.writeFileSync(exportCli, exportContent, "utf8");
+console.log("export-catalog.ts written");
+
+const { execSync } = require("child_process");
+try {
+  execSync("npx --yes tsx scripts/export-catalog.ts", {
+    cwd: root,
+    stdio: "inherit",
+    encoding: "utf8",
+  });
+} catch (err) {
+  console.warn("[write-lib-files] catalog export skipped:", err.message);
+}

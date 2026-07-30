@@ -1,14 +1,66 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
 import { CarDetailActions } from "@/components/CarDetailActions";
 import { CarRequestSection } from "@/components/CarRequestSection";
 import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/seo/site";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 
 const specLabels: Record<string, string> = { engine: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043b\u044c", power: "\u041c\u043e\u0449\u043d\u043e\u0441\u0442\u044c", transmission: "\u041a\u041f\u041f", drive: "\u041f\u0440\u0438\u0432\u043e\u0434", fuel: "\u0422\u043e\u043f\u043b\u0438\u0432\u043e", consumption: "\u0420\u0430\u0441\u0445\u043e\u0434" };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const cars = await getCarsCatalog();
+  const car = cars.find((item) => item.id === id);
+
+  if (!car) {
+    return {
+      title: "Автомобиль не найден",
+    };
+  }
+
+  const title = `${car.brand} ${car.model} ${car.year}`;
+  const description =
+    car.description ||
+    `${car.brand} ${car.model} ${car.year} — импорт под ключ с расчётом таможни и доставкой.`;
+  const photo = car.sync?.photos?.[0];
+  const ogImage = photo ?? DEFAULT_OG_IMAGE;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/catalog/${id}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/catalog/${id}`,
+      type: "website",
+      images: [
+        {
+          url: ogImage,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
+  };
+}
 
 export default async function CarDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -17,8 +69,30 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
   if (!car) notFound();
   const total = getTotalPrice(car);
   const photo = car.sync?.photos?.[0];
+  const carJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Car",
+    name: `${car.brand} ${car.model} ${car.year}`,
+    brand: {
+      "@type": "Brand",
+      name: car.brand,
+    },
+    model: car.model,
+    vehicleModelDate: String(car.year),
+    description: car.description,
+    image: photo ? [photo] : [`${SITE_URL}${DEFAULT_OG_IMAGE}`],
+    offers: {
+      "@type": "Offer",
+      price: total,
+      priceCurrency: "RUB",
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/catalog/${car.id}`,
+    },
+  };
 
   return (
+    <>
+      <JsonLd data={carJsonLd} />
     <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
       <Header />
@@ -45,5 +119,6 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
         </div>
       </div>
     </main>
+    </>
   );
 }

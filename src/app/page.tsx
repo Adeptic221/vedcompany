@@ -1,9 +1,40 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/seo/site";
+
+export const metadata: Metadata = {
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  description: SITE_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "RU",
+  },
+};
 
 export default function HomePage() {
   return (
+    <>
+      <JsonLd data={organizationJsonLd} />
     <main className="relative ved-screen overflow-hidden bg-ved-navy">
       <PageBackground />
       <Header />
@@ -63,5 +94,6 @@ export default function HomePage() {
         © {new Date().getFullYear()} ВЭД · vedcompany.ru
       </footer>
     </main>
+    </>
   );
 }

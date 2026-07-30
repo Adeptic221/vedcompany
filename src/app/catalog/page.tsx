@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
@@ -13,6 +14,21 @@ import {
   type CatalogSearchParams,
 } from "@/data/cars";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
+
+export const metadata: Metadata = {
+  title: "Каталог автомобилей",
+  description:
+    "Каталог автомобилей для импорта под ключ: цены, расчёт таможни, доставка. Фильтры по марке, модели и бюджету.",
+  alternates: {
+    canonical: "/catalog",
+  },
+  openGraph: {
+    title: "Каталог автомобилей",
+    description:
+      "Каталог автомобилей для импорта под ключ: цены, расчёт таможни, доставка.",
+    url: "/catalog",
+  },
+};
 
 export default async function CatalogPage({
   searchParams,

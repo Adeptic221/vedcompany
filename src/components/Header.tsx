@@ -2,21 +2,23 @@
 
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useContactModal } from "@/context/ContactModalContext";
 import { VedLogo } from "./VedLogo";
 
 const links = [
-  { href: "/catalog", label: "\u041a\u0430\u0442\u0430\u043b\u043e\u0433" },
-  { href: "/about", label: "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438" },
-  { href: "/cabinet", label: "\u041b\u0438\u0447\u043d\u044b\u0439 \u043a\u0430\u0431\u0438\u043d\u0435\u0442" },
+  { href: "/catalog", label: "Каталог" },
+  { href: "/about", label: "О компании" },
+  { href: "/cabinet", label: "Личный кабинет" },
 ];
 
 export function Header() {
   const { cartCount } = useCart();
+  const { openContactModal } = useContactModal();
 
   return (
     <header className="relative z-10 flex items-center justify-between px-8 py-6 md:px-12">
       <VedLogo />
-      <nav className="flex items-center gap-4 text-xs uppercase tracking-widest text-white/70 md:gap-8">
+      <nav className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/70 md:gap-6">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -26,19 +28,36 @@ export function Header() {
             {link.label}
           </Link>
         ))}
+        <button
+          type="button"
+          onClick={openContactModal}
+          className="hidden border border-white/20 px-3 py-2 transition hover:border-white/40 hover:text-white sm:inline"
+        >
+          Связаться
+        </button>
         <Link
           href="/cabinet?tab=cart"
           className="relative border border-white/20 px-3 py-2 transition hover:border-white/40 hover:text-white"
         >
-          {"\u041a\u043e\u0440\u0437\u0438\u043d\u0430"}
+          Корзина
           {cartCount > 0 && (
             <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-medium text-ved-navy">
               {cartCount}
             </span>
           )}
         </Link>
+        <button
+          type="button"
+          onClick={openContactModal}
+          className="border border-white/20 px-2 py-2 transition hover:border-white/40 hover:text-white sm:hidden"
+          aria-label="Связаться"
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+        </button>
         <Link href="/cabinet" className="transition hover:text-white sm:hidden">
-          {"\u041b\u041a"}
+          ЛК
         </Link>
       </nav>
     </header>

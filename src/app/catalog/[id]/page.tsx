@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { PageBackground } from "@/components/PageBackground";
 import { CarDetailActions } from "@/components/CarDetailActions";
+import { CarRequestSection } from "@/components/CarRequestSection";
 import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 
@@ -39,6 +40,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
               <div className="flex justify-between border-t border-white/10 pt-3 text-base font-medium"><span>{"\u0418\u0442\u043e\u0433\u043e"}</span><span>{formatPrice(total)}</span></div>
             </div>
             <CarDetailActions carId={car.id} totalAmount={total} />
+            <CarRequestSection carId={car.id} carLabel={`${car.brand} ${car.model} ${car.year}`} />
           </div>
         </div>
       </div>

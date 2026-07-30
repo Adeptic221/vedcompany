@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { PageBackground } from "@/components/PageBackground";
 import { CarCard } from "@/components/CarCard";
 import { CatalogFilters } from "@/components/CatalogFilters";
+import { CatalogContactBanner } from "@/components/CatalogContactBanner";
 import {
   countActiveFilters,
   filterCars,
@@ -84,6 +85,8 @@ export default async function CatalogPage({
             </div>
           )}
         </div>
+
+        <CatalogContactBanner />
       </div>
     </main>
   );

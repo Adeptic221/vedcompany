@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Header } from "@/components/Header";
+import { VedLogoMark } from "@/components/VedLogo";
 import { PageBackground } from "@/components/PageBackground";
 
 export const metadata: Metadata = {
@@ -24,14 +24,7 @@ export default function AboutPage() {
       <PageBackground />
       <Header />
       <div className="relative z-10 mx-auto max-w-3xl px-8 py-12 md:px-12">
-        <Image
-          src="/logo.png"
-          alt="VED"
-          width={160}
-          height={64}
-          className="mb-8 h-16 w-auto md:h-20"
-          sizes="160px"
-        />
+        <VedLogoMark className="mb-8 h-16 w-auto md:h-20" />
         <h1 className="text-3xl font-light uppercase tracking-[0.15em]">О компании ВЭД</h1>
         <p className="mt-6 leading-relaxed text-white/70">
           ВЭД — онлайн-автосалон для импорта автомобилей под ключ. Мы сопровождаем клиента от

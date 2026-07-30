@@ -13,4 +13,4 @@ export const SITE_KEYWORDS = [
   "\u043a\u0430\u0442\u0430\u043b\u043e\u0433 \u0430\u0432\u0442\u043e\u043c\u043e\u0431\u0438\u043b\u0435\u0439",
   "vedcompany",
 ];
-export const DEFAULT_OG_IMAGE = "/logo.png";
+export const DEFAULT_OG_IMAGE = "/logo.svg";

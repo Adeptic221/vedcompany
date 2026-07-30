@@ -128,3 +128,16 @@ try {
 } catch (err) {
   console.warn("[write-lib-files] catalog export skipped:", err.message);
 }
+
+const siteFile = path.join(root, "src/lib/seo/site.ts");
+if (fs.existsSync(siteFile)) {
+  let siteText = fs.readFileSync(siteFile, "utf8");
+  if (siteText.includes('DEFAULT_OG_IMAGE = "/logo.png"')) {
+    siteText = siteText.replace(
+      'export const DEFAULT_OG_IMAGE = "/logo.png";',
+      'export const DEFAULT_OG_IMAGE = "/logo.svg";'
+    );
+    fs.writeFileSync(siteFile, siteText, "utf8");
+    console.log("patched site.ts DEFAULT_OG_IMAGE -> logo.svg");
+  }
+}

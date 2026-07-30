@@ -1,0 +1,27 @@
+================================================================================
+  GOOGLE SEARCH CONSOLE - vedcompany.ru
+================================================================================
+
+SHAG 1 - Search Console: https://search.google.com/search-console
+  Vojdite cherez Google-akkaunt.
+
+SHAG 2 - Dobavit sajt: "Prefiks URL" -> https://vedcompany.ru
+
+SHAG 3A - Meta-teg (prosche):
+  1. Metod "HTML-teg" -> skopirujte content= iz meta-tega
+  2. Netlify -> Environment variables -> Add:
+       GOOGLE_SITE_VERIFICATION = vash_kod
+  3. Trigger deploy without cache
+  4. V Search Console -> "Podtverdit"
+
+SHAG 3B - DNS (dlya "Domen"):
+  Reg.ru -> TXT @ -> google-site-verification=...
+
+SHAG 4 - Sitemap:
+  Fajly Sitemap -> vvesti: sitemap.xml -> Otpravit
+
+SHAG 5 - Proverka URL -> Zaprosit indeksirovanie
+
+Sitemap: https://vedcompany.ru/sitemap.xml
+Netlify env: https://app.netlify.com/sites/dashing-eclair-d67cad/configuration/env
+================================================================================

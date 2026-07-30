@@ -2,51 +2,112 @@ import type { Car, CarType } from "@/types/car";
 
 const RATE = 12.5;
 const SYNCED_AT = "2026-01-15T00:00:00.000Z";
-/** Curated Unsplash pools — each URL matches the body type it lives in. */
-const PHOTOS_BY_TYPE: Record<CarType, string[]> = {
-  sedan: [
-    "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80", // BMW 5 Series
-    "https://images.unsplash.com/photo-1583121274602-3e2820c50efe?w=800&q=80", // Mercedes E-Class
-    "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800&q=80", // Tesla Model 3
-    "https://images.unsplash.com/photo-1605559424843-efef323f3179?w=800&q=80", // Audi A4
-    "https://images.unsplash.com/photo-1621007945112-4c2d9b86e9b2?w=800&q=80", // Toyota Camry
-  ],
-  crossover: [
-    "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80", // Tesla Model Y
-    "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80", // Range Rover Evoque
-    "https://images.unsplash.com/photo-1517177646-9e4998a1e996?w=800&q=80", // Honda CR-V
-    "https://images.unsplash.com/photo-1549395162-2f0adf235b2e?w=800&q=80", // compact crossover
-    "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80", // Volvo XC90
-  ],
-  suv: [
-    "https://images.unsplash.com/photo-1519641471654-76cefc7c8dec?w=800&q=80", // large SUV
-    "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80", // Jeep 4x4
-    "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80", // Mercedes GLE
-    "https://images.unsplash.com/photo-1533474712522-2740e1c96c4e?w=800&q=80", // Land Rover
-    "https://images.unsplash.com/photo-1590362896012-4d7a484eaa84?w=800&q=80", // BMW X5
-  ],
-  hatchback: [
-    "https://images.unsplash.com/photo-1541899481282-d53bffe2c00d?w=800&q=80", // VW Golf
-    "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&q=80", // Honda Civic hatch
-    "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80", // compact hatch
-    "https://images.unsplash.com/photo-1562145161-47612b5a5b4b?w=800&q=80", // Mini hatchback
-  ],
-  coupe: [
-    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80", // Porsche 911
-    "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80", // Ford Mustang
-    "https://images.unsplash.com/photo-1619767886552-efdc259cde1a?w=800&q=80", // Porsche 911 (alt)
-    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80", // Chevrolet Camaro
-  ],
+
+const u = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&q=80`;
+
+function modelPhotoKey(brandSlug: string, model: string): string {
+  const slug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return `${brandSlug}:${slug}`;
+}
+
+/** Curated photo per brand+model — year variants share the same URL. */
+const MODEL_PHOTOS: Record<string, string> = {
+  "byd:han-ev": u("1617531653332-bd46c24f2068"),
+  "byd:seal": u("1580273916550-e323be2ae537"),
+  "byd:song-plus": u("1549395162-2f0adf235b2e"),
+  "byd:tang": u("1618843479313-40f8afb4b4d8"),
+  "geely:coolray": u("1549395162-2f0adf235b2e"),
+  "geely:monjaro": u("1606664515524-ed2f786a0bd6"),
+  "geely:galaxy-l7": u("1517177646-9e4998a1e996"),
+  "chery:tiggo-8-pro": u("1519641471654-76cefc7c8dec"),
+  "chery:tiggo-7-pro": u("1549395162-2f0adf235b2e"),
+  "chery:arrizo-8": u("1605559424843-efef323f3179"),
+  "haval:h6": u("1517177646-9e4998a1e996"),
+  "haval:jolion": u("1549395162-2f0adf235b2e"),
+  "haval:dargo": u("1606664515524-ed2f786a0bd6"),
+  "changan:uni-v": u("1555215695-3004980ad54e"),
+  "changan:cs75-plus": u("1517177646-9e4998a1e996"),
+  "li-auto:l7": u("1590362896012-4d7a484eaa84"),
+  "li-auto:l6": u("1618843479313-40f8afb4b4d8"),
+  "li-auto:l9": u("1519641471654-76cefc7c8dec"),
+  "zeekr:001": u("1617788138017-80ad40651399"),
+  "zeekr:007": u("1617531653332-bd46c24f2068"),
+  "hongqi:h9": u("1583121274602-3e2820c50efe"),
+  "hongqi:hs5": u("1606664515524-ed2f786a0bd6"),
+  "gac-aion:y-plus": u("1617788138017-80ad40651399"),
+  "gac-aion:s-plus": u("1617531653332-bd46c24f2068"),
+  "wuling:bingo": u("1541899481282-d53bffe2c00d"),
+  "wuling:starlight": u("1486262715619-67b85e0b08d3"),
+  "tank:300": u("1549317661-bd32c8ce0db2"),
+  "tank:500": u("1519641471654-76cefc7c8dec"),
+  "nio:et5": u("1617531653332-bd46c24f2068"),
+  "nio:es6": u("1617788138017-80ad40651399"),
+  "xpeng:g6": u("1549395162-2f0adf235b2e"),
+  "xpeng:p7": u("1580273916550-e323be2ae537"),
+  "voyah:free": u("1618843479313-40f8afb4b4d8"),
+  "avatr:11": u("1606664515524-ed2f786a0bd6"),
+  "leapmotor:c11": u("1549395162-2f0adf235b2e"),
+  "leapmotor:c10": u("1517177646-9e4998a1e996"),
+  "jetour:dashing": u("1517177646-9e4998a1e996"),
+  "jetour:t2": u("1549317661-bd32c8ce0db2"),
+  "omoda:c5": u("1549395162-2f0adf235b2e"),
+  "jaecoo:j7": u("1606664515524-ed2f786a0bd6"),
+  "mg:mg4": u("1553440569-bcc63803a83d"),
+  "mg:mg7": u("1605559424843-efef323f3179"),
+  "deepal:sl03": u("1617531653332-bd46c24f2068"),
+  "deepal:s7": u("1617788138017-80ad40651399"),
+  "aito:m7": u("1618843479313-40f8afb4b4d8"),
+  "aito:m9": u("1519641471654-76cefc7c8dec"),
+  "baic:bj40": u("1549317661-bd32c8ce0db2"),
+  "neta:s": u("1580273916550-e323be2ae537"),
+  "roewe:rx5": u("1517177646-9e4998a1e996"),
+  "maxus:mifa-9": u("1609521263047-f8f205293f24"),
+  "dongfeng:forthing-t5-evo": u("1549395162-2f0adf235b2e"),
+  "great-wall:ora-good-cat": u("1562145161-47612b5a5b4b"),
+  "toyota:camry": u("1621007945112-4c2d9b86e9b2"),
+  "bmw:x5": u("1590362896012-4d7a484eaa84"),
+  "mercedes:e-class": u("1583121274602-3e2820c50efe"),
+  "audi:q5": u("1605559424843-efef323f3179"),
+  "lexus:rx": u("1606664515524-ed2f786a0bd6"),
+  "porsche:macan": u("1617788138017-80ad40651399"),
+  "volkswagen:tiguan": u("1517177646-9e4998a1e996"),
+  "hyundai:tucson": u("1549395162-2f0adf235b2e"),
+  "kia:sportage": u("1606664515524-ed2f786a0bd6"),
+  "volvo:xc60": u("1609521263047-f8f205293f24"),
+  "land-rover:defender": u("1533474712522-2740e1c96c4e"),
+  "tesla:model-y": u("1617788138017-80ad40651399"),
+  "genesis:gv70": u("1606664515524-ed2f786a0bd6"),
 };
 
-export function photoForDemoCar(type: CarType, brandSlug: string, model: string): string {
-  const pool = PHOTOS_BY_TYPE[type] ?? PHOTOS_BY_TYPE.crossover;
-  const key = `${brandSlug}:${model.toLowerCase()}`;
+const PHOTOS_BY_BRAND: Record<string, Partial<Record<CarType, string[]>>> = {
+  toyota: { sedan: [u("1621007945112-4c2d9b86e9b2")] },
+  bmw: { suv: [u("1590362896012-4d7a484eaa84")] },
+  mercedes: { sedan: [u("1583121274602-3e2820c50efe")] },
+  tesla: { crossover: [u("1617788138017-80ad40651399")] },
+  byd: { sedan: [u("1617531653332-bd46c24f2068")] },
+};
+
+const PHOTOS_BY_TYPE: Record<CarType, string[]> = {
+  sedan: [u("1621007945112-4c2d9b86e9b2"), u("1583121274602-3e2820c50efe"), u("1617531653332-bd46c24f2068")],
+  crossover: [u("1617788138017-80ad40651399"), u("1606664515524-ed2f786a0bd6"), u("1517177646-9e4998a1e996")],
+  suv: [u("1590362896012-4d7a484eaa84"), u("1519641471654-76cefc7c8dec"), u("1549317661-bd32c8ce0db2")],
+  hatchback: [u("1541899481282-d53bffe2c00d"), u("1553440569-bcc63803a83d")],
+  coupe: [u("1503376780353-7e6692767b70"), u("1494976388531-d1058494cdd8")],
+};
+
+function hashKey(key: string): number {
   let hash = 0;
-  for (let i = 0; i < key.length; i++) {
-    hash = (hash * 31 + key.charCodeAt(i)) >>> 0;
-  }
-  return pool[hash % pool.length]!;
+  for (let i = 0; i < key.length; i++) hash = (hash * 31 + key.charCodeAt(i)) >>> 0;
+  return hash;
+}
+
+export function photoForDemoCar(type: CarType, brandSlug: string, model: string): string {
+  const key = modelPhotoKey(brandSlug, model);
+  if (MODEL_PHOTOS[key]) return MODEL_PHOTOS[key];
+  const brandPool = PHOTOS_BY_BRAND[brandSlug]?.[type] ?? PHOTOS_BY_BRAND[brandSlug]?.crossover;
+  if (brandPool?.length) return brandPool[hashKey(key) % brandPool.length]!;
+  const typePool = PHOTOS_BY_TYPE[type] ?? PHOTOS_BY_TYPE.crossover;
+  return typePool[hashKey(key) % typePool.length]!;
 }
 
 type RawListing = [string, string, string, number, CarType, number, string, string, string, string, number];

@@ -21,7 +21,7 @@ export function VedLogoMark({
       <path fill={color} d="M2 0h24l12 52L50 0h24L46 68H30L2 0z" />
       <path
         fill={color}
-        d="M88 0h50v11H88L68 30v11h70v11H88v5h50v11H88v-11H88V41H68V30L88 11V0z"
+        d="M88 0h50v11H88L68 30v11h70v11H88v5h50v11H88V57H88V41H68V30L88 11V0z"
       />
       <path fill={color} d="M158 0h20v68h-20q48 0 48-34T158 0z" />
     </svg>

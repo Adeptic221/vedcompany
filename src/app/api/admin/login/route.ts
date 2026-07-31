@@ -4,8 +4,20 @@ import {
   getAdminSecret,
   getAdminSessionToken,
 } from "@/lib/admin/session";
+import { checkRateLimit } from "@/lib/security/rate-limit";
+import { assertSameOrigin, getClientIp } from "@/lib/security/request";
 
 export async function POST(request: NextRequest) {
+  if (!assertSameOrigin(request)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const ip = getClientIp(request);
+  const limited = checkRateLimit(`admin-login:${ip}`, 10, 15 * 60 * 1000);
+  if (!limited.ok) {
+    return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  }
+
   const secret = getAdminSecret();
   if (!secret) {
     return NextResponse.json(

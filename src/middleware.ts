@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ADMIN_COOKIE, getAdminSessionToken } from "@/lib/admin/session";
 
+function withAdminRobots(response: NextResponse) {
+  response.headers.set("X-Robots-Tag", "noindex, nofollow");
+  return response;
+}
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const isAdminPage = pathname === "/admin" || pathname.startsWith("/admin/");
 
   let expected: string | null = null;
   try {
@@ -20,8 +26,10 @@ export async function middleware(request: NextRequest) {
   if (isLoginApi) return NextResponse.next();
 
   if (isLoginPage) {
-    if (ok) return NextResponse.redirect(new URL("/admin", request.url));
-    return NextResponse.next();
+    if (ok) {
+      return withAdminRobots(NextResponse.redirect(new URL("/admin", request.url)));
+    }
+    return withAdminRobots(NextResponse.next());
   }
 
   if (!ok) {
@@ -30,7 +38,11 @@ export async function middleware(request: NextRequest) {
     }
     const login = new URL("/admin/login", request.url);
     login.searchParams.set("next", pathname);
-    return NextResponse.redirect(login);
+    return withAdminRobots(NextResponse.redirect(login));
+  }
+
+  if (isAdminPage) {
+    return withAdminRobots(NextResponse.next());
   }
 
   return NextResponse.next();

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { VedLogoMark } from "@/components/VedLogo";
 import { PageBackground } from "@/components/PageBackground";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "О компании",
@@ -49,6 +50,7 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
+      <SiteFooter />
     </main>
   );
 }

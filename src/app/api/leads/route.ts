@@ -3,6 +3,8 @@ import { appendLead, forwardToWebhook, readLeads } from "@/lib/leads/storage";
 import { sendLeadToTelegram } from "@/lib/leads/telegram";
 import { validateLeadPayload } from "@/lib/leads/validation";
 import type { LeadRecord } from "@/types/lead";
+import { checkRateLimit } from "@/lib/security/rate-limit";
+import { assertSameOrigin, getClientIp } from "@/lib/security/request";
 
 function createLeadId(): string {
   const ts = Date.now().toString(36);
@@ -14,11 +16,21 @@ export async function GET() {
   const leads = await readLeads();
   return NextResponse.json({
     count: leads.length,
-    note: "Netlify: задайте TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID или LEADS_WEBHOOK_URL",
+    note: "Netlify: \u0437\u0430\u0434\u0430\u0439\u0442\u0435 TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID \u0438\u043b\u0438 LEADS_WEBHOOK_URL",
   });
 }
 
 export async function POST(request: Request) {
+  if (!assertSameOrigin(request)) {
+    return NextResponse.json({ success: false, error: "Forbidden" }, { status: 403 });
+  }
+
+  const ip = getClientIp(request);
+  const limited = checkRateLimit(`leads:${ip}`, 20, 10 * 60 * 1000);
+  if (!limited.ok) {
+    return NextResponse.json({ success: false, error: "Too many requests" }, { status: 429 });
+  }
+
   let body: unknown;
   try { body = await request.json(); } catch {
     return NextResponse.json({ success: false, error: "Invalid JSON" }, { status: 400 });

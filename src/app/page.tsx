@@ -4,6 +4,7 @@ import { HomeCarPicker } from "@/components/HomeCarPicker";
 import { ContactButtons } from "@/components/ContactButtons";
 import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
+import { SiteFooter } from "@/components/SiteFooter";
 import { getCatalogFilterMeta } from "@/data/cars";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/seo/site";
@@ -64,9 +65,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <footer className="relative z-10 px-8 pb-6 text-xs text-white/40 md:px-12">
-          © {new Date().getFullYear()} ВЭД · vedcompany.ru
-        </footer>
+        <SiteFooter />
       </main>
     </>
   );

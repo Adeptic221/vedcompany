@@ -16,6 +16,7 @@ import {
 import { findAnalogCars } from "@/lib/catalog/analogs";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 import { CarCardMini } from "@/components/CarCardMini";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Каталог автомобилей",
@@ -130,6 +131,7 @@ export default async function CatalogPage({
 
         <CatalogContactBanner />
       </div>
+      <SiteFooter />
     </main>
   );
 }

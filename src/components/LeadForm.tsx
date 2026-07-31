@@ -1,5 +1,6 @@
 "use client";
 import { useState, useCallback, type FormEvent } from "react";
+import Link from "next/link";
 import type { LeadPayload, LeadType } from "@/types/lead";
 import { saveLeadLocally } from "@/lib/leads/client-backup";
 import { isValidName, isValidPhone } from "@/lib/leads/validation";
@@ -20,12 +21,13 @@ export function LeadForm({ type, carId, carLabel, source, submitLabel, onSuccess
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
   const [leadId, setLeadId] = useState("");
 
   const reset = useCallback(() => {
-    setName(""); setPhone(""); setMessage(""); setStatus("idle"); setError(""); setLeadId("");
+    setName(""); setPhone(""); setMessage(""); setConsent(false); setStatus("idle"); setError(""); setLeadId("");
   }, []);
 
   async function handleSubmit(e: FormEvent) {
@@ -33,6 +35,7 @@ export function LeadForm({ type, carId, carLabel, source, submitLabel, onSuccess
     setError("");
     if (!isValidName(name)) { setError("\u0423\u043a\u0430\u0436\u0438\u0442\u0435 \u0438\u043c\u044f (\u043c\u0438\u043d\u0438\u043c\u0443\u043c 2 \u0441\u0438\u043c\u0432\u043e\u043b\u0430)"); return; }
     if (!isValidPhone(phone)) { setError("\u0423\u043a\u0430\u0436\u0438\u0442\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0439 \u043d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430"); return; }
+    if (!consent) { setError("\u041d\u0443\u0436\u043d\u043e \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445"); return; }
     setStatus("submitting");
     const payload: LeadPayload = { type, name: name.trim(), phone: phone.trim(), message: message.trim() || undefined, carId, carLabel, source };
     try {
@@ -84,11 +87,30 @@ export function LeadForm({ type, carId, carLabel, source, submitLabel, onSuccess
         <label htmlFor={`lead-message-${type}`} className="mb-1.5 block text-[10px] uppercase tracking-widest text-white/50">{"\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439"}</label>
         <textarea id={`lead-message-${type}`} value={message} onChange={(e) => setMessage(e.target.value)} placeholder={type === "car_request" ? "\u0423\u0434\u043e\u0431\u043d\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u0437\u0432\u043e\u043d\u043a\u0430..." : "\u0427\u0435\u043c \u043c\u043e\u0436\u0435\u043c \u043f\u043e\u043c\u043e\u0447\u044c?"} className="ved-input min-h-[88px] resize-y" rows={compact ? 2 : 3} disabled={status === "submitting"} />
       </div>
+      <label className="flex items-start gap-3 text-[10px] leading-relaxed text-white/45">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 border border-white/30 bg-transparent"
+          disabled={status === "submitting"}
+          required
+        />
+        <span>
+          {"\u042f \u0441\u043e\u0433\u043b\u0430\u0441\u0435\u043d(\u0430) \u043d\u0430 "}
+          <Link href="/legal/consent" className="underline decoration-white/30 underline-offset-2 transition hover:text-white/70" target="_blank">
+            {"\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445"}
+          </Link>
+          {" \u0438 \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0438\u043b\u0441\u044f \u0441 "}
+          <Link href="/legal/privacy" className="underline decoration-white/30 underline-offset-2 transition hover:text-white/70" target="_blank">
+            {"\u043f\u043e\u043b\u0438\u0442\u0438\u043a\u043e\u0439 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438"}
+          </Link>
+        </span>
+      </label>
       {error && <p className="text-xs text-red-400" role="alert">{error}</p>}
-      <button type="submit" disabled={status === "submitting"} className="w-full border border-white bg-white px-6 py-3.5 text-xs uppercase tracking-[0.2em] text-ved-navy transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-60">
+      <button type="submit" disabled={status === "submitting" || !consent} className="w-full border border-white bg-white px-6 py-3.5 text-xs uppercase tracking-[0.2em] text-ved-navy transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-60">
         {status === "submitting" ? "\u041e\u0442\u043f\u0440\u0430\u0432\u043a\u0430..." : submitLabel || (type === "car_request" ? "\u041e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0437\u0430\u044f\u0432\u043a\u0443" : "\u041f\u0435\u0440\u0435\u0437\u0432\u043e\u043d\u0438\u0442\u0435 \u043c\u043d\u0435")}
       </button>
-      <p className="text-[10px] leading-relaxed text-white/35">{"\u041d\u0430\u0436\u0438\u043c\u0430\u044f \u043a\u043d\u043e\u043f\u043a\u0443, \u0432\u044b \u0441\u043e\u0433\u043b\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044c \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445"}</p>
     </form>
   );
 }

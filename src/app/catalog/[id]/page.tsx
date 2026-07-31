@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
+import { SiteFooter } from "@/components/SiteFooter";
 import { JsonLd } from "@/components/JsonLd";
 import { PageBackground } from "@/components/PageBackground";
 import { CarDetailPricing } from "@/components/CarDetailPricing";
@@ -111,6 +112,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
           </div>
         </div>
       </div>
+      <SiteFooter />
     </main>
     </>
   );

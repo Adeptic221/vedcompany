@@ -87,3 +87,25 @@ export function getCarsStorageInfo() {
     committedCatalog: COMMITTED_CATALOG,
   };
 }
+
+export async function getCarById(id: string): Promise<Car | null> {
+  const cars = await getCarsCatalog();
+  return cars.find((car) => car.id === id) ?? null;
+}
+
+export async function upsertCar(car: Car): Promise<Car> {
+  const cars = await getCarsCatalog();
+  const idx = cars.findIndex((c) => c.id === car.id);
+  if (idx >= 0) cars[idx] = car;
+  else cars.unshift(car);
+  await saveCarsCatalog(cars);
+  return car;
+}
+
+export async function deleteCarById(id: string): Promise<boolean> {
+  const cars = await getCarsCatalog();
+  const next = cars.filter((car) => car.id !== id);
+  if (next.length === cars.length) return false;
+  await saveCarsCatalog(next);
+  return true;
+}

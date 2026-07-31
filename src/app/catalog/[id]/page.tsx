@@ -104,7 +104,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
             {photo ? <Image src={photo} alt={car.brand + " " + car.model} fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" /> : <span className="text-5xl font-light tracking-widest text-white/20">{car.brand}</span>}
           </div>
           <div>
-            <p className="text-xs uppercase tracking-widest text-white/50">{carTypeLabels[car.type]} · {car.country}{car.sync ? " · Autohome" : ""}</p>
+            <p className="text-xs uppercase tracking-widest text-white/50">{carTypeLabels[car.type]} · {car.country}</p>
             <h1 className="mt-2 text-3xl font-light tracking-wide md:text-4xl">{car.brand} {car.model} {car.year}</h1>
             <p className="mt-4 text-sm leading-relaxed text-white/60">{car.description}</p>
             <CarDetailPricing car={car} />

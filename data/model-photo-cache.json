@@ -1,0 +1,854 @@
+{
+  "byd:han-ev": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/BYD_Han_EV_facelift_001.jpg/800px-BYD_Han_EV_facelift_001.jpg",
+    "wikiTitle": "BYD_Han"
+  },
+  "byd:seal": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/2022_BYD_Seal.jpg/800px-2022_BYD_Seal.jpg",
+    "wikiTitle": "BYD_Seal"
+  },
+  "byd:song-plus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/2023_BYD_Song_Plus_DM-i_%28front%29.jpg/800px-2023_BYD_Song_Plus_DM-i_%28front%29.jpg",
+    "wikiTitle": "BYD_Song_Plus"
+  },
+  "byd:tang": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/BYD_Tang_DM-p_front_quarter_trimmed_2.jpg",
+    "wikiTitle": "BYD_Tang"
+  },
+  "geely:coolray": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/2018_Geely_Binyue.jpg",
+    "wikiTitle": "Geely_Coolray"
+  },
+  "geely:monjaro": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Geely_Monjaro_%28cropped%29.jpg",
+    "wikiTitle": "Geely_Monjaro"
+  },
+  "chery:tiggo-8-pro": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Chery_Tiggo_8_Plus_018_%28cropped%29.jpg",
+    "wikiTitle": "Chery_Tiggo_8"
+  },
+  "haval:h6": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Haval_H6_III_IMG001_%28cropped%29.jpg",
+    "wikiTitle": "Haval_H6"
+  },
+  "changan:uni-v": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Changan_UNI-V_IMG01.jpg",
+    "wikiTitle": "Changan_UNI-V"
+  },
+  "li-auto:l9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Li_Auto_L9_IMG001.jpg/800px-Li_Auto_L9_IMG001.jpg",
+    "wikiTitle": "Li_Auto_L9"
+  },
+  "zeekr:001": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2022_Zeekr_001_%28front%29.jpg/800px-2022_Zeekr_001_%28front%29.jpg",
+    "wikiTitle": "Zeekr_001"
+  },
+  "toyota:camry": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/2018_Toyota_Camry_%28ASV70R%29_Ascent_sedan_%282018-08-27%29_01.jpg/800px-2018_Toyota_Camry_%28ASV70R%29_Ascent_sedan_%282018-08-27%29_01.jpg",
+    "wikiTitle": "Toyota_Camry"
+  },
+  "porsche:macan": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Porsche_Macan_4_IMG_2153.jpg/800px-Porsche_Macan_4_IMG_2153.jpg",
+    "wikiTitle": "Porsche_Macan"
+  },
+  "mg:mg4": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/MG4_Electric_%E2%80%93_f_21042025.jpg/800px-MG4_Electric_%E2%80%93_f_21042025.jpg",
+    "wikiTitle": "MG4_EV"
+  },
+  "gac-aion:y-plus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2021_GAC_Aion_Y_%28front%29.jpg/800px-2021_GAC_Aion_Y_%28front%29.jpg",
+    "wikiTitle": "Aion_Y"
+  },
+  "wuling:bingo": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/2024_Wuling_BinguoEV_Long_Range_%28Indonesia%29_front_view.jpg/800px-2024_Wuling_BinguoEV_Long_Range_%28Indonesia%29_front_view.jpg",
+    "wikiTitle": "Wuling_Bingo"
+  },
+  "deepal:sl03": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/2023_Chang%27an_Shenlan_SL03_%28front%29.jpg/800px-2023_Chang%27an_Shenlan_SL03_%28front%29.jpg",
+    "wikiTitle": "Deepal_SL03"
+  },
+  "avatr:11": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2022_Avatr_11_%28front%29.jpg/800px-2022_Avatr_11_%28front%29.jpg",
+    "wikiTitle": "Avatr_11"
+  },
+  "leapmotor:c11": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/2020_Leapmotor_C11_%28front%29.jpg/800px-2020_Leapmotor_C11_%28front%29.jpg",
+    "wikiTitle": "Leapmotor_C11"
+  },
+  "voyah:free": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/%28CHN-Shanghai%29_Showcar_Voyah_Free%2B_No-plate_2025-12-21.jpg/800px-%28CHN-Shanghai%29_Showcar_Voyah_Free%2B_No-plate_2025-12-21.jpg",
+    "wikiTitle": "Voyah_Free"
+  },
+  "jaecoo:j7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Jaecoo_J7_1.6T_4WD_%E2%80%93_f_21032025.jpg/800px-Jaecoo_J7_1.6T_4WD_%E2%80%93_f_21032025.jpg",
+    "wikiTitle": "Jaecoo_7"
+  },
+  "omoda:c5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/2023_Omoda_C5_front_view.png",
+    "wikiTitle": "Omoda_C5"
+  },
+  "byd:qin-plus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/BYD_Qin_Plus_DM-i_facelift_008.jpg",
+    "wikiTitle": "BYD_Qin_Plus",
+    "lang": "en",
+    "desc": "Motor vehicle"
+  },
+  "byd:yuan-plus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/BYD_Yuan_Plus_II_002.jpg/800px-BYD_Yuan_Plus_II_002.jpg",
+    "wikiTitle": "BYD_Yuan_Plus",
+    "lang": "en",
+    "desc": "Battery electric compact crossover SUV"
+  },
+  "byd:dolphin": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/2021_BYD_Dolphin_EV_%28front%29.jpg/800px-2021_BYD_Dolphin_EV_%28front%29.jpg",
+    "wikiTitle": "BYD_Dolphin",
+    "lang": "en",
+    "desc": "Battery electric hatchback"
+  },
+  "byd:seal-06": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2024_BYD_Seal_06_DM-i.jpg/800px-2024_BYD_Seal_06_DM-i.jpg",
+    "wikiTitle": "BYD_Seal_06_DM-i",
+    "lang": "en",
+    "desc": "Plug-in hybrid mid-size car"
+  },
+  "geely:galaxy-l7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Geely_Galaxy_L7_010_%28cropped%29.jpg",
+    "wikiTitle": "Geely_Galaxy_L7",
+    "lang": "en",
+    "desc": "Plug-in hybrid compact crossover SUV"
+  },
+  "geely:preface": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Geely_Preface_008.jpg",
+    "wikiTitle": "Geely_Preface",
+    "lang": "en",
+    "desc": "Motor vehicle"
+  },
+  "geely:xingyue-l": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Geely_Monjaro_%28cropped%29.jpg",
+    "wikiTitle": "Geely_Xingyue_L",
+    "lang": "en",
+    "desc": "Mid-size crossover SUV"
+  },
+  "chery:tiggo-7-pro": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Chery_Tiggo_7_II_014_%28cropped%29.jpg",
+    "wikiTitle": "Chery_Tiggo_7",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "chery:arrizo-8": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Chery_Arrizo_8_004_%28cropped%29.jpg/800px-Chery_Arrizo_8_004_%28cropped%29.jpg",
+    "wikiTitle": "Chery_Arrizo_8",
+    "lang": "en",
+    "desc": "Motor vehicle"
+  },
+  "chery:tiggo-4-pro": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/2018_Chery_Tiggo_5x%2C_front_8.6.18.jpg/800px-2018_Chery_Tiggo_5x%2C_front_8.6.18.jpg",
+    "wikiTitle": "Chery_Tiggo_4",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "exeed:txl": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/2019_Exeed_TXL_%28front%29.jpg",
+    "wikiTitle": "Exeed_TXL",
+    "lang": "en",
+    "desc": "Chinese mid-size CUV"
+  },
+  "exeed:lx": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Exeed_LX_IMG001.jpg/800px-Exeed_LX_IMG001.jpg",
+    "wikiTitle": "Exeed_LX",
+    "lang": "en",
+    "desc": "Chinese subcompact luxury crossover SUV"
+  },
+  "haval:jolion": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/2023_Haval_Jolion_HEV_Sport.jpg/800px-2023_Haval_Jolion_HEV_Sport.jpg",
+    "wikiTitle": "Haval_Jolion",
+    "lang": "ru",
+    "desc": "Компактный кроссовер китайской компании Haval"
+  },
+  "haval:dargo": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/2020_Great_Wall_Haval_Big_Dog_front.jpg/800px-2020_Great_Wall_Haval_Big_Dog_front.jpg",
+    "wikiTitle": "Haval_Dargo",
+    "lang": "en",
+    "desc": "Chinese compact SUV"
+  },
+  "haval:h9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/2019_Haval_H9_%28facelift%29.jpg",
+    "wikiTitle": "Haval_H9",
+    "lang": "en",
+    "desc": "Full-size SUV made by Great Wall Motor"
+  },
+  "tank:300": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/TANK_300_IMG006.jpg",
+    "wikiTitle": "Tank_300",
+    "lang": "en",
+    "desc": "Mid-size SUV"
+  },
+  "tank:500": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tank_500_IMG001.jpg/800px-Tank_500_IMG001.jpg",
+    "wikiTitle": "Tank_500",
+    "lang": "en",
+    "desc": "Full-size SUV"
+  },
+  "tank:400": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tank_400_001.jpg/800px-Tank_400_001.jpg",
+    "wikiTitle": "Tank_400",
+    "lang": "en",
+    "desc": "Mid-size SUV"
+  },
+  "great-wall:ora-good-cat": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/GWM_Ora_03_%E2%80%93_f_12102025.jpg/800px-GWM_Ora_03_%E2%80%93_f_12102025.jpg",
+    "wikiTitle": "Ora_Good_Cat",
+    "lang": "en",
+    "desc": "Battery electric compact car"
+  },
+  "wey:coffee-01": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Wey_Coffee_01_PHEV_IAA_2021_1X7A0222.jpg/800px-Wey_Coffee_01_PHEV_IAA_2021_1X7A0222.jpg",
+    "wikiTitle": "WEY_Coffee_01",
+    "lang": "en",
+    "desc": "Chinese mid-size luxury crossover SUV"
+  },
+  "changan:cs75-plus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Changan_CS75_Plus_IV_005.jpg",
+    "wikiTitle": "Changan_CS75_Plus",
+    "lang": "en",
+    "desc": "Chinese compact crossover SUV manufactured by Changan"
+  },
+  "changan:uni-k": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Changan_UNI-K_001.jpg",
+    "wikiTitle": "Changan_UNI-K",
+    "lang": "en",
+    "desc": "Chinese mid-size crossover SUV"
+  },
+  "deepal:s7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/2023_Chang%27an_Shenlan_S7.jpg/800px-2023_Chang%27an_Shenlan_S7.jpg",
+    "wikiTitle": "Deepal_S7"
+  },
+  "li-auto:l7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Li_Auto_L7_006.jpg/800px-Li_Auto_L7_006.jpg",
+    "wikiTitle": "Li_Auto_L7",
+    "lang": "en",
+    "desc": "Range-extender mid-size luxury crossover SUV"
+  },
+  "li-auto:l6": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Li_Auto_L6_003.jpg",
+    "wikiTitle": "Li_Auto_L6",
+    "lang": "ru",
+    "desc": ""
+  },
+  "li-auto:l8": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Lixiang_L8_01_China_2023-04-19.jpg",
+    "wikiTitle": "Li_Auto_L8",
+    "lang": "en",
+    "desc": "Range extender luxury mid-size crossover SUV"
+  },
+  "aito:m7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/AITO_M7_II_008.jpg",
+    "wikiTitle": "AITO_M7",
+    "lang": "en",
+    "desc": "Full-size luxury SUV"
+  },
+  "aito:m9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/AITO_M9_II_003.jpg",
+    "wikiTitle": "AITO_M9",
+    "lang": "en",
+    "desc": "Full-size luxury SUV"
+  },
+  "aito:m5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/2022_Seres_AITO_M5_%28front%29.jpg/800px-2022_Seres_AITO_M5_%28front%29.jpg",
+    "wikiTitle": "AITO_M5",
+    "lang": "en",
+    "desc": "Compact luxury SUV"
+  },
+  "voyah:dream": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/2021_Voyah_Dreamer_%28front%29.jpg/800px-2021_Voyah_Dreamer_%28front%29.jpg",
+    "wikiTitle": "Voyah_Dreamer",
+    "lang": "en",
+    "desc": "Chinese minivan"
+  },
+  "avatr:12": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/%28CHN-Guangdong%29_Showcar_Avatr_12_No-plate_2024-05-26.jpg",
+    "wikiTitle": "Avatr_12",
+    "lang": "en",
+    "desc": "Electric executive full-size sedan"
+  },
+  "zeekr:007": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Zeekr_007_006_%28cropped%29.jpg",
+    "wikiTitle": "Zeekr_007"
+  },
+  "zeekr:x": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/2023_Zeekr_X_%28front%29.jpg/800px-2023_Zeekr_X_%28front%29.jpg",
+    "wikiTitle": "Zeekr_X",
+    "lang": "en",
+    "desc": "Battery electric compact crossover SUV"
+  },
+  "zeekr:009": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Zeekr_009_003.jpg/800px-Zeekr_009_003.jpg",
+    "wikiTitle": "Zeekr_009",
+    "lang": "en",
+    "desc": "Battery electric luxury MPV"
+  },
+  "lynk-co:08": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/2023_Lynk_%26_Co_08.jpg/800px-2023_Lynk_%26_Co_08.jpg",
+    "wikiTitle": "Lynk_%26_Co_08",
+    "lang": "en",
+    "desc": "Plug-in hybrid mid-size crossover SUV"
+  },
+  "lynk-co:09": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/2021_Lynk_%26_Co_09.jpg/800px-2021_Lynk_%26_Co_09.jpg",
+    "wikiTitle": "Lynk_%26_Co_09",
+    "lang": "en",
+    "desc": "Mid-size luxury crossover SUV"
+  },
+  "hongqi:h9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hongqi_H9_010.jpg/800px-Hongqi_H9_010.jpg",
+    "wikiTitle": "Hongqi_H9",
+    "lang": "en",
+    "desc": "Motor vehicle"
+  },
+  "hongqi:hs5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hongqi_HS5_facelift_009.jpg/800px-Hongqi_HS5_facelift_009.jpg",
+    "wikiTitle": "Hongqi_HS5",
+    "lang": "en",
+    "desc": "Compact luxury crossover SUV"
+  },
+  "hongqi:e-hs9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Hongqi_E-HS9_IMG_0753_%28cropped%29.jpg/800px-Hongqi_E-HS9_IMG_0753_%28cropped%29.jpg",
+    "wikiTitle": "Hongqi_E-HS9",
+    "lang": "en",
+    "desc": "Battery electric full-size luxury crossover SUV"
+  },
+  "hongqi:hs7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hongqi_HS7_II_003.jpg/800px-Hongqi_HS7_II_003.jpg",
+    "wikiTitle": "Hongqi_HS7",
+    "lang": "en",
+    "desc": "Mid-size luxury crossover SUV"
+  },
+  "gac-aion:s-plus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/2019_G%D0%90C_Aion_S.jpg/800px-2019_G%D0%90C_Aion_S.jpg",
+    "wikiTitle": "Aion_S",
+    "lang": "en",
+    "desc": "Compact executive electric sedan"
+  },
+  "gac-aion:v": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/GAC_Aion_V_%28second_generation%29_IAA_2025_DSC_1406.jpg/800px-GAC_Aion_V_%28second_generation%29_IAA_2025_DSC_1406.jpg",
+    "wikiTitle": "Aion_V",
+    "lang": "en",
+    "desc": "Battery electric compact crossover SUV"
+  },
+  "trumpchi:gs8": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Moscow%2C_GAC_GS8_Aug_2024_01.jpg/800px-Moscow%2C_GAC_GS8_Aug_2024_01.jpg",
+    "wikiTitle": "GAC_Trumpchi_GS8"
+  },
+  "wuling:starlight": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Wuling_Starlight_009.jpg",
+    "wikiTitle": "Wuling_Starlight",
+    "lang": "en",
+    "desc": "Mid-size sedan"
+  },
+  "wuling:hongguang-mini-ev": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2022_Wuling_Hongguang_Mini_EV_GameBoy_Edition_%28front%29.jpg/800px-2022_Wuling_Hongguang_Mini_EV_GameBoy_Edition_%28front%29.jpg",
+    "wikiTitle": "Wuling_Hongguang_Mini_EV",
+    "lang": "en",
+    "desc": "Chinese electric mini-car"
+  },
+  "nio:et5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NIO_ET5_IMG_8291.jpg/800px-NIO_ET5_IMG_8291.jpg",
+    "wikiTitle": "NIO_ET5",
+    "lang": "en",
+    "desc": "Battery electric compact executive car"
+  },
+  "nio:es6": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%28CHN-Guangdong%29_Showcar_Nio_ES6_No-plate_2024-05-25.jpg",
+    "wikiTitle": "NIO_ES6",
+    "lang": "en",
+    "desc": "Battery electric mid-size luxury crossover SUV"
+  },
+  "nio:et7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/NIO_ET7_1X7A6679_%28cropped%29.jpg/800px-NIO_ET7_1X7A6679_%28cropped%29.jpg",
+    "wikiTitle": "NIO_ET7",
+    "lang": "en",
+    "desc": "Battery electric executive sedan"
+  },
+  "nio:es8": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/%28CHN-Jiangsu%29_Showcar_Nio_ES8_No-plate_2025-12-20.jpg/800px-%28CHN-Jiangsu%29_Showcar_Nio_ES8_No-plate_2025-12-20.jpg",
+    "wikiTitle": "NIO_ES8",
+    "lang": "en",
+    "desc": "Battery electric full-size luxury crossover SUV"
+  },
+  "xpeng:g6": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/XPeng_G6_018_%28cropped%29.jpg",
+    "wikiTitle": "XPeng_G6",
+    "lang": "en",
+    "desc": "Battery electric mid-size crossover SUV"
+  },
+  "xpeng:p7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/XPeng_P7_II_MY2025_IMG03.jpg",
+    "wikiTitle": "XPeng_P7",
+    "lang": "en",
+    "desc": "Battery electric executive sedan"
+  },
+  "xpeng:g9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/2022_XPeng_G9_%28front%29.jpg/800px-2022_XPeng_G9_%28front%29.jpg",
+    "wikiTitle": "XPeng_G9",
+    "lang": "en",
+    "desc": "Battery electric mid-size crossover SUV"
+  },
+  "xpeng:x9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/XPeng_X9_003_%28cropped%29.jpg",
+    "wikiTitle": "XPeng_X9",
+    "lang": "en",
+    "desc": "Battery electric minivan"
+  },
+  "xiaomi:su7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%28CHN-Shanghai%29_Private_Xiaomi_SU7_%E6%B2%AAA7WE106_2024-11-24.jpg/800px-%28CHN-Shanghai%29_Private_Xiaomi_SU7_%E6%B2%AAA7WE106_2024-11-24.jpg",
+    "wikiTitle": "Xiaomi_SU7",
+    "lang": "en",
+    "desc": "Battery electric full-size sedan"
+  },
+  "im:ls6": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/IM_LS6_008.jpg/800px-IM_LS6_008.jpg",
+    "wikiTitle": "IM_LS6",
+    "lang": "en",
+    "desc": "Battery electric compact luxury crossover SUV"
+  },
+  "im:l7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/IM_L7_GIMS_2024_1X7A2241.jpg/800px-IM_L7_GIMS_2024_1X7A2241.jpg",
+    "wikiTitle": "IM_L7"
+  },
+  "leapmotor:c10": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Leapmotor_C10_EREV_Classic-Gala_2025_DSC_0779.jpg/800px-Leapmotor_C10_EREV_Classic-Gala_2025_DSC_0779.jpg",
+    "wikiTitle": "Leapmotor_C10",
+    "lang": "en",
+    "desc": "Mid-size crossover SUV"
+  },
+  "leapmotor:c01": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Leapmotor_C01_006_%28cropped%29.jpg",
+    "wikiTitle": "Leapmotor_C01",
+    "lang": "en",
+    "desc": "Mid-size sedan"
+  },
+  "neta:s": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Neta_S_IMG01_%28cropped%29.jpg",
+    "wikiTitle": "Neta_S",
+    "lang": "en",
+    "desc": "Battery electric mid-size sedan"
+  },
+  "neta:x": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Neta_U_001.jpg",
+    "wikiTitle": "Neta_X",
+    "lang": "en",
+    "desc": "Battery electric compact crossover SUV"
+  },
+  "jetour:dashing": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Moscow%2C_black_Jetour_Dashing%2C_April_2025_02.jpg",
+    "wikiTitle": "Jetour_Dashing",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "jetour:t2": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jetour_T2_Lightning_i-DM_Panda_White.jpg/800px-Jetour_T2_Lightning_i-DM_Panda_White.jpg",
+    "wikiTitle": "Jetour_Traveller",
+    "lang": "en",
+    "desc": "Mid-size SUV"
+  },
+  "mg:mg7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/MG_7_II_012_%28cropped%29.jpg",
+    "wikiTitle": "MG_7",
+    "lang": "en",
+    "desc": "Four-door large family car"
+  },
+  "mg:zs": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2018_SAIC-MG_ZS%2C_front_8.11.18.jpg/800px-2018_SAIC-MG_ZS%2C_front_8.11.18.jpg",
+    "wikiTitle": "MG_ZS",
+    "lang": "en",
+    "desc": "Index of articles associated with the same name"
+  },
+  "baic:bj40": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Beijing_BJ40_II_009_%28cropped%29.jpg",
+    "wikiTitle": "Beijing_BJ40",
+    "lang": "en",
+    "desc": "Chinese off-road vehicle"
+  },
+  "roewe:rx5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2023_SAIC-Roewe_eRX5_charging%2C_front_8.18.23.jpg/800px-2023_SAIC-Roewe_eRX5_charging%2C_front_8.18.23.jpg",
+    "wikiTitle": "Roewe_RX5",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "maxus:mifa-9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/2024_LDV_MIFA_Executive_front.jpg/800px-2024_LDV_MIFA_Executive_front.jpg",
+    "wikiTitle": "Maxus_Mifa_9",
+    "lang": "en",
+    "desc": "Chinese minivan"
+  },
+  "dongfeng:forthing-t5-evo": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Dongfeng_Forthing_5_1X7A7308.jpg/800px-Dongfeng_Forthing_5_1X7A7308.jpg",
+    "wikiTitle": "Forthing_T5_EVO"
+  },
+  "denza:d9": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Denza_D9_DM-i_IAA_2025_DSC_2042.jpg/800px-Denza_D9_DM-i_IAA_2025_DSC_2042.jpg",
+    "wikiTitle": "Denza_D9",
+    "lang": "en",
+    "desc": "Large minivan"
+  },
+  "denza:n7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2024_Denza_N7_%28facelift%29.jpg/800px-2024_Denza_N7_%28facelift%29.jpg",
+    "wikiTitle": "Denza_N7",
+    "lang": "en",
+    "desc": "Battery electric mid-size crossover SUV"
+  },
+  "fangchengbao:bao-5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Denza_B5_DMO_Granite_Gray_01.jpg/800px-Denza_B5_DMO_Granite_Gray_01.jpg",
+    "wikiTitle": "Fangchengbao_Bao_5",
+    "lang": "en",
+    "desc": "Plug-in hybrid mid-size SUV"
+  },
+  "toyota:rav4": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2024_Toyota_RAV4_Prime_XSE_Premium_in_Silver_Sky_with_Midnight_Black_roof%2C_front_left.jpg/800px-2024_Toyota_RAV4_Prime_XSE_Premium_in_Silver_Sky_with_Midnight_Black_roof%2C_front_left.jpg",
+    "wikiTitle": "Toyota_RAV4",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "toyota:highlander": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Toyota_Highlander_Hybrid_%28XU70%29_1X7A6356.jpg/800px-Toyota_Highlander_Hybrid_%28XU70%29_1X7A6356.jpg",
+    "wikiTitle": "Toyota_Highlander",
+    "lang": "en",
+    "desc": "Mid-size crossover SUV"
+  },
+  "toyota:corolla": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Toyota_Corolla_Hybrid_%28E210%29_IMG_4338.jpg/800px-Toyota_Corolla_Hybrid_%28E210%29_IMG_4338.jpg",
+    "wikiTitle": "Toyota_Corolla",
+    "lang": "en",
+    "desc": "Japanese compact car"
+  },
+  "lexus:rx": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Lexus_RX_500h_F_SPORT%2B_%28V%29_%E2%80%93_f_14072024.jpg/800px-Lexus_RX_500h_F_SPORT%2B_%28V%29_%E2%80%93_f_14072024.jpg",
+    "wikiTitle": "Lexus_RX",
+    "lang": "en",
+    "desc": "Luxury crossover SUV model from Lexus"
+  },
+  "lexus:es": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Lexus_ES_350_%28GSZ10%29_IMG_4332.jpg/800px-Lexus_ES_350_%28GSZ10%29_IMG_4332.jpg",
+    "wikiTitle": "Lexus_ES",
+    "lang": "en",
+    "desc": "Luxury car series produced by Lexus"
+  },
+  "lexus:nx": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/2023_Lexus_NX_450h%2C_front_4.5.23.jpg",
+    "wikiTitle": "Lexus_NX",
+    "lang": "en",
+    "desc": "Compact luxury crossover SUV"
+  },
+  "honda:cr-v": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Honda_CR-V_e-HEV_Elegance_AWD_%28VI%29_%E2%80%93_f_14072024.jpg/800px-Honda_CR-V_e-HEV_Elegance_AWD_%28VI%29_%E2%80%93_f_14072024.jpg",
+    "wikiTitle": "Honda_CR-V",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "honda:accord": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/2023_Honda_Accord_LX%2C_front_left%2C_07-13-2023.jpg/800px-2023_Honda_Accord_LX%2C_front_left%2C_07-13-2023.jpg",
+    "wikiTitle": "Honda_Accord",
+    "lang": "en",
+    "desc": "Japanese mid-size car"
+  },
+  "nissan:x-trail": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Nissan_X-Trail_%28T33%29_1X7A7179.jpg/800px-Nissan_X-Trail_%28T33%29_1X7A7179.jpg",
+    "wikiTitle": "Nissan_X-Trail",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "mazda:cx-5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic%2C_front_right.jpg/800px-2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic%2C_front_right.jpg",
+    "wikiTitle": "Mazda_CX-5"
+  },
+  "subaru:forester": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Subaru_Forester_%28SL%29_e-BOXER_DSC_8811.jpg/800px-Subaru_Forester_%28SL%29_e-BOXER_DSC_8811.jpg",
+    "wikiTitle": "Subaru_Forester",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "hyundai:tucson": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/2022_Hyundai_Tucson_Preferred%2C_Front_Right%2C_05-24-2021.jpg",
+    "wikiTitle": "Hyundai_Tucson",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "hyundai:santa-fe": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/2024_Hyundai_Santa_Fe_Luxury_AWD_in_Hampton_Grey%2C_front_left%2C_2024-06-30.jpg",
+    "wikiTitle": "Hyundai_Santa_Fe",
+    "lang": "en",
+    "desc": "Mid-size crossover SUV"
+  },
+  "kia:sportage": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/2025_Kia_Sportage_S_front_only.jpg/800px-2025_Kia_Sportage_S_front_only.jpg",
+    "wikiTitle": "Kia_Sportage",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "kia:sorento": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/2024_Kia_Sorento_X-Line_SX_Prestige_%28facelift%29%2C_front_12.20.24.jpg",
+    "wikiTitle": "Kia_Sorento",
+    "lang": "en",
+    "desc": "Mid-size crossover SUV"
+  },
+  "genesis:gv70": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Genesis_GV70_IAA_2021_1X7A0228.jpg/800px-Genesis_GV70_IAA_2021_1X7A0228.jpg",
+    "wikiTitle": "Genesis_GV70",
+    "lang": "en",
+    "desc": "Korean luxury crossover SUV"
+  },
+  "genesis:g80": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Genesis_G80_IAA_2021_1X7A0229.jpg/800px-Genesis_G80_IAA_2021_1X7A0229.jpg",
+    "wikiTitle": "Genesis_G80",
+    "lang": "en",
+    "desc": "Executive sedan"
+  },
+  "bmw:x5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_BMW_X5_M50d_Automatic_3.0.jpg/800px-2019_BMW_X5_M50d_Automatic_3.0.jpg",
+    "wikiTitle": "BMW_X5",
+    "lang": "en",
+    "desc": "Mid-size luxury crossover SUV"
+  },
+  "bmw:3-series": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/BMW_G20_%282022%29_IMG_7316_%282%29.jpg/800px-BMW_G20_%282022%29_IMG_7316_%282%29.jpg",
+    "wikiTitle": "BMW_3_Series",
+    "lang": "en",
+    "desc": "Series of compact executive cars produced by BMW"
+  },
+  "bmw:x3": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/BMW_G45_20_IMG_3794.jpg/800px-BMW_G45_20_IMG_3794.jpg",
+    "wikiTitle": "BMW_X3",
+    "lang": "en",
+    "desc": "Compact luxury crossover SUV"
+  },
+  "mercedes:e-class": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Mercedes-Benz_W214_1X7A1841.jpg/800px-Mercedes-Benz_W214_1X7A1841.jpg",
+    "wikiTitle": "Mercedes-Benz_E-Class",
+    "lang": "en",
+    "desc": "German executive car"
+  },
+  "mercedes:gle": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Mercedes-Benz_GLE_350_d_4MATIC_AMG_Line_%28V_167%29_%E2%80%93_f_18042021.jpg/800px-Mercedes-Benz_GLE_350_d_4MATIC_AMG_Line_%28V_167%29_%E2%80%93_f_18042021.jpg",
+    "wikiTitle": "Mercedes-Benz_GLE",
+    "lang": "en",
+    "desc": "Mid-size luxury SUV"
+  },
+  "mercedes:c-class": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mercedes-Benz_W206_IMG_6380.jpg/800px-Mercedes-Benz_W206_IMG_6380.jpg",
+    "wikiTitle": "Mercedes-Benz_C-Class",
+    "lang": "en",
+    "desc": "Motor vehicle"
+  },
+  "audi:q5": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Audi_Q5_2.0_TDI_quattro_S_line_%28GU%29_%E2%80%93_f_13102025.jpg/800px-Audi_Q5_2.0_TDI_quattro_S_line_%28GU%29_%E2%80%93_f_13102025.jpg",
+    "wikiTitle": "Audi_Q5",
+    "lang": "en",
+    "desc": "Compact luxury crossover SUV"
+  },
+  "audi:a6": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Audi_A6_C9_IAA_2025_DSC_1920.jpg/800px-Audi_A6_C9_IAA_2025_DSC_1920.jpg",
+    "wikiTitle": "Audi_A6",
+    "lang": "en",
+    "desc": "Executive car series produced by Audi"
+  },
+  "audi:q7": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Audi_Q7_4M_FL2_3.0_V6_MHEV_quattro_Satellite_Silver_Metallic_01_%28cropped%29.jpg/800px-Audi_Q7_4M_FL2_3.0_V6_MHEV_quattro_Satellite_Silver_Metallic_01_%28cropped%29.jpg",
+    "wikiTitle": "Audi_Q7"
+  },
+  "porsche:cayenne": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Porsche_Cayenne_%28III%2C_Facelift%29_%E2%80%93_f_01012025.jpg/800px-Porsche_Cayenne_%28III%2C_Facelift%29_%E2%80%93_f_01012025.jpg",
+    "wikiTitle": "Porsche_Cayenne",
+    "lang": "en",
+    "desc": "Mid-size luxury crossover SUV"
+  },
+  "volkswagen:tiguan": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Volkswagen_Tiguan_III_IMG_8823_%28cropped%29.jpg/800px-Volkswagen_Tiguan_III_IMG_8823_%28cropped%29.jpg",
+    "wikiTitle": "Volkswagen_Tiguan",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "volkswagen:passat": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/VW_Passat_Variant_Elegance_%28B9%29_%E2%80%93_f_18052025.jpg/800px-VW_Passat_Variant_Elegance_%28B9%29_%E2%80%93_f_18052025.jpg",
+    "wikiTitle": "Volkswagen_Passat",
+    "lang": "en",
+    "desc": "Car model series"
+  },
+  "volvo:xc60": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2018_Volvo_XC60_R-Design_D5_P-Pulse_2.0_Front.jpg/800px-2018_Volvo_XC60_R-Design_D5_P-Pulse_2.0_Front.jpg",
+    "wikiTitle": "Volvo_XC60",
+    "lang": "en",
+    "desc": "Compact luxury crossover SUV"
+  },
+  "volvo:xc90": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Volvo_XC90_T8_AWD_Plug-in_Hybrid_Plus_%28II%2C_2._Facelift%29_%E2%80%93_f_03102025.jpg/800px-Volvo_XC90_T8_AWD_Plug-in_Hybrid_Plus_%28II%2C_2._Facelift%29_%E2%80%93_f_03102025.jpg",
+    "wikiTitle": "Volvo_XC90",
+    "lang": "en",
+    "desc": "Mid-size luxury crossover SUV"
+  },
+  "land-rover:defender": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/2015_Land_Rover_Defender_%28L316_MY15%29_90_3-door_wagon_%282015-10-24%29_01.jpg/800px-2015_Land_Rover_Defender_%28L316_MY15%29_90_3-door_wagon_%282015-10-24%29_01.jpg",
+    "wikiTitle": "Land_Rover_Defender",
+    "lang": "en",
+    "desc": "Off-road 4x4 and pickup truck series produced by Land Rover"
+  },
+  "land-rover:range-rover-sport": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2015_Land_Rover_Range_Rover_Sport_HSE_3.0_Front.jpg/800px-2015_Land_Rover_Range_Rover_Sport_HSE_3.0_Front.jpg",
+    "wikiTitle": "Range_Rover_Sport",
+    "lang": "en",
+    "desc": "Mid-size luxury SUV"
+  },
+  "tesla:model-y": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tesla_Model_Y_Premium_%28Facelift%29_%E2%80%93_f_05052026.jpg/800px-Tesla_Model_Y_Premium_%28Facelift%29_%E2%80%93_f_05052026.jpg",
+    "wikiTitle": "Tesla_Model_Y",
+    "lang": "en",
+    "desc": "Electric compact crossover SUV"
+  },
+  "tesla:model-3": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Tesla_Model_3_%282023%29_Autofr%C3%BChling_Ulm_IMG_9282.jpg/800px-Tesla_Model_3_%282023%29_Autofr%C3%BChling_Ulm_IMG_9282.jpg",
+    "wikiTitle": "Tesla_Model_3",
+    "lang": "en",
+    "desc": "Electric mid-size sedan"
+  },
+  "skoda:kodiaq": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%C5%A0koda_Kodiaq_II_IMG_9825.jpg/800px-%C5%A0koda_Kodiaq_II_IMG_9825.jpg",
+    "wikiTitle": "Skoda_Kodiaq",
+    "lang": "en",
+    "desc": "Mid-size crossover SUV produced by Škoda"
+  },
+  "peugeot:3008": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Peugeot_e-3008_Automesse_Ludwigsburg_2024_IMG_1537.jpg/800px-Peugeot_e-3008_Automesse_Ludwigsburg_2024_IMG_1537.jpg",
+    "wikiTitle": "Peugeot_3008",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  }
+}

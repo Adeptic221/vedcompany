@@ -1,5 +1,7 @@
 <svg viewBox="0 0 220 68" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VED">
-  <path fill="#0059A3" d="M2 0h24l12 52L50 0h24L46 68H30L2 0z"/>
-  <path fill="#0059A3" d="M88 0h50v11H88L68 30v11h70v11H88v5h50v11H88V57H88V41H68V30L88 11V0z"/>
-  <path fill="#0059A3" d="M158 0h20v68h-20q48 0 48-34T158 0z"/>
+  <rect width="220" height="68" fill="#0a1628"/>
+  <path fill="#FFFFFF" d="M2 0h24l12 52L50 0h24L46 68H30L2 0z"/>
+  <path fill="#FFFFFF" d="M88 0h50v12H88V0z"/>
+  <path fill="#FFFFFF" d="M88 24h50v12H100v20h38v12H88V24z"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M158 0h20c34 0 40 14 40 34s-6 34-40 34h-20V0zm20 13c20 0 26 8 26 21s-6 21-26 21V13z"/>
 </svg>

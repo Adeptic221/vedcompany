@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-const LOGO_COLOR = "#0059A3";
+/** White mark for navy/blue site chrome. */
+const LOGO_COLOR = "#FFFFFF";
 
 export function VedLogoMark({
   className = "",
@@ -19,11 +20,13 @@ export function VedLogoMark({
       className={className}
     >
       <path fill={color} d="M2 0h24l12 52L50 0h24L46 68H30L2 0z" />
+      <path fill={color} d="M88 0h50v12H88V0z" />
+      <path fill={color} d="M88 24h50v12H100v20h38v12H88V24z" />
       <path
         fill={color}
-        d="M88 0h50v11H88L68 30v11h70v11H88v5h50v11H88V57H88V41H68V30L88 11V0z"
+        fillRule="evenodd"
+        d="M158 0h20c34 0 40 14 40 34s-6 34-40 34h-20V0zm20 13c20 0 26 8 26 21s-6 21-26 21V13z"
       />
-      <path fill={color} d="M158 0h20v68h-20q48 0 48-34T158 0z" />
     </svg>
   );
 }

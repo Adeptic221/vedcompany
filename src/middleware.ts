@@ -3,13 +3,23 @@ import { ADMIN_COOKIE, getAdminSessionToken } from "@/lib/admin/session";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const expected = await getAdminSessionToken();
+
+  let expected: string | null = null;
+  try {
+    expected = await getAdminSessionToken();
+  } catch {
+    expected = null;
+  }
+
   const token = request.cookies.get(ADMIN_COOKIE)?.value;
   const ok = Boolean(expected && token && token === expected);
 
-  if (pathname === "/api/admin/login") return NextResponse.next();
+  const isLoginPage = pathname === "/admin/login";
+  const isLoginApi = pathname === "/api/admin/login";
 
-  if (pathname === "/admin/login") {
+  if (isLoginApi) return NextResponse.next();
+
+  if (isLoginPage) {
     if (ok) return NextResponse.redirect(new URL("/admin", request.url));
     return NextResponse.next();
   }
@@ -27,5 +37,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
+  matcher: ["/admin", "/admin/(.*)", "/api/admin/(.*)"],
 };

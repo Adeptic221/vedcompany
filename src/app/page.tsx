@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { HomeCarPicker } from "@/components/HomeCarPicker";
 import { ContactButtons } from "@/components/ContactButtons";
 import { JsonLd } from "@/components/JsonLd";
+import { HomeHeroSketch } from "@/components/HomeHeroSketch";
 import { PageBackground } from "@/components/PageBackground";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getCatalogFilterMeta } from "@/data/cars";
@@ -42,12 +43,12 @@ export default async function HomePage() {
   return (
     <>
       <JsonLd data={organizationJsonLd} />
-      <main className="relative ved-screen overflow-hidden bg-ved-navy">
+      <main className="relative ved-screen overflow-x-clip overflow-y-visible bg-[#0a1628]">
         <PageBackground />
         <Header />
 
-        <section className="relative z-10 flex min-h-[calc(100vh-88px)] items-center px-8 md:px-16 lg:px-24">
-          <div className="w-full max-w-xl">
+        <section className="relative z-10 flex min-h-[calc(100vh-88px)] items-center gap-6 px-8 md:gap-10 md:px-16 lg:gap-14 lg:px-24">
+          <div className="relative z-10 w-full max-w-xl shrink-0">
             <h1 className="mb-8 text-lg font-light uppercase tracking-[0.2em] text-white/90 md:text-xl">
               Подберите автомобиль
               <br />
@@ -62,6 +63,10 @@ export default async function HomePage() {
               </p>
               <ContactButtons size="sm" />
             </div>
+          </div>
+
+          <div className="relative z-[1] hidden min-h-[70vh] flex-1 self-stretch overflow-visible md:block lg:min-h-[80vh] lg:pt-8">
+            <HomeHeroSketch />
           </div>
         </section>
 

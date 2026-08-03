@@ -43,7 +43,7 @@ export function CabinetNav({
         </select>
       </div>
 
-      <nav className="hidden shrink-0 lg:flex lg:w-56 lg:flex-col lg:gap-1.5">
+      <nav className="hidden w-full shrink-0 lg:flex lg:flex-col lg:gap-1.5">
         {cabinetTabs.map((t) => {
           const count = badge(t.id);
           return (
@@ -51,13 +51,13 @@ export function CabinetNav({
               key={t.id}
               type="button"
               onClick={() => onTabChange(t.id)}
-              className={`flex items-center justify-between border px-4 py-3 text-left text-xs uppercase tracking-wider transition ${
+              className={`flex items-center justify-between gap-2 border px-4 py-3 text-left text-xs uppercase tracking-wider transition ${
                 tab === t.id
                   ? "border-white bg-white/10 text-white"
                   : "border-white/10 text-white/50 hover:border-white/30 hover:text-white"
               }`}
             >
-              <span className="truncate">{t.label}</span>
+              <span className="min-w-0 whitespace-normal leading-snug">{t.label}</span>
               {count !== null && (
                 <span className="ml-2 shrink-0 rounded-full bg-white/15 px-2 py-0.5 text-[10px] text-white/70">
                   {count}

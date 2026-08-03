@@ -81,7 +81,6 @@ export function filterCars(items: Car[], filters: CatalogSearchParams): Car[] {
     if (filters.brand && car.brandSlug !== filters.brand) return false;
     if (filters.model && filters.model !== "any" && car.model.toLowerCase() !== filters.model.toLowerCase()) return false;
     if (filters.year && car.year !== Number(filters.year)) return false;
-    if (filters.type && car.type !== filters.type) return false;
     if (filters.fuel && car.specs.fuel !== filters.fuel) return false;
     if (filters.q && !matchesSearch(car, filters.q)) return false;
 
@@ -168,7 +167,6 @@ export function countActiveFilters(filters: CatalogSearchParams): number {
   let count = 0;
   if (filters.q?.trim()) count++;
   if (filters.brand) count++;
-  if (filters.type) count++;
   if (filters.year) count++;
   if (filters.fuel) count++;
   if (filters.priceMin || filters.priceMax || filters.budget) count++;

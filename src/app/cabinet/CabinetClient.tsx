@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { PageBackground } from "@/components/PageBackground";
@@ -17,6 +17,7 @@ import { ChatTab } from "./components/ChatTab";
 import { DocumentsTab } from "./components/DocumentsTab";
 import { TrackingTab } from "./components/TrackingTab";
 import { FinanceTab } from "./components/FinanceTab";
+import { AfterSalesTab } from "./components/AfterSalesTab";
 
 const tabTitles: Record<CabinetTab, string> = {
   favorites: "Избранное",
@@ -26,9 +27,11 @@ const tabTitles: Record<CabinetTab, string> = {
   documents: "Документы для таможни",
   tracking: "Отслеживание автомобиля",
   finance: "Финансовая сводка",
+  aftersales: "Послепродажное обслуживание",
 };
 
 function CabinetContent() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab") as CabinetTab | null;
   const [tab, setTab] = useState<CabinetTab>(tabParam || "cart");
@@ -53,6 +56,7 @@ function CabinetContent() {
   const handleTabChange = (next: CabinetTab) => {
     setTab(next);
     if (next !== "tracking") setHighlightOrderId(null);
+    router.replace(`/cabinet?tab=${next}`, { scroll: false });
   };
 
   return (
@@ -69,7 +73,7 @@ function CabinetContent() {
         </p>
 
         <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:gap-8">
-          <aside className="flex flex-col gap-4 lg:w-56 lg:shrink-0">
+          <aside className="flex flex-col gap-4 lg:w-72 lg:shrink-0">
             <ProfileCard />
             <CabinetNav
               tab={tab}
@@ -99,6 +103,7 @@ function CabinetContent() {
               <TrackingTab cars={cars} highlightOrderId={highlightOrderId} />
             )}
             {tab === "finance" && <FinanceTab />}
+            {tab === "aftersales" && <AfterSalesTab cars={cars} />}
           </div>
         </div>
       </div>

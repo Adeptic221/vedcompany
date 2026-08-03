@@ -4,7 +4,7 @@ import { useId } from "react";
 
 type LoadingSphereProps = {
   label?: string;
-  /** Explicit px size; default ≈ 10% viewport height */
+  /** Explicit px size; default ≈ 40% viewport height */
   size?: number;
   fullscreen?: boolean;
 };
@@ -23,7 +23,7 @@ export function LoadingSphere({
   const sizeStyle = size ? { width: size, height: size } : undefined;
   const sizeClass = size
     ? ""
-    : "h-[10vh] w-[10vh] min-h-[72px] min-w-[72px] max-h-[160px] max-w-[160px]";
+    : "h-[40vh] w-[40vh] min-h-[288px] min-w-[288px] max-h-[640px] max-w-[640px]";
 
   const sphere = (
     <div
@@ -80,7 +80,9 @@ export function LoadingSphere({
   const content = (
     <div className="flex flex-col items-center justify-center gap-6">
       {sphere}
-      <p className="text-xs uppercase tracking-[0.35em] text-white/45">{label}</p>
+      {label ? (
+        <p className="text-xs uppercase tracking-[0.35em] text-white/45">{label}</p>
+      ) : null}
     </div>
   );
 

@@ -30,6 +30,7 @@ yarn-error.log*
 # env files
 .env*.local
 .env
+!.env.example
 
 # synced runtime data (keep cars.catalog.json in repo for Netlify)
 /data/leads.json
@@ -38,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.vercel
+
+# local build logs
+build-log.txt
+build-log-run.txt

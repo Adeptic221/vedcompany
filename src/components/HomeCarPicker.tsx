@@ -2,10 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Car } from "@/types/car";
-import {
-  carTypeLabels,
-  type CatalogFilterMeta,
-} from "@/data/cars";
+import { type CatalogFilterMeta } from "@/data/cars";
 import { findAnalogCars, findSelectedCar } from "@/lib/catalog/analogs";
 import { CarCardMini } from "@/components/CarCardMini";
 
@@ -16,8 +13,6 @@ const BUDGET_OPTIONS = [
   { value: "6000000", label: "до 6 000 000" },
   { value: "10000000", label: "до 10 000 000" },
 ];
-
-const CAR_TYPES = Object.keys(carTypeLabels) as (keyof typeof carTypeLabels)[];
 
 export function HomeCarPicker({
   cars,
@@ -30,7 +25,6 @@ export function HomeCarPicker({
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
   const [budget, setBudget] = useState("");
-  const [type, setType] = useState("");
 
   const modelOptions = useMemo(() => {
     if (!brand) return [];
@@ -42,21 +36,21 @@ export function HomeCarPicker({
   }, [cars, brand]);
 
   const selectedCar = useMemo(
-    () => findSelectedCar(cars, { brand, model, year, type }),
-    [cars, brand, model, year, type]
+    () => findSelectedCar(cars, { brand, model, year }),
+    [cars, brand, model, year]
   );
 
   const analogs = useMemo(() => {
-    if (!type || !budget || !selectedCar) return [];
+    if (!budget || !selectedCar) return [];
     return findAnalogCars(cars, {
       budget: Number(budget),
-      type,
+      type: selectedCar.type,
       brand: selectedCar.brandSlug,
       excludeId: selectedCar.id,
     });
-  }, [cars, budget, type, selectedCar]);
+  }, [cars, budget, selectedCar]);
 
-  const showPreview = Boolean(selectedCar && type && budget);
+  const showPreview = Boolean(selectedCar && budget);
 
   return (
     <div className="flex flex-col gap-6">
@@ -113,23 +107,6 @@ export function HomeCarPicker({
           {meta.years.map((y) => (
             <option key={y} value={String(y)}>
               {y}
-            </option>
-          ))}
-        </select>
-
-        <select
-          id="type"
-          name="type"
-          className="ved-select"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <option value="" disabled>
-            Тип автомобиля
-          </option>
-          {CAR_TYPES.map((value) => (
-            <option key={value} value={value}>
-              {carTypeLabels[value]}
             </option>
           ))}
         </select>

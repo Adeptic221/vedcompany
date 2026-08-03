@@ -47,10 +47,10 @@ export default async function CatalogPage({
   const filteredIds = new Set(filtered.map((car) => car.id));
   const primaryCar = filtered.length === 1 ? filtered[0] : null;
   const showAnalogs =
-    Boolean(primaryCar && params.type && (params.budget || params.priceMax));
+    Boolean(primaryCar && (params.budget || params.priceMax));
   const analogs = showAnalogs
     ? findAnalogCars(cars, {
-        type: params.type,
+        type: primaryCar!.type,
         budget: Number(params.budget || params.priceMax),
         brand: primaryCar!.brandSlug,
         excludeId: primaryCar!.id,

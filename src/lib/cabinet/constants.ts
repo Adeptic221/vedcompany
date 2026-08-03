@@ -7,7 +7,8 @@ export type CabinetTab =
   | "chat"
   | "documents"
   | "tracking"
-  | "finance";
+  | "finance"
+  | "aftersales";
 
 export const cabinetTabs: { id: CabinetTab; label: string }[] = [
   { id: "favorites", label: "Избранное" },
@@ -17,6 +18,7 @@ export const cabinetTabs: { id: CabinetTab; label: string }[] = [
   { id: "documents", label: "Документы" },
   { id: "tracking", label: "Отслеживание" },
   { id: "finance", label: "Финансы" },
+  { id: "aftersales", label: "Послепродажное обслуживание" },
 ];
 
 export const statusLabels: Record<OrderStatus, string> = {

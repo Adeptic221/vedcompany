@@ -16,9 +16,9 @@ export function Header() {
   const { openContactModal } = useContactModal();
 
   return (
-    <header className="relative z-10 flex items-center justify-between px-8 py-6 md:px-12">
+    <header className="relative z-50 flex items-center justify-between bg-[#0a1628]/95 px-8 py-6 backdrop-blur-sm md:px-12">
       <VedLogo />
-      <nav className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/70 md:gap-6">
+      <nav className="flex items-center gap-3 text-xs uppercase tracking-widest text-white md:gap-6">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -31,13 +31,13 @@ export function Header() {
         <button
           type="button"
           onClick={openContactModal}
-          className="hidden border border-white/20 px-3 py-2 transition hover:border-white/40 hover:text-white sm:inline"
+          className="hidden border border-white/50 px-3 py-2 transition hover:border-white hover:text-white sm:inline"
         >
           Связаться
         </button>
         <Link
           href="/cabinet?tab=cart"
-          className="relative border border-white/20 px-3 py-2 transition hover:border-white/40 hover:text-white"
+          className="relative border border-white/50 px-3 py-2 transition hover:border-white hover:text-white"
         >
           Корзина
           {cartCount > 0 && (
@@ -49,7 +49,7 @@ export function Header() {
         <button
           type="button"
           onClick={openContactModal}
-          className="border border-white/20 px-2 py-2 transition hover:border-white/40 hover:text-white sm:hidden"
+          className="border border-white/50 px-2 py-2 transition hover:border-white hover:text-white sm:hidden"
           aria-label="Связаться"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

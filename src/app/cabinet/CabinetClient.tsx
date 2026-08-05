@@ -103,7 +103,7 @@ function CabinetContent() {
               <TrackingTab cars={cars} highlightOrderId={highlightOrderId} />
             )}
             {tab === "finance" && <FinanceTab />}
-            {tab === "aftersales" && <AfterSalesTab cars={cars} />}
+            {tab === "aftersales" && <AfterSalesTab />}
           </div>
         </div>
       </div>

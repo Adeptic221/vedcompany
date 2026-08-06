@@ -8,6 +8,7 @@ import {
   isGithubCatalogEnabled,
   pushCatalogToGithub,
 } from "@/lib/storage/github-catalog";
+import { withoutChinaCars } from "@/lib/catalog/china";
 
 /** Serverless (Netlify/Vercel functions): ephemeral /tmp only */
 const isServerless = Boolean(
@@ -52,7 +53,7 @@ function mergeCatalogs(...sources: Car[][]): Car[] {
 }
 
 function getDefaultCatalog(): Car[] {
-  return mergeCatalogs(autohomeDemoCars, staticCars);
+  return withoutChinaCars(mergeCatalogs(autohomeDemoCars, staticCars));
 }
 
 async function writeLocalCatalog(cars: Car[]): Promise<void> {
@@ -84,13 +85,14 @@ export async function getCarsCatalog(): Promise<Car[]> {
     try {
       const remote = await fetchCatalogFromGithub();
       if (remote && remote.cars.length > 0) {
-        memoryCatalog = { cars: remote.cars, fetchedAt: Date.now() };
+        const cars = withoutChinaCars(remote.cars);
+        memoryCatalog = { cars, fetchedAt: Date.now() };
         try {
-          await writeLocalCatalog(remote.cars);
+          await writeLocalCatalog(cars);
         } catch {
           // Local cache is best-effort on serverless.
         }
-        return remote.cars;
+        return cars;
       }
     } catch (e) {
       console.warn("[cars-store] GitHub catalog read failed, falling back to disk:", e);
@@ -99,8 +101,9 @@ export async function getCarsCatalog(): Promise<Car[]> {
 
   const local = await readLocalCatalog();
   if (local) {
-    memoryCatalog = { cars: local, fetchedAt: Date.now() };
-    return local;
+    const cars = withoutChinaCars(local);
+    memoryCatalog = { cars, fetchedAt: Date.now() };
+    return cars;
   }
 
   const fallback = getDefaultCatalog();
@@ -109,11 +112,12 @@ export async function getCarsCatalog(): Promise<Car[]> {
 }
 
 export async function saveCarsCatalog(cars: Car[]): Promise<void> {
-  memoryCatalog = { cars, fetchedAt: Date.now() };
+  const cleaned = withoutChinaCars(cars);
+  memoryCatalog = { cars: cleaned, fetchedAt: Date.now() };
 
   let localError: unknown = null;
   try {
-    await writeLocalCatalog(cars);
+    await writeLocalCatalog(cleaned);
   } catch (e) {
     localError = e;
     console.warn("[cars-store] local save skipped:", e);
@@ -121,8 +125,8 @@ export async function saveCarsCatalog(cars: Car[]): Promise<void> {
 
   if (isGithubCatalogEnabled()) {
     await pushCatalogToGithub(
-      cars,
-      `chore(catalog): update cars.catalog.json via admin (${cars.length} cars)`
+      cleaned,
+      `chore(catalog): update cars.catalog.json via admin (${cleaned.length} cars)`
     );
     return;
   }

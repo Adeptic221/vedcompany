@@ -178,6 +178,8 @@ function countryFor(slug) {
   return "China";
 }
 
+const ACTIVE_LISTINGS = LISTINGS.filter((row) => countryFor(row[0]) !== "China");
+
 function driveFor(type, fuel, brandSlug) {
   if (fuel === "Electric" && ["tesla", "porsche", "bmw", "nio", "xpeng", "zeekr", "avatr", "xiaomi"].includes(brandSlug)) {
     return type === "sedan" ? "RWD" : "AWD";
@@ -267,7 +269,7 @@ function saveCache(cache) {
 async function resolveAllPhotos() {
   const cache = loadCache();
   const unique = new Map();
-  for (const row of LISTINGS) {
+  for (const row of ACTIVE_LISTINGS) {
     const key = modelPhotoKey(row[0], row[2]);
     if (!unique.has(key)) unique.set(key, row[11]);
   }
@@ -357,7 +359,7 @@ function buildCars(photoMap) {
       entry[11],
     ];
   }
-  for (const entry of LISTINGS) {
+  for (const entry of ACTIVE_LISTINGS) {
     cars.push(buildOne(entry));
     cars.push(buildOne(alt(entry)));
   }
@@ -396,7 +398,7 @@ function writeDemoPhotosTs(photoMap) {
 }
 
 function writeAutohomeDemoTs() {
-  const listingLines = LISTINGS.map((row) => {
+  const listingLines = ACTIVE_LISTINGS.map((row) => {
     const [slug, brand, model, year, type, price, engine, power, fuel, cons, days] = row;
     return `  [${JSON.stringify(slug)}, ${JSON.stringify(brand)}, ${JSON.stringify(model)}, ${year}, ${JSON.stringify(type)}, ${price}, ${JSON.stringify(engine)}, ${JSON.stringify(power)}, ${JSON.stringify(fuel)}, ${JSON.stringify(cons)}, ${days}],`;
   });
@@ -523,11 +525,11 @@ function patchExportCatalogForce() {
 }
 
 async function main() {
-  console.log(`Models: ${LISTINGS.length}, expected cars: ${LISTINGS.length * 2}`);
+  console.log(`Models: ${ACTIVE_LISTINGS.length}, expected cars: ${ACTIVE_LISTINGS.length * 2}`);
   const cache = await resolveAllPhotos();
   const missing = [];
   const photoMap = {};
-  for (const row of LISTINGS) {
+  for (const row of ACTIVE_LISTINGS) {
     const key = modelPhotoKey(row[0], row[2]);
     const hit = cache[key];
     if (!hit?.url) missing.push(key + " <- " + row[11]);
@@ -550,7 +552,7 @@ async function main() {
 
   // Spot-check
   const samples = [
-    "ah-byd-han-ev-2024",
+    
     "ah-toyota-camry-2024",
     "ah-bmw-x5-2023",
     "ah-tesla-model-y-2024",

@@ -3,6 +3,7 @@ import type { VtbExchangeRate } from "@/types/sync";
 import { autohomeDemoCars } from "@/data/cars.autohome-demo";
 import { convertCnyToRub } from "@/lib/exchange/vtb";
 import { calculateCustoms, parseEngineVolumeCc } from "@/lib/customs/calculate";
+import { isChinaBrandSlug, isChinaCountry } from "@/lib/catalog/china";
 
 export interface AutohomeRawCar {
   sourceId: string;
@@ -17,6 +18,20 @@ export interface AutohomeRawCar {
   specs: Car["specs"];
   descriptionRu: string;
   deliveryDays?: number;
+  country?: string;
+}
+
+function countryForBrandSlug(slug: string): string {
+  if (["toyota", "lexus", "honda", "nissan", "mazda", "subaru"].includes(slug)) return "Japan";
+  if (["hyundai", "kia", "genesis"].includes(slug)) return "Korea";
+  if (slug === "volvo") return "Sweden";
+  if (slug === "skoda") return "Czech Republic";
+  if (slug === "land-rover") return "UK";
+  if (slug === "tesla") return "USA";
+  if (slug === "peugeot") return "France";
+  if (["bmw", "mercedes", "audi", "porsche", "volkswagen"].includes(slug)) return "Germany";
+  if (isChinaBrandSlug(slug)) return "China";
+  return "Other";
 }
 
 /** Carapis / compatible listing shape (https://carapis.com/api/listings) */
@@ -267,20 +282,23 @@ export async function fetchAutohomeCatalog(): Promise<AutohomeRawCar[]> {
 
 /** Demo listings when API key is not configured (dev / Netlify without Carapis) */
 export function getDemoAutohomeCatalog(): AutohomeRawCar[] {
-  return autohomeDemoCars.map((car) => ({
-    sourceId: car.id,
-    sourceUrl: car.sync?.sourceUrl ?? "https://www.autohome.com.cn/",
-    brand: car.brand,
-    brandSlug: car.brandSlug,
-    model: car.model,
-    year: car.year,
-    type: car.type,
-    priceCny: car.sync?.priceCny ?? Math.round(car.price / 12.5),
-    photos: car.sync?.photos ?? [],
-    specs: car.specs,
-    descriptionRu: car.description,
-    deliveryDays: car.deliveryDays,
-  }));
+  return autohomeDemoCars
+    .filter((car) => !isChinaCountry(car.country) && !isChinaBrandSlug(car.brandSlug))
+    .map((car) => ({
+      sourceId: car.id,
+      sourceUrl: car.sync?.sourceUrl ?? "https://www.autohome.com.cn/",
+      brand: car.brand,
+      brandSlug: car.brandSlug,
+      model: car.model,
+      year: car.year,
+      type: car.type,
+      priceCny: car.sync?.priceCny ?? Math.round(car.price / 12.5),
+      photos: car.sync?.photos ?? [],
+      specs: car.specs,
+      descriptionRu: car.description,
+      deliveryDays: car.deliveryDays,
+      country: car.country,
+    }));
 }
 
 export async function mapAutohomeToCatalog(raw: AutohomeRawCar, exchangeRate: VtbExchangeRate): Promise<Car> {
@@ -301,7 +319,7 @@ export async function mapAutohomeToCatalog(raw: AutohomeRawCar, exchangeRate: Vt
     price: priceRub,
     customsCost: customs.totalRub,
     deliveryDays: raw.deliveryDays ?? 45,
-    country: "Китай",
+    country: raw.country ?? countryForBrandSlug(raw.brandSlug),
     imageColor: "#1a3a5c",
     specs: raw.specs,
     description: raw.descriptionRu,

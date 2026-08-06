@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import type { Car } from "@/types/car";
 import { formatPrice, getTotalPrice } from "@/data/cars";
 import { useCart } from "@/context/CartContext";
+import { CarPhoto } from "@/components/CarPhoto";
 
 export function FavoritesTab({ cars }: { cars: Car[] }) {
   const { favorites, removeFavorite, addToCart, isInCart } = useCart();
@@ -53,23 +53,15 @@ export function FavoritesTab({ cars }: { cars: Car[] }) {
             className="flex flex-col gap-4 border border-white/10 p-4 sm:flex-row sm:items-center"
           >
             <Link href={`/catalog/${car.id}`} className="flex min-w-0 flex-1 items-center gap-4">
-              <div
-                className="relative h-16 w-24 shrink-0 overflow-hidden"
-                style={{
-                  background: photo
-                    ? undefined
-                    : `linear-gradient(135deg, ${car.imageColor}, #0a1628)`,
-                }}
-              >
-                {photo && (
-                  <Image
-                    src={photo}
-                    alt={`${car.brand} ${car.model}`}
-                    fill
-                    className="object-cover"
-                    sizes="96px"
-                  />
-                )}
+              <div className="relative h-16 w-24 shrink-0 overflow-hidden">
+                <CarPhoto
+                  src={photo}
+                  alt={`${car.brand} ${car.model}`}
+                  className="object-cover"
+                  sizes="96px"
+                  fallbackColor={car.imageColor}
+                  fallbackLabel={car.brand.slice(0, 2)}
+                />
               </div>
               <div className="min-w-0">
                 <p className="truncate font-light">

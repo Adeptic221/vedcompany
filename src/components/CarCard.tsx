@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Car } from "@/types/car";
 import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { AddToFavoritesButton } from "@/components/AddToFavoritesButton";
+import { CarPhoto } from "@/components/CarPhoto";
 
 export function CarCard({ car }: { car: Car }) {
   const total = getTotalPrice(car);
@@ -11,8 +11,15 @@ export function CarCard({ car }: { car: Car }) {
   return (
     <article className="group flex flex-col overflow-hidden border border-white/10 ved-glass transition hover:border-white/25 hover:bg-white/10">
       <Link href={"/catalog/" + car.id} className="block">
-        <div className="relative flex h-44 items-center justify-center overflow-hidden" style={{ background: photo ? undefined : "linear-gradient(135deg, " + car.imageColor + ", #0a1628)" }}>
-          {photo ? <Image src={photo} alt={car.brand} fill className="object-cover transition group-hover:scale-105" sizes="400px" /> : <span className="text-4xl font-light tracking-widest text-white/20">{car.brand}</span>}
+        <div className="relative flex h-44 items-center justify-center overflow-hidden">
+          <CarPhoto
+            src={photo}
+            alt={car.brand}
+            className="object-cover transition group-hover:scale-105"
+            sizes="400px"
+            fallbackColor={car.imageColor}
+            fallbackLabel={car.brand}
+          />
           <span className="absolute bottom-3 left-3 rounded bg-black/40 px-2 py-1 text-xs text-white/80">{carTypeLabels[car.type]}</span>
         </div>
       </Link>

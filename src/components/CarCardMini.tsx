@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Car } from "@/types/car";
 import { carTypeLabels, formatPrice, getTotalPrice } from "@/data/cars";
+import { CarPhoto } from "@/components/CarPhoto";
 
 export function CarCardMini({
   car,
@@ -22,27 +22,15 @@ export function CarCardMini({
           : "border-white/10 bg-white/5 hover:border-white/25 hover:bg-white/10"
       }`}
     >
-      <div
-        className="relative h-16 w-20 shrink-0 overflow-hidden"
-        style={{
-          background: photo
-            ? undefined
-            : `linear-gradient(135deg, ${car.imageColor}, #0a1628)`,
-        }}
-      >
-        {photo ? (
-          <Image
-            src={photo}
-            alt={`${car.brand} ${car.model}`}
-            fill
-            className="object-cover transition group-hover:scale-105"
-            sizes="80px"
-          />
-        ) : (
-          <span className="flex h-full items-center justify-center text-xs font-light text-white/30">
-            {car.brand.slice(0, 2)}
-          </span>
-        )}
+      <div className="relative h-16 w-20 shrink-0 overflow-hidden">
+        <CarPhoto
+          src={photo}
+          alt={`${car.brand} ${car.model}`}
+          className="object-cover transition group-hover:scale-105"
+          sizes="80px"
+          fallbackColor={car.imageColor}
+          fallbackLabel={car.brand.slice(0, 2)}
+        />
       </div>
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-light tracking-wide">

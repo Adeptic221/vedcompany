@@ -1811,6 +1811,7 @@
     "deliveryDays": 49,
     "country": "Germany",
     "imageColor": "#1a3a5c",
+    "description": "Audi A6 2024 — импорт под ключ с расчётом таможни и доставкой.",
     "specs": {
       "engine": "2.0 L",
       "power": "245 hp",
@@ -1819,20 +1820,19 @@
       "fuel": "Petrol",
       "consumption": "7.8 L/100km"
     },
-    "description": "Audi A6 2024 — импорт под ключ с расчётом таможни и доставкой.",
     "sync": {
       "source": "autohome",
       "sourceId": "ah-audi-a6-2024",
       "sourceUrl": "https://www.autohome.com.cn/",
       "photos": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Audi_A6_C9_IAA_2025_DSC_1920.jpg/800px-Audi_A6_C9_IAA_2025_DSC_1920.jpg"
+        "https://www.google.com/imgres?q=%D0%B0%D1%83%D0%B4%D0%B8%20%D0%906%202024%20%D0%B3%D0%BE%D0%B4%D0%B0%202.0%20%D0%B1%D0%B5%D0%BD%D0%B7%D0%B8%D0%BD&imgurl=https%3A%2F%2Favatars.mds.yandex.net%2Fget-verba%2F997355%2F2a0000018a519a2dac73eebc7462328ea338%2F456x342&imgrefurl=https%3A%2F%2Fauto.ru%2Fcars%2Faudi%2Fa6%2F2024-year%2Fnew%2F&docid=BYLKBcfi_nr3HM&tbnid=hQQpjISjPiAXCM&vet=12ahUKEwjp_rrfuYuWAxViJRAIHQivC-QQnPAOegQIQxAA..i&w=456&h=342&hcb=2&ved=2ahUKEwjp_rrfuYuWAxViJRAIHQivC-QQnPAOegQIQxAA"
       ],
       "priceCny": 448000,
       "exchangeRate": 12.5,
       "exchangeBank": "VTB",
       "exchangeRateAt": "2026-01-15T00:00:00.000Z",
       "customsSource": "tks.ru",
-      "syncedAt": "2026-01-15T00:00:00.000Z"
+      "syncedAt": "2026-08-06T07:13:03.447Z"
     }
   },
   {

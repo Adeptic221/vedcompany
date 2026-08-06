@@ -1,0 +1,19 @@
+{
+  "appId": "ru.vedcompany.app",
+  "appName": "VED",
+  "webDir": "www",
+  "server": {
+    "url": "https://vedcompany.ru",
+    "cleartext": false,
+    "allowNavigation": [
+      "vedcompany.ru",
+      "*.vedcompany.ru",
+      "vedcompany-adeptic221s-projects.vercel.app",
+      "*.vercel.app"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#0a1628"
+  }
+}

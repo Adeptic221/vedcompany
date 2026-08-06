@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">VED</string>
+    <string name="title_activity_main">VED</string>
+    <string name="package_name">ru.vedcompany.app</string>
+    <string name="custom_url_scheme">ru.vedcompany.app</string>
+</resources>

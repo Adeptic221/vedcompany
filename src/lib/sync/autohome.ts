@@ -2,7 +2,11 @@ import type { Car, CarType } from "@/types/car";
 import type { VtbExchangeRate } from "@/types/sync";
 import { autohomeDemoCars } from "@/data/cars.autohome-demo";
 import { convertCnyToRub } from "@/lib/exchange/vtb";
-import { calculateCustoms, parseEngineVolumeCc } from "@/lib/customs/calculate";
+import {
+  calculateCustoms,
+  parseEngineVolumeCc,
+  parsePowerHp,
+} from "@/lib/customs/calculate";
 import { isChinaBrandSlug, isChinaCountry } from "@/lib/catalog/china";
 
 export interface AutohomeRawCar {
@@ -308,6 +312,8 @@ export async function mapAutohomeToCatalog(raw: AutohomeRawCar, exchangeRate: Vt
     priceRub,
     engineVolumeCc: parseEngineVolumeCc(raw.specs.engine),
     ageYears,
+    fuel: raw.specs.fuel,
+    powerHp: parsePowerHp(raw.specs.power),
   });
   return {
     id: raw.sourceId,

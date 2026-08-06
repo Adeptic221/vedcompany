@@ -19,10 +19,6 @@ const LISTINGS: RawListing[] = [
   ["nissan", "Nissan", "X-Trail", 2024, "crossover", 238000, "1.5 L", "163 hp", "Petrol", "7.4 L/100km", 43],
   ["mazda", "Mazda", "CX-5", 2024, "crossover", 218000, "2.5 L", "194 hp", "Petrol", "7.9 L/100km", 42],
   ["subaru", "Subaru", "Forester", 2024, "crossover", 248000, "2.5 L", "182 hp", "Petrol", "8.2 L/100km", 44],
-  ["hyundai", "Hyundai", "Tucson", 2024, "crossover", 248000, "1.6 L", "180 hp", "Petrol", "7.5 L/100km", 44],
-  ["hyundai", "Hyundai", "Santa Fe", 2024, "suv", 298000, "2.5 L", "281 hp", "Petrol", "9.0 L/100km", 46],
-  ["kia", "Kia", "Sportage", 2024, "crossover", 238000, "1.6 L", "180 hp", "Petrol", "7.4 L/100km", 43],
-  ["kia", "Kia", "Sorento", 2024, "suv", 278000, "2.5 L", "191 hp", "Petrol", "8.6 L/100km", 45],
   ["genesis", "Genesis", "GV70", 2024, "crossover", 428000, "2.5 L", "304 hp", "Petrol", "9.1 L/100km", 49],
   ["genesis", "Genesis", "G80", 2024, "sedan", 448000, "2.5 L", "304 hp", "Petrol", "8.8 L/100km", 50],
   ["bmw", "BMW", "X5", 2023, "suv", 578000, "3.0 L", "340 hp", "Petrol", "9.4 L/100km", 55],
@@ -38,13 +34,32 @@ const LISTINGS: RawListing[] = [
   ["porsche", "Porsche", "Cayenne", 2024, "suv", 898000, "3.0 L", "353 hp", "Petrol", "11.0 L/100km", 58],
   ["volkswagen", "Volkswagen", "Tiguan", 2024, "crossover", 298000, "2.0 L", "220 hp", "Petrol", "8.0 L/100km", 46],
   ["volkswagen", "Volkswagen", "Passat", 2024, "sedan", 248000, "2.0 L", "190 hp", "Petrol", "7.2 L/100km", 44],
+  ["volkswagen", "Volkswagen", "Polo", 2024, "hatchback", 98000, "1.6 L", "110 hp", "Petrol", "6.5 L/100km", 38],
+  ["volkswagen", "Volkswagen", "Golf", 2024, "hatchback", 138000, "1.5 L", "150 hp", "Petrol", "6.2 L/100km", 40],
+  ["skoda", "Skoda", "Octavia", 2024, "sedan", 124000, "1.4 L", "150 hp", "Petrol", "6.4 L/100km", 40],
+  ["skoda", "Skoda", "Karoq", 2024, "crossover", 158000, "1.4 L", "150 hp", "Petrol", "6.9 L/100km", 42],
+  ["skoda", "Skoda", "Kodiaq", 2024, "suv", 278000, "2.0 L", "190 hp", "Petrol", "8.1 L/100km", 45],
+  ["hyundai", "Hyundai", "Solaris", 2024, "sedan", 102000, "1.6 L", "123 hp", "Petrol", "6.6 L/100km", 38],
+  ["hyundai", "Hyundai", "Creta", 2024, "crossover", 128000, "1.6 L", "123 hp", "Petrol", "7.1 L/100km", 40],
+  ["hyundai", "Hyundai", "Elantra", 2024, "sedan", 142000, "2.0 L", "149 hp", "Petrol", "7.0 L/100km", 41],
+  ["hyundai", "Hyundai", "Tucson", 2024, "crossover", 248000, "1.6 L", "180 hp", "Petrol", "7.5 L/100km", 44],
+  ["hyundai", "Hyundai", "Santa Fe", 2024, "suv", 298000, "2.5 L", "281 hp", "Petrol", "9.0 L/100km", 46],
+  ["kia", "Kia", "Rio", 2024, "sedan", 96000, "1.6 L", "123 hp", "Petrol", "6.4 L/100km", 37],
+  ["kia", "Kia", "Cerato", 2024, "hatchback", 132000, "2.0 L", "150 hp", "Petrol", "7.2 L/100km", 40],
+  ["kia", "Kia", "Sportage", 2024, "crossover", 238000, "1.6 L", "180 hp", "Petrol", "7.4 L/100km", 43],
+  ["kia", "Kia", "Sorento", 2024, "suv", 278000, "2.5 L", "191 hp", "Petrol", "8.6 L/100km", 45],
+  ["ford", "Ford", "Focus", 2024, "hatchback", 112000, "1.5 L", "150 hp", "Petrol", "6.8 L/100km", 40],
+  ["ford", "Ford", "Kuga", 2024, "crossover", 168000, "1.5 L", "150 hp", "Petrol", "7.5 L/100km", 42],
+  ["renault", "Renault", "Duster", 2024, "crossover", 108000, "1.6 L", "114 hp", "Petrol", "7.6 L/100km", 39],
+  ["renault", "Renault", "Arkana", 2024, "crossover", 148000, "1.3 L", "150 hp", "Petrol", "6.9 L/100km", 41],
+  ["nissan", "Nissan", "Qashqai", 2024, "crossover", 178000, "1.3 L", "158 hp", "Petrol", "6.8 L/100km", 42],
+  ["mazda", "Mazda", "3", 2024, "sedan", 148000, "2.0 L", "150 hp", "Petrol", "6.5 L/100km", 41],
   ["volvo", "Volvo", "XC60", 2024, "crossover", 468000, "2.0 L", "250 hp", "Petrol", "8.5 L/100km", 50],
   ["volvo", "Volvo", "XC90", 2024, "suv", 598000, "2.0 L", "250 hp", "Petrol", "9.2 L/100km", 52],
   ["land-rover", "Land Rover", "Defender", 2023, "suv", 698000, "3.0 L", "400 hp", "Petrol", "11.2 L/100km", 58],
   ["land-rover", "Land Rover", "Range Rover Sport", 2024, "suv", 798000, "3.0 L", "400 hp", "Petrol", "10.8 L/100km", 58],
   ["tesla", "Tesla", "Model Y", 2024, "crossover", 399000, "Dual Motor", "450 hp", "Electric", "15.0 kWh/100km", 48],
   ["tesla", "Tesla", "Model 3", 2024, "sedan", 329000, "Dual Motor", "450 hp", "Electric", "14.0 kWh/100km", 46],
-  ["skoda", "Skoda", "Kodiaq", 2024, "suv", 278000, "2.0 L", "190 hp", "Petrol", "8.1 L/100km", 45],
   ["peugeot", "Peugeot", "3008", 2024, "crossover", 248000, "1.6 L", "180 hp", "Petrol", "7.3 L/100km", 44],
 ];
 
@@ -58,8 +73,8 @@ function countryFor(slug: string): string {
   if (slug === "volvo") return "Sweden";
   if (slug === "skoda") return "Czech Republic";
   if (slug === "land-rover") return "UK";
-  if (slug === "tesla") return "USA";
-  if (slug === "peugeot") return "France";
+  if (["tesla", "ford"].includes(slug)) return "USA";
+  if (["peugeot", "renault"].includes(slug)) return "France";
   if (["bmw", "mercedes", "audi", "porsche", "volkswagen"].includes(slug)) return "Germany";
   return "China";
 }

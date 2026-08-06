@@ -2806,5 +2806,1085 @@
       "customsSource": "tks.ru",
       "syncedAt": "2026-01-15T00:00:00.000Z"
     }
+  },
+  {
+    "id": "ah-volkswagen-polo-2024",
+    "brand": "Volkswagen",
+    "brandSlug": "volkswagen",
+    "model": "Polo",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 1225000,
+    "customsCost": 461880,
+    "deliveryDays": 38,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "110 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "Volkswagen Polo 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volkswagen-polo-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/79/VW_Polo_beats_%28VI%29_%E2%80%93_f_03032019.jpg"
+      ],
+      "priceCny": 98000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volkswagen-polo-2023",
+    "brand": "Volkswagen",
+    "brandSlug": "volkswagen",
+    "model": "Polo",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 1078000,
+    "customsCost": 407078,
+    "deliveryDays": 40,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "110 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "Volkswagen Polo 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volkswagen-polo-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/79/VW_Polo_beats_%28VI%29_%E2%80%93_f_03032019.jpg"
+      ],
+      "priceCny": 86240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volkswagen-golf-2024",
+    "brand": "Volkswagen",
+    "brandSlug": "volkswagen",
+    "model": "Golf",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 1725000,
+    "customsCost": 629650,
+    "deliveryDays": 40,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Volkswagen Golf 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volkswagen-golf-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8a/2020_Volkswagen_Golf_Style_1.5_Front.jpg"
+      ],
+      "priceCny": 138000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-volkswagen-golf-2023",
+    "brand": "Volkswagen",
+    "brandSlug": "volkswagen",
+    "model": "Golf",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 1518000,
+    "customsCost": 554716,
+    "deliveryDays": 42,
+    "country": "Germany",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Volkswagen Golf 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-volkswagen-golf-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8a/2020_Volkswagen_Golf_Style_1.5_Front.jpg"
+      ],
+      "priceCny": 121440,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-skoda-octavia-2024",
+    "brand": "Skoda",
+    "brandSlug": "skoda",
+    "model": "Octavia",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1550000,
+    "customsCost": 549560,
+    "deliveryDays": 40,
+    "country": "Czech Republic",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.4 L/100km"
+    },
+    "description": "Skoda Octavia 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-skoda-octavia-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg"
+      ],
+      "priceCny": 124000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-skoda-octavia-2023",
+    "brand": "Skoda",
+    "brandSlug": "skoda",
+    "model": "Octavia",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1364000,
+    "customsCost": 484237,
+    "deliveryDays": 42,
+    "country": "Czech Republic",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.4 L/100km"
+    },
+    "description": "Skoda Octavia 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-skoda-octavia-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg"
+      ],
+      "priceCny": 109120,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-skoda-karoq-2024",
+    "brand": "Skoda",
+    "brandSlug": "skoda",
+    "model": "Karoq",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1975000,
+    "customsCost": 698820,
+    "deliveryDays": 42,
+    "country": "Czech Republic",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.9 L/100km"
+    },
+    "description": "Skoda Karoq 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-skoda-karoq-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/Skoda_Karoq_%E2%80%93_f_18042025.jpg"
+      ],
+      "priceCny": 158000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-skoda-karoq-2023",
+    "brand": "Skoda",
+    "brandSlug": "skoda",
+    "model": "Karoq",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1738000,
+    "customsCost": 615586,
+    "deliveryDays": 44,
+    "country": "Czech Republic",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.9 L/100km"
+    },
+    "description": "Skoda Karoq 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-skoda-karoq-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f2/Skoda_Karoq_%E2%80%93_f_18042025.jpg"
+      ],
+      "priceCny": 139040,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-solaris-2024",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Solaris",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1275000,
+    "customsCost": 480520,
+    "deliveryDays": 38,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "123 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.6 L/100km"
+    },
+    "description": "Hyundai Solaris 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-solaris-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9d/2019_Hyundai_Accent_1.6L%2C_front_10.8.19.jpg"
+      ],
+      "priceCny": 102000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-solaris-2023",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Solaris",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1122000,
+    "customsCost": 423482,
+    "deliveryDays": 40,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "123 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.6 L/100km"
+    },
+    "description": "Hyundai Solaris 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-solaris-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9d/2019_Hyundai_Accent_1.6L%2C_front_10.8.19.jpg"
+      ],
+      "priceCny": 89760,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-creta-2024",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Creta",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1600000,
+    "customsCost": 601680,
+    "deliveryDays": 40,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "123 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Hyundai Creta 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-creta-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/2022_Hyundai_Creta_1.6_Plus_%28Chile%29_front_view.jpg"
+      ],
+      "priceCny": 128000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-creta-2023",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Creta",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1408000,
+    "customsCost": 530102,
+    "deliveryDays": 42,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "123 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.1 L/100km"
+    },
+    "description": "Hyundai Creta 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-creta-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/2022_Hyundai_Creta_1.6_Plus_%28Chile%29_front_view.jpg"
+      ],
+      "priceCny": 112640,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-elantra-2024",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Elantra",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1775000,
+    "customsCost": 743600,
+    "deliveryDays": 41,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "149 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.0 L/100km"
+    },
+    "description": "Hyundai Elantra 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-elantra-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/2023_Hyundai_Elantra_Limited_in_Silver%2C_front_left%2C_04-04-2026.jpg"
+      ],
+      "priceCny": 142000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-hyundai-elantra-2023",
+    "brand": "Hyundai",
+    "brandSlug": "hyundai",
+    "model": "Elantra",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1562000,
+    "customsCost": 654992,
+    "deliveryDays": 43,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "149 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.0 L/100km"
+    },
+    "description": "Hyundai Elantra 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-hyundai-elantra-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/2023_Hyundai_Elantra_Limited_in_Silver%2C_front_left%2C_04-04-2026.jpg"
+      ],
+      "priceCny": 124960,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-kia-rio-2024",
+    "brand": "Kia",
+    "brandSlug": "kia",
+    "model": "Rio",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1200000,
+    "customsCost": 452560,
+    "deliveryDays": 37,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "123 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.4 L/100km"
+    },
+    "description": "Kia Rio 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-kia-rio-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c4/2021_Kia_Rio_3_MHEV_facelift_1.0.jpg"
+      ],
+      "priceCny": 96000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-kia-rio-2023",
+    "brand": "Kia",
+    "brandSlug": "kia",
+    "model": "Rio",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1056000,
+    "customsCost": 398877,
+    "deliveryDays": 39,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "123 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.4 L/100km"
+    },
+    "description": "Kia Rio 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-kia-rio-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c4/2021_Kia_Rio_3_MHEV_facelift_1.0.jpg"
+      ],
+      "priceCny": 84480,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-kia-cerato-2024",
+    "brand": "Kia",
+    "brandSlug": "kia",
+    "model": "Cerato",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 1650000,
+    "customsCost": 691600,
+    "deliveryDays": 40,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.2 L/100km"
+    },
+    "description": "Kia Cerato 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-kia-cerato-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a8/2019_Kia_Cerato_S_hatchback_front.jpg"
+      ],
+      "priceCny": 132000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-kia-cerato-2023",
+    "brand": "Kia",
+    "brandSlug": "kia",
+    "model": "Cerato",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 1452000,
+    "customsCost": 609232,
+    "deliveryDays": 42,
+    "country": "Korea",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "7.2 L/100km"
+    },
+    "description": "Kia Cerato 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-kia-cerato-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a8/2019_Kia_Cerato_S_hatchback_front.jpg"
+      ],
+      "priceCny": 116160,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-ford-focus-2024",
+    "brand": "Ford",
+    "brandSlug": "ford",
+    "model": "Focus",
+    "year": 2024,
+    "type": "hatchback",
+    "price": 1400000,
+    "customsCost": 512000,
+    "deliveryDays": 40,
+    "country": "USA",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Ford Focus 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-ford-focus-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/75/2018_Ford_Focus_ST-Line_X_1.0.jpg"
+      ],
+      "priceCny": 112000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-ford-focus-2023",
+    "brand": "Ford",
+    "brandSlug": "ford",
+    "model": "Focus",
+    "year": 2023,
+    "type": "hatchback",
+    "price": 1232000,
+    "customsCost": 451184,
+    "deliveryDays": 42,
+    "country": "USA",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Ford Focus 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-ford-focus-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/7/75/2018_Ford_Focus_ST-Line_X_1.0.jpg"
+      ],
+      "priceCny": 98560,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-ford-kuga-2024",
+    "brand": "Ford",
+    "brandSlug": "ford",
+    "model": "Kuga",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2100000,
+    "customsCost": 765400,
+    "deliveryDays": 42,
+    "country": "USA",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Ford Kuga 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-ford-kuga-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/2020_Ford_Kuga_Titanium_First_Edition_EcoBlue_1.5.jpg"
+      ],
+      "priceCny": 168000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-ford-kuga-2023",
+    "brand": "Ford",
+    "brandSlug": "ford",
+    "model": "Kuga",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1848000,
+    "customsCost": 674176,
+    "deliveryDays": 44,
+    "country": "USA",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.5 L/100km"
+    },
+    "description": "Ford Kuga 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-ford-kuga-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/2020_Ford_Kuga_Titanium_First_Edition_EcoBlue_1.5.jpg"
+      ],
+      "priceCny": 147840,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-duster-2024",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Duster",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1350000,
+    "customsCost": 508480,
+    "deliveryDays": 39,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "114 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.6 L/100km"
+    },
+    "description": "Renault Duster 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-duster-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Dacia_Duster_TCe_130_Extreme_%28III%29_%E2%80%93_f_13102024.jpg"
+      ],
+      "priceCny": 108000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-duster-2023",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Duster",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1188000,
+    "customsCost": 448086,
+    "deliveryDays": 41,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "114 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "7.6 L/100km"
+    },
+    "description": "Renault Duster 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-duster-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Dacia_Duster_TCe_130_Extreme_%28III%29_%E2%80%93_f_13102024.jpg"
+      ],
+      "priceCny": 95040,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-arkana-2024",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Arkana",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1850000,
+    "customsCost": 634940,
+    "deliveryDays": 41,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.3 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.9 L/100km"
+    },
+    "description": "Renault Arkana 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-arkana-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/85/Renault_Arkana_%28CMF-B%29_Facelift_IMG_9961.jpg"
+      ],
+      "priceCny": 148000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-arkana-2023",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Arkana",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1628000,
+    "customsCost": 559371,
+    "deliveryDays": 43,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.3 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.9 L/100km"
+    },
+    "description": "Renault Arkana 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-arkana-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/85/Renault_Arkana_%28CMF-B%29_Facelift_IMG_9961.jpg"
+      ],
+      "priceCny": 130240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-nissan-qashqai-2024",
+    "brand": "Nissan",
+    "brandSlug": "nissan",
+    "model": "Qashqai",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2225000,
+    "customsCost": 762590,
+    "deliveryDays": 42,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.3 L",
+      "power": "158 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Nissan Qashqai 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-nissan-qashqai-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/dc/2024_Nissan_Qashqai_e-Power_IMG_2187.jpg"
+      ],
+      "priceCny": 178000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-nissan-qashqai-2023",
+    "brand": "Nissan",
+    "brandSlug": "nissan",
+    "model": "Qashqai",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1958000,
+    "customsCost": 671703,
+    "deliveryDays": 44,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.3 L",
+      "power": "158 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Nissan Qashqai 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-nissan-qashqai-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/dc/2024_Nissan_Qashqai_e-Power_IMG_2187.jpg"
+      ],
+      "priceCny": 156640,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mazda-3-2024",
+    "brand": "Mazda",
+    "brandSlug": "mazda",
+    "model": "3",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1850000,
+    "customsCost": 774800,
+    "deliveryDays": 41,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "Mazda 3 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mazda-3-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mazda3_SKYACTIV-G.jpg"
+      ],
+      "priceCny": 148000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mazda-3-2023",
+    "brand": "Mazda",
+    "brandSlug": "mazda",
+    "model": "3",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1628000,
+    "customsCost": 682448,
+    "deliveryDays": 43,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.0 L",
+      "power": "150 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.5 L/100km"
+    },
+    "description": "Mazda 3 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mazda-3-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mazda3_SKYACTIV-G.jpg"
+      ],
+      "priceCny": 130240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
   }
 ]

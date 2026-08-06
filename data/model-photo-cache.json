@@ -850,5 +850,110 @@
     "wikiTitle": "Peugeot_3008",
     "lang": "en",
     "desc": "Compact crossover SUV"
+  },
+  "volkswagen:polo": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/VW_Polo_beats_%28VI%29_%E2%80%93_f_03032019.jpg",
+    "wikiTitle": "Volkswagen_Polo",
+    "lang": "en",
+    "desc": "Model series by Volkswagen"
+  },
+  "volkswagen:golf": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/2020_Volkswagen_Golf_Style_1.5_Front.jpg",
+    "wikiTitle": "Volkswagen_Golf",
+    "lang": "en",
+    "desc": "Small family cars manufactured by Volkswagen"
+  },
+  "skoda:octavia": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg",
+    "wikiTitle": "Skoda_Octavia",
+    "lang": "en",
+    "desc": "Czech small family car"
+  },
+  "skoda:karoq": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Skoda_Karoq_%E2%80%93_f_18042025.jpg",
+    "wikiTitle": "Skoda_Karoq",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "hyundai:solaris": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/2019_Hyundai_Accent_1.6L%2C_front_10.8.19.jpg",
+    "wikiTitle": "Hyundai_Solaris",
+    "lang": "en",
+    "desc": "Subcompact car produced by Hyundai"
+  },
+  "hyundai:creta": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/2022_Hyundai_Creta_1.6_Plus_%28Chile%29_front_view.jpg",
+    "wikiTitle": "Hyundai_Creta",
+    "lang": "en",
+    "desc": "Subcompact crossover SUV"
+  },
+  "hyundai:elantra": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/2023_Hyundai_Elantra_Limited_in_Silver%2C_front_left%2C_04-04-2026.jpg",
+    "wikiTitle": "Hyundai_Elantra",
+    "lang": "en",
+    "desc": "Compact car"
+  },
+  "kia:rio": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/2021_Kia_Rio_3_MHEV_facelift_1.0.jpg",
+    "wikiTitle": "Kia_Rio",
+    "lang": "en",
+    "desc": "Subcompact car produced by Kia, 1999–2023"
+  },
+  "kia:cerato": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/2019_Kia_Cerato_S_hatchback_front.jpg",
+    "wikiTitle": "Kia_Cerato",
+    "lang": "en",
+    "desc": "Compact car"
+  },
+  "ford:focus": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/2018_Ford_Focus_ST-Line_X_1.0.jpg",
+    "wikiTitle": "Ford_Focus",
+    "lang": "en",
+    "desc": "Compact/small family car manufactured by the Ford Motor Company 1998–2025"
+  },
+  "ford:kuga": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/2020_Ford_Kuga_Titanium_First_Edition_EcoBlue_1.5.jpg",
+    "wikiTitle": "Ford_Kuga",
+    "lang": "en",
+    "desc": "Sport utility vehicle manufactured by Ford"
+  },
+  "renault:duster": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Dacia_Duster_TCe_130_Extreme_%28III%29_%E2%80%93_f_13102024.jpg",
+    "wikiTitle": "Renault_Duster",
+    "lang": "en",
+    "desc": "Subcompact crossover SUV/Pick-up truck by Dacia"
+  },
+  "renault:arkana": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Renault_Arkana_%28CMF-B%29_Facelift_IMG_9961.jpg",
+    "wikiTitle": "Renault_Arkana",
+    "lang": "en",
+    "desc": "Motor vehicle"
+  },
+  "nissan:qashqai": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/2024_Nissan_Qashqai_e-Power_IMG_2187.jpg",
+    "wikiTitle": "Nissan_Qashqai",
+    "lang": "en",
+    "desc": "Compact crossover SUV"
+  },
+  "mazda:3": {
+    "ok": true,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mazda3_SKYACTIV-G.jpg",
+    "wikiTitle": "Mazda3",
+    "lang": "en",
+    "desc": "Compact car range manufactured by Mazda"
   }
 }

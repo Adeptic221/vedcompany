@@ -121,6 +121,7 @@ const MODEL_PHOTOS: Record<string, string> = {
   "skoda:karoq": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Skoda_Karoq_%E2%80%93_f_18042025.jpg",
   "skoda:kodiaq": "https://upload.wikimedia.org/wikipedia/commons/6/67/%C5%A0koda_Kodiaq_II_IMG_9825.jpg",
   "skoda:octavia": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg",
+  "skoda:rapid": "https://upload.wikimedia.org/wikipedia/commons/5/5e/2019_Skoda_Rapid_Hockey_Edition_blue_front.jpg",
   "subaru:forester": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Subaru_Forester_Wilderness_%282023%29_%2853651855176%29.jpg",
   "tank:300": "https://upload.wikimedia.org/wikipedia/commons/e/e9/TANK_300_IMG006.jpg",
   "tank:400": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Tank_400_001.jpg",

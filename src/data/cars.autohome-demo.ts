@@ -60,10 +60,14 @@ const LISTINGS: RawListing[] = [
   ["kia", "Kia", "Sorento", 2024, "suv", 278000, "2.5 L", "191 hp", "Petrol", "8.6 L/100km", 45],
   ["ford", "Ford", "Focus", 2024, "hatchback", 105000, "1.5 L", "150 hp", "Petrol", "6.8 L/100km", 40],
   ["ford", "Ford", "Kuga", 2024, "crossover", 168000, "1.5 L", "150 hp", "Petrol", "7.5 L/100km", 42],
+  ["renault", "Renault", "Logan", 2024, "sedan", 82000, "1.6 L", "113 hp", "Petrol", "6.8 L/100km", 36],
   ["renault", "Renault", "Duster", 2024, "crossover", 98000, "1.6 L", "114 hp", "Petrol", "7.6 L/100km", 39],
   ["renault", "Renault", "Arkana", 2024, "crossover", 148000, "1.3 L", "150 hp", "Petrol", "6.9 L/100km", 41],
   ["nissan", "Nissan", "Qashqai", 2024, "crossover", 178000, "1.3 L", "158 hp", "Petrol", "6.8 L/100km", 42],
   ["mazda", "Mazda", "3", 2024, "sedan", 148000, "2.0 L", "150 hp", "Petrol", "6.5 L/100km", 41],
+  ["honda", "Honda", "Civic", 2024, "sedan", 168000, "1.5 L", "180 hp", "Petrol", "6.3 L/100km", 42],
+  ["mitsubishi", "Mitsubishi", "Outlander", 2024, "crossover", 198000, "2.5 L", "181 hp", "Petrol", "8.2 L/100km", 43],
+  ["suzuki", "Suzuki", "Vitara", 2024, "crossover", 128000, "1.4 L", "140 hp", "Petrol", "6.2 L/100km", 40],
   ["toyota", "Toyota", "Corolla", 2024, "sedan", 135000, "1.8 L", "140 hp", "Hybrid", "4.5 L/100km", 40],
   // Mid / volume Japan-Korea-EU
   ["toyota", "Toyota", "Camry", 2024, "sedan", 198000, "2.5 L", "181 hp", "Petrol", "7.1 L/100km", 45],
@@ -124,7 +128,9 @@ function slugify(value: string): string {
 }
 
 function countryFor(slug: string): string {
-  if (["toyota", "lexus", "honda", "nissan", "mazda", "subaru"].includes(slug)) return "Japan";
+  if (["toyota", "lexus", "honda", "nissan", "mazda", "subaru", "mitsubishi", "suzuki"].includes(slug)) {
+    return "Japan";
+  }
   if (["hyundai", "kia", "genesis"].includes(slug)) return "Korea";
   if (slug === "volvo") return "Sweden";
   if (slug === "skoda") return "Czech Republic";

@@ -1,4 +1,5 @@
 import type { Car } from "@/types/car";
+import { isRussiaCar } from "@/lib/catalog/russia";
 
 const CHINA_BRAND_SLUGS = new Set([
   "byd",
@@ -70,5 +71,6 @@ export function isChinaCar(car: Pick<Car, "country" | "brandSlug">): boolean {
 }
 
 export function withoutChinaCars<T extends Pick<Car, "country" | "brandSlug">>(cars: T[]): T[] {
-  return cars.filter((car) => !isChinaCar(car));
+  // Also drop Russian domestic brands — catalog is import-only (no China, no Russia).
+  return cars.filter((car) => !isChinaCar(car) && !isRussiaCar(car));
 }

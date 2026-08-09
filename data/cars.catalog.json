@@ -1800,6 +1800,222 @@
     }
   },
   {
+    "id": "ah-honda-civic-2021",
+    "brand": "Honda",
+    "brandSlug": "honda",
+    "model": "Civic",
+    "year": 2021,
+    "type": "sedan",
+    "price": 1470000,
+    "customsCost": 1506430,
+    "deliveryDays": 46,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.3 L/100km"
+    },
+    "description": "Honda Civic 2021 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-honda-civic-2021",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg"
+      ],
+      "priceCny": 117600,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-honda-civic-2022",
+    "brand": "Honda",
+    "brandSlug": "honda",
+    "model": "Civic",
+    "year": 2022,
+    "type": "sedan",
+    "price": 1638000,
+    "customsCost": 1506430,
+    "deliveryDays": 46,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.3 L/100km"
+    },
+    "description": "Honda Civic 2022 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-honda-civic-2022",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg"
+      ],
+      "priceCny": 131040,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-honda-civic-2023",
+    "brand": "Honda",
+    "brandSlug": "honda",
+    "model": "Civic",
+    "year": 2023,
+    "type": "sedan",
+    "price": 1848000,
+    "customsCost": 1645570,
+    "deliveryDays": 44,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.3 L/100km"
+    },
+    "description": "Honda Civic 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-honda-civic-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg"
+      ],
+      "priceCny": 147840,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-honda-civic-2024",
+    "brand": "Honda",
+    "brandSlug": "honda",
+    "model": "Civic",
+    "year": 2024,
+    "type": "sedan",
+    "price": 2100000,
+    "customsCost": 1766530,
+    "deliveryDays": 42,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.3 L/100km"
+    },
+    "description": "Honda Civic 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-honda-civic-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg"
+      ],
+      "priceCny": 168000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-honda-civic-2025",
+    "brand": "Honda",
+    "brandSlug": "honda",
+    "model": "Civic",
+    "year": 2025,
+    "type": "sedan",
+    "price": 2268000,
+    "customsCost": 1847170,
+    "deliveryDays": 42,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.3 L/100km"
+    },
+    "description": "Honda Civic 2025 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-honda-civic-2025",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg"
+      ],
+      "priceCny": 181440,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-honda-civic-2026",
+    "brand": "Honda",
+    "brandSlug": "honda",
+    "model": "Civic",
+    "year": 2026,
+    "type": "sedan",
+    "price": 2436000,
+    "customsCost": 1927810,
+    "deliveryDays": 41,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.5 L",
+      "power": "180 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.3 L/100km"
+    },
+    "description": "Honda Civic 2026 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-honda-civic-2026",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b5/2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg"
+      ],
+      "priceCny": 194880,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
     "id": "ah-honda-cr-v-2021",
     "brand": "Honda",
     "brandSlug": "honda",
@@ -5544,6 +5760,222 @@
     }
   },
   {
+    "id": "ah-mitsubishi-outlander-2021",
+    "brand": "Mitsubishi",
+    "brandSlug": "mitsubishi",
+    "model": "Outlander",
+    "year": 2021,
+    "type": "crossover",
+    "price": 1732500,
+    "customsCost": 4150730,
+    "deliveryDays": 47,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mitsubishi Outlander 2021 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mitsubishi-outlander-2021",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3129.jpg"
+      ],
+      "priceCny": 138600,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mitsubishi-outlander-2022",
+    "brand": "Mitsubishi",
+    "brandSlug": "mitsubishi",
+    "model": "Outlander",
+    "year": 2022,
+    "type": "crossover",
+    "price": 1930500,
+    "customsCost": 4150730,
+    "deliveryDays": 47,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mitsubishi Outlander 2022 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mitsubishi-outlander-2022",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3129.jpg"
+      ],
+      "priceCny": 154440,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mitsubishi-outlander-2023",
+    "brand": "Mitsubishi",
+    "brandSlug": "mitsubishi",
+    "model": "Outlander",
+    "year": 2023,
+    "type": "crossover",
+    "price": 2178000,
+    "customsCost": 3606430,
+    "deliveryDays": 45,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mitsubishi Outlander 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mitsubishi-outlander-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3129.jpg"
+      ],
+      "priceCny": 174240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mitsubishi-outlander-2024",
+    "brand": "Mitsubishi",
+    "brandSlug": "mitsubishi",
+    "model": "Outlander",
+    "year": 2024,
+    "type": "crossover",
+    "price": 2475000,
+    "customsCost": 3606430,
+    "deliveryDays": 43,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mitsubishi Outlander 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mitsubishi-outlander-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3129.jpg"
+      ],
+      "priceCny": 198000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mitsubishi-outlander-2025",
+    "brand": "Mitsubishi",
+    "brandSlug": "mitsubishi",
+    "model": "Outlander",
+    "year": 2025,
+    "type": "crossover",
+    "price": 2673000,
+    "customsCost": 3606430,
+    "deliveryDays": 43,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mitsubishi Outlander 2025 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mitsubishi-outlander-2025",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3129.jpg"
+      ],
+      "priceCny": 213840,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-mitsubishi-outlander-2026",
+    "brand": "Mitsubishi",
+    "brandSlug": "mitsubishi",
+    "model": "Outlander",
+    "year": 2026,
+    "type": "crossover",
+    "price": 2871000,
+    "customsCost": 3640480,
+    "deliveryDays": 42,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "2.5 L",
+      "power": "181 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "8.2 L/100km"
+    },
+    "description": "Mitsubishi Outlander 2026 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-mitsubishi-outlander-2026",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/3/35/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3129.jpg"
+      ],
+      "priceCny": 229680,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
     "id": "ah-nissan-qashqai-2021",
     "brand": "Nissan",
     "brandSlug": "nissan",
@@ -6912,6 +7344,222 @@
     }
   },
   {
+    "id": "ah-renault-logan-2021",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Logan",
+    "year": 2021,
+    "type": "sedan",
+    "price": 717500,
+    "customsCost": 400300,
+    "deliveryDays": 40,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "113 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Renault Logan 2021 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-logan-2021",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dacia_Logan_2023_Front_2_%28cropped%29.jpg"
+      ],
+      "priceCny": 57400,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-logan-2022",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Logan",
+    "year": 2022,
+    "type": "sedan",
+    "price": 799500,
+    "customsCost": 400300,
+    "deliveryDays": 40,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "113 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Renault Logan 2022 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-logan-2022",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dacia_Logan_2023_Front_2_%28cropped%29.jpg"
+      ],
+      "priceCny": 63960,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-logan-2023",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Logan",
+    "year": 2023,
+    "type": "sedan",
+    "price": 902000,
+    "customsCost": 555300,
+    "deliveryDays": 38,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "113 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Renault Logan 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-logan-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dacia_Logan_2023_Front_2_%28cropped%29.jpg"
+      ],
+      "priceCny": 72160,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-logan-2024",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Logan",
+    "year": 2024,
+    "type": "sedan",
+    "price": 1025000,
+    "customsCost": 555300,
+    "deliveryDays": 36,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "113 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Renault Logan 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-logan-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dacia_Logan_2023_Front_2_%28cropped%29.jpg"
+      ],
+      "priceCny": 82000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-logan-2025",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Logan",
+    "year": 2025,
+    "type": "sedan",
+    "price": 1107000,
+    "customsCost": 555300,
+    "deliveryDays": 36,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "113 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Renault Logan 2025 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-logan-2025",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dacia_Logan_2023_Front_2_%28cropped%29.jpg"
+      ],
+      "priceCny": 88560,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-renault-logan-2026",
+    "brand": "Renault",
+    "brandSlug": "renault",
+    "model": "Logan",
+    "year": 2026,
+    "type": "sedan",
+    "price": 1189000,
+    "customsCost": 577220,
+    "deliveryDays": 35,
+    "country": "France",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.6 L",
+      "power": "113 hp",
+      "transmission": "Auto",
+      "drive": "FWD",
+      "fuel": "Petrol",
+      "consumption": "6.8 L/100km"
+    },
+    "description": "Renault Logan 2026 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-renault-logan-2026",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dacia_Logan_2023_Front_2_%28cropped%29.jpg"
+      ],
+      "priceCny": 95120,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
     "id": "ah-skoda-karoq-2021",
     "brand": "Skoda",
     "brandSlug": "skoda",
@@ -7984,6 +8632,222 @@
         "https://upload.wikimedia.org/wikipedia/commons/b/b3/Subaru_Forester_Wilderness_%282023%29_%2853651855176%29.jpg"
       ],
       "priceCny": 287680,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-suzuki-vitara-2021",
+    "brand": "Suzuki",
+    "brandSlug": "suzuki",
+    "model": "Vitara",
+    "year": 2021,
+    "type": "crossover",
+    "price": 1120000,
+    "customsCost": 241540,
+    "deliveryDays": 44,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "140 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Suzuki Vitara 2021 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-suzuki-vitara-2021",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/2018_Suzuki_Vitara_%28LY%29_S_Turbo_wagon_%282018-11-02%29_01.jpg"
+      ],
+      "priceCny": 89600,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-suzuki-vitara-2022",
+    "brand": "Suzuki",
+    "brandSlug": "suzuki",
+    "model": "Vitara",
+    "year": 2022,
+    "type": "crossover",
+    "price": 1248000,
+    "customsCost": 246970,
+    "deliveryDays": 44,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "140 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Suzuki Vitara 2022 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-suzuki-vitara-2022",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/2018_Suzuki_Vitara_%28LY%29_S_Turbo_wagon_%282018-11-02%29_01.jpg"
+      ],
+      "priceCny": 99840,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-suzuki-vitara-2023",
+    "brand": "Suzuki",
+    "brandSlug": "suzuki",
+    "model": "Vitara",
+    "year": 2023,
+    "type": "crossover",
+    "price": 1408000,
+    "customsCost": 687770,
+    "deliveryDays": 42,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "140 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Suzuki Vitara 2023 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-suzuki-vitara-2023",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/2018_Suzuki_Vitara_%28LY%29_S_Turbo_wagon_%282018-11-02%29_01.jpg"
+      ],
+      "priceCny": 112640,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-suzuki-vitara-2024",
+    "brand": "Suzuki",
+    "brandSlug": "suzuki",
+    "model": "Vitara",
+    "year": 2024,
+    "type": "crossover",
+    "price": 1600000,
+    "customsCost": 779930,
+    "deliveryDays": 40,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "140 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Suzuki Vitara 2024 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-suzuki-vitara-2024",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/2018_Suzuki_Vitara_%28LY%29_S_Turbo_wagon_%282018-11-02%29_01.jpg"
+      ],
+      "priceCny": 128000,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-suzuki-vitara-2025",
+    "brand": "Suzuki",
+    "brandSlug": "suzuki",
+    "model": "Vitara",
+    "year": 2025,
+    "type": "crossover",
+    "price": 1728000,
+    "customsCost": 841370,
+    "deliveryDays": 40,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "140 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Suzuki Vitara 2025 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-suzuki-vitara-2025",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/2018_Suzuki_Vitara_%28LY%29_S_Turbo_wagon_%282018-11-02%29_01.jpg"
+      ],
+      "priceCny": 138240,
+      "exchangeRate": 12.5,
+      "exchangeBank": "VTB",
+      "exchangeRateAt": "2026-01-15T00:00:00.000Z",
+      "customsSource": "tks.ru",
+      "syncedAt": "2026-01-15T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ah-suzuki-vitara-2026",
+    "brand": "Suzuki",
+    "brandSlug": "suzuki",
+    "model": "Vitara",
+    "year": 2026,
+    "type": "crossover",
+    "price": 1856000,
+    "customsCost": 902810,
+    "deliveryDays": 39,
+    "country": "Japan",
+    "imageColor": "#1a3a5c",
+    "specs": {
+      "engine": "1.4 L",
+      "power": "140 hp",
+      "transmission": "Auto",
+      "drive": "AWD",
+      "fuel": "Petrol",
+      "consumption": "6.2 L/100km"
+    },
+    "description": "Suzuki Vitara 2026 — импорт под ключ с расчётом таможни и доставкой.",
+    "sync": {
+      "source": "autohome",
+      "sourceId": "ah-suzuki-vitara-2026",
+      "sourceUrl": "https://www.autohome.com.cn/",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/2018_Suzuki_Vitara_%28LY%29_S_Turbo_wagon_%282018-11-02%29_01.jpg"
+      ],
+      "priceCny": 148480,
       "exchangeRate": 12.5,
       "exchangeBank": "VTB",
       "exchangeRateAt": "2026-01-15T00:00:00.000Z",

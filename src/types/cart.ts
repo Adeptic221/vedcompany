@@ -39,6 +39,7 @@ export interface UploadedDoc {
 export interface UserProfile {
   name: string;
   phone: string;
+  email?: string;
 }
 
 export interface FavoriteItem {

@@ -1,26 +1,83 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
 
 export function ProfileCard() {
+  const router = useRouter();
+  const { user, logout, refresh } = useAuth();
   const { profile, updateProfile } = useCart();
   const [name, setName] = useState(profile.name);
   const [phone, setPhone] = useState(profile.phone);
   const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!user) return;
+    const nextName = user.name || profile.name;
+    const nextPhone = user.phone || profile.phone;
+    setName(nextName);
+    setPhone(nextPhone);
+    if (
+      nextName !== profile.name ||
+      nextPhone !== profile.phone ||
+      (user.email && profile.email !== user.email)
+    ) {
+      updateProfile({
+        name: nextName,
+        phone: nextPhone,
+        email: user.email,
+      });
+    }
+    // Intentionally sync once when auth user becomes available.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id]);
 
   useEffect(() => {
     setName(profile.name);
     setPhone(profile.phone);
   }, [profile.name, profile.phone]);
 
-  const handleSave = () => {
-    updateProfile({ name: name.trim(), phone: phone.trim() });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+  const handleSave = async () => {
+    setSaving(true);
+    setError("");
+    try {
+      const res = await fetch("/api/auth/me", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name.trim(), phone: phone.trim() }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(data.error || "Не удалось сохранить");
+        return;
+      }
+      updateProfile({
+        name: data.user?.name || name.trim(),
+        phone: data.user?.phone || phone.trim(),
+        email: data.user?.email || user?.email || profile.email || "",
+      });
+      await refresh();
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch {
+      setError("Ошибка сети");
+    } finally {
+      setSaving(false);
+    }
   };
 
-  const displayName = profile.name.trim() || "Гость";
+  const handleLogout = async () => {
+    await logout();
+    router.push("/login");
+    router.refresh();
+  };
+
+  const displayName = (user?.name || profile.name).trim() || "Клиент";
+  const displayEmail = user?.email || profile.email || "";
 
   return (
     <div className="ved-glass border border-white/10 p-5">
@@ -31,7 +88,7 @@ export function ProfileCard() {
         <div className="min-w-0">
           <p className="truncate font-light text-white">{displayName}</p>
           <p className="truncate text-xs text-white/40">
-            {profile.phone.trim() || "Телефон не указан"}
+            {displayEmail || profile.phone.trim() || "Профиль"}
           </p>
         </div>
       </div>
@@ -41,6 +98,14 @@ export function ProfileCard() {
       </p>
 
       <div className="space-y-3">
+        {displayEmail && (
+          <div>
+            <label className="mb-1 block text-xs text-white/50">Email</label>
+            <p className="border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/70">
+              {displayEmail}
+            </p>
+          </div>
+        )}
         <div>
           <label htmlFor="profile-name" className="mb-1 block text-xs text-white/50">
             Имя
@@ -66,12 +131,21 @@ export function ProfileCard() {
             className="w-full border border-white/15 bg-transparent px-3 py-2 text-sm outline-none transition focus:border-white/40"
           />
         </div>
+        {error && <p className="text-xs text-red-300">{error}</p>}
         <button
           type="button"
           onClick={handleSave}
-          className="w-full border border-white/30 py-2.5 text-xs uppercase tracking-wider transition hover:bg-white hover:text-ved-navy"
+          disabled={saving}
+          className="w-full border border-white/30 py-2.5 text-xs uppercase tracking-wider transition hover:bg-white hover:text-ved-navy disabled:opacity-50"
         >
-          {saved ? "Сохранено" : "Сохранить"}
+          {saved ? "Сохранено" : saving ? "..." : "Сохранить"}
+        </button>
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="w-full border border-white/15 py-2.5 text-xs uppercase tracking-wider text-white/70 transition hover:border-white/40 hover:text-white"
+        >
+          Выйти
         </button>
       </div>
     </div>

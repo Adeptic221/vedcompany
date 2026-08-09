@@ -18,7 +18,7 @@ const DOCS_KEY = "ved-docs";
 const PROFILE_KEY = "ved-profile";
 const FAVORITES_KEY = "ved-favorites";
 
-const DEFAULT_PROFILE: UserProfile = { name: "", phone: "" };
+const DEFAULT_PROFILE: UserProfile = { name: "", phone: "", email: "" };
 
 interface CartContextValue {
   items: CartItem[];

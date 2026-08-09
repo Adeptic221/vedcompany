@@ -35,6 +35,8 @@ yarn-error.log*
 # synced runtime data (keep cars.catalog.json in repo for Netlify)
 /data/leads.json
 /data/sync-log.json
+/data/users.json
+/data/otp.json
 
 # typescript
 *.tsbuildinfo

@@ -8,6 +8,7 @@ interface CabinetNavProps {
   onTabChange: (tab: CabinetTab) => void;
   cartCount: number;
   favoritesCount: number;
+  ordersCount?: number;
 }
 
 export function CabinetNav({
@@ -15,10 +16,12 @@ export function CabinetNav({
   onTabChange,
   cartCount,
   favoritesCount,
+  ordersCount = 0,
 }: CabinetNavProps) {
   const badge = (id: CabinetTab) => {
     if (id === "cart" && cartCount > 0) return cartCount;
     if (id === "favorites" && favoritesCount > 0) return favoritesCount;
+    if (id === "orders" && ordersCount > 0) return ordersCount;
     return null;
   };
 

@@ -25,8 +25,15 @@ export function OrdersTab({ cars, onTabChange, onHighlightOrder }: OrdersTabProp
       <div className="py-8 text-center">
         <p className="text-white/50">Заказов пока нет</p>
         <p className="mt-2 text-sm text-white/30">
-          Оформите заказ из корзины — он появится здесь
+          Добавьте авто в корзину и нажмите «Оформить» — заявка уйдёт менеджеру
         </p>
+        <button
+          type="button"
+          onClick={() => onTabChange("cart")}
+          className="mt-6 border border-white/30 px-6 py-3 text-xs uppercase tracking-widest transition hover:bg-white hover:text-ved-navy"
+        >
+          В корзину
+        </button>
       </div>
     );
   }

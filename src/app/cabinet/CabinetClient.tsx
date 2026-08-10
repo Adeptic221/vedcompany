@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { PageBackground } from "@/components/PageBackground";
+import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
 import type { Car } from "@/types/car";
 import type { CabinetTab } from "@/lib/cabinet/constants";
@@ -34,11 +35,14 @@ function CabinetContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab") as CabinetTab | null;
-  const [tab, setTab] = useState<CabinetTab>(tabParam || "cart");
+  const [tab, setTab] = useState<CabinetTab>(
+    tabParam && cabinetTabs.some((t) => t.id === tabParam) ? tabParam : "favorites"
+  );
   const [cars, setCars] = useState<Car[]>([]);
   const [highlightOrderId, setHighlightOrderId] = useState<string | null>(null);
 
-  const { cartCount, favoritesCount } = useCart();
+  const { user } = useAuth();
+  const { cartCount, favoritesCount, orders } = useCart();
 
   useEffect(() => {
     fetch("/api/cars")
@@ -59,6 +63,8 @@ function CabinetContent() {
     router.replace(`/cabinet?tab=${next}`, { scroll: false });
   };
 
+  const greetName = (user?.name || "").trim();
+
   return (
     <main className="relative ved-screen bg-ved-navy">
       <PageBackground />
@@ -69,7 +75,9 @@ function CabinetContent() {
           Личный кабинет
         </h1>
         <p className="mt-2 text-sm text-white/40">
-          Управление заказами, документами и избранными автомобилями
+          {greetName
+            ? `${greetName}, здесь избранное, корзина и ваши заявки на авто`
+            : "Избранное, корзина и заявки на автомобили"}
         </p>
 
         <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:gap-8">
@@ -80,6 +88,7 @@ function CabinetContent() {
               onTabChange={handleTabChange}
               cartCount={cartCount}
               favoritesCount={favoritesCount}
+              ordersCount={orders.length}
             />
           </aside>
 
@@ -89,7 +98,9 @@ function CabinetContent() {
             </h2>
 
             {tab === "favorites" && <FavoritesTab cars={cars} />}
-            {tab === "cart" && <CartTab cars={cars} />}
+            {tab === "cart" && (
+              <CartTab cars={cars} onOrdered={() => handleTabChange("orders")} />
+            )}
             {tab === "orders" && (
               <OrdersTab
                 cars={cars}

@@ -1,15 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import type { Car } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
 import { formatPrice, getTotalPrice } from "@/data/cars";
 import { getDeliveryCost, getDeliveryDays, formatDeliveryDays } from "@/lib/delivery/calculate";
 import { DeliverySelector } from "@/components/DeliverySelector";
+import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
 
-export function CartTab({ cars }: { cars: Car[] }) {
-  const { items, removeFromCart, checkout, updateCartDelivery } = useCart();
+interface CartTabProps {
+  cars: Car[];
+  onOrdered?: () => void;
+}
+
+export function CartTab({ cars, onOrdered }: CartTabProps) {
+  const { user } = useAuth();
+  const { items, removeFromCart, checkout, updateCartDelivery, profile } =
+    useCart();
+  const [busyId, setBusyId] = useState<string | null>(null);
+  const [error, setError] = useState("");
+  const [info, setInfo] = useState("");
 
   const cartRows = items
     .map((item) => {
@@ -43,8 +55,54 @@ export function CartTab({ cars }: { cars: Car[] }) {
     return sum + getTotalPrice(car) + delivery;
   }, 0);
 
+  async function handleCheckout(car: Car, total: number) {
+    setError("");
+    setInfo("");
+    const name = (user?.name || profile.name || "").trim();
+    const phone = (user?.phone || profile.phone || "").trim();
+    if (name.length < 2 || phone.replace(/\D/g, "").length < 10) {
+      setError("Заполните имя и телефон в профиле слева — так менеджер свяжется с вами.");
+      return;
+    }
+
+    setBusyId(car.id);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "car_request",
+          name,
+          phone,
+          carId: car.id,
+          carLabel: `${car.brand} ${car.model} ${car.year}`,
+          message: `Заявка из личного кабинета. Ориентир по сумме: ${formatPrice(total)}.`,
+          source: "cabinet_checkout",
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(data.error || "Не удалось отправить заявку");
+        return;
+      }
+      checkout(car.id, total);
+      setInfo("Заявка отправлена менеджеру. Заказ появился во вкладке «Мои заказы».");
+      onOrdered?.();
+    } catch {
+      setError("Ошибка сети. Проверьте интернет и попробуйте снова.");
+    } finally {
+      setBusyId(null);
+    }
+  }
+
   return (
     <div>
+      <p className="mb-4 text-sm text-white/45">
+        «Оформить» создаёт заказ в кабинете и отправляет заявку менеджеру VED.
+      </p>
+      {error && <p className="mb-4 text-sm text-red-300">{error}</p>}
+      {info && <p className="mb-4 text-sm text-emerald-300/90">{info}</p>}
+
       <div className="space-y-6">
         {cartRows.map(({ item, car }) => {
           const destination: DeliveryDestination =
@@ -85,10 +143,11 @@ export function CartTab({ cars }: { cars: Car[] }) {
                 <div className="flex shrink-0 gap-2">
                   <button
                     type="button"
-                    onClick={() => checkout(car.id, total)}
-                    className="border border-white bg-white px-4 py-2 text-xs uppercase tracking-wider text-ved-navy"
+                    disabled={busyId === car.id}
+                    onClick={() => void handleCheckout(car, total)}
+                    className="border border-white bg-white px-4 py-2 text-xs uppercase tracking-wider text-ved-navy disabled:opacity-50"
                   >
-                    Оформить
+                    {busyId === car.id ? "..." : "Оформить"}
                   </button>
                   <button
                     type="button"

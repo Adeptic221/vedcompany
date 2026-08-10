@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
 
 type Mode = "login" | "register";
 type Method = "email" | "sms";
@@ -10,6 +11,7 @@ type Method = "email" | "sms";
 export function AuthForm({ mode }: { mode: Mode }) {
   const router = useRouter();
   const search = useSearchParams();
+  const { refresh } = useAuth();
   const [method, setMethod] = useState<Method>("email");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -50,6 +52,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
         setError(data.error || "Ошибка запроса");
         return;
       }
+      await refresh();
       router.push(next);
       router.refresh();
     } catch {
@@ -114,6 +117,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
         setError(data.error || "Не удалось войти");
         return;
       }
+      await refresh();
       router.push(next);
       router.refresh();
     } catch {

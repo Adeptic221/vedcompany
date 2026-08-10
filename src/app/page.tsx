@@ -50,9 +50,7 @@ export default async function HomePage() {
         <section className="relative z-10 flex min-h-[calc(100vh-88px)] items-center gap-6 px-8 md:gap-10 md:px-16 lg:gap-14 lg:px-24">
           <div className="relative z-10 w-full max-w-xl shrink-0">
             <h1 className="mb-8 text-lg font-light uppercase tracking-[0.2em] text-white/90 md:text-xl">
-              Подберите автомобиль
-              <br />
-              <span className="text-white/60">для вашего рынка</span>
+              Подобрать и купить автомобиль для Ваших целей.
             </h1>
 
             <HomeCarPicker cars={cars} meta={meta} />

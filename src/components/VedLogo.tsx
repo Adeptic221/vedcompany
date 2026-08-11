@@ -17,7 +17,10 @@ export function VedLogoMark({
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="VED"
+      width={220}
+      height={68}
       className={className}
+      style={{ height: "2.25rem", width: "auto", maxWidth: "100%" }}
     >
       <path fill={color} d="M2 0h24l12 52L50 0h24L46 68H30L2 0z" />
       <path fill={color} d="M88 0h50v12H88V0z" />

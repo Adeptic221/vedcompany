@@ -91,8 +91,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body className={`${geistSans.variable} font-sans antialiased`}>
+    <html
+      lang="ru"
+      style={{ backgroundColor: "#0a1628", color: "#ffffff" }}
+    >
+      <body
+        className={`${geistSans.variable} font-sans antialiased`}
+        style={{
+          backgroundColor: "#0a1628",
+          color: "#ffffff",
+          margin: 0,
+          minHeight: "100vh",
+        }}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

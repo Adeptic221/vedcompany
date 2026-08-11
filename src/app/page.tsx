@@ -47,11 +47,15 @@ export default async function HomePage() {
         <PageBackground />
         <Header />
 
-        <section className="relative z-10 flex min-h-[calc(100vh-88px)] items-center gap-6 px-8 md:gap-10 md:px-16 lg:gap-14 lg:px-24">
-          <div className="relative z-10 w-full max-w-xl shrink-0">
-            <h1 className="mb-8 text-lg font-light uppercase tracking-[0.2em] text-white/90 md:text-xl">
+        <section className="relative z-10 flex min-h-[calc(100vh-88px)] flex-col items-stretch gap-6 px-8 md:flex-row md:items-center md:gap-10 md:px-16 lg:gap-14 lg:px-24">
+          <div className="relative z-10 w-full max-w-xl shrink-0 pt-4 md:pt-0">
+            <h1 className="mb-6 text-lg font-light uppercase tracking-[0.2em] text-white/90 md:mb-8 md:text-xl">
               Подобрать и купить автомобиль для Ваших целей.
             </h1>
+
+            <div className="relative mb-8 h-48 w-full overflow-hidden md:hidden">
+              <HomeHeroSketch />
+            </div>
 
             <HomeCarPicker cars={cars} meta={meta} />
 

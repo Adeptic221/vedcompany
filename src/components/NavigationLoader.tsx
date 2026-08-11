@@ -7,8 +7,14 @@ import { LoadingSphere } from "./LoadingSphere";
 export function NavigationLoader() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [, startTransition] = useTransition();
+
+  // Brief splash on first paint so the brand preloader is visible.
+  useEffect(() => {
+    const t = window.setTimeout(() => setVisible(false), 1100);
+    return () => window.clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     startTransition(() => {

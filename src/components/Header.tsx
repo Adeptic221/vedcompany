@@ -16,7 +16,11 @@ export function Header() {
   const { user, loading } = useAuth();
   const { openContactModal } = useContactModal();
   const cabinetHref = user ? "/cabinet" : "/login?next=/cabinet";
-  const cabinetLabel = loading ? "Кабинет" : user ? "Личный кабинет" : "Войти";
+  const cabinetLabel = loading
+    ? "Кабинет"
+    : user
+      ? "Личный кабинет"
+      : "Кабинет";
 
   return (
     <header className="relative z-50 flex items-center justify-between bg-[#0a1628]/95 px-8 py-6 backdrop-blur-sm md:px-12">
@@ -66,7 +70,7 @@ export function Header() {
           </svg>
         </button>
         <Link href={cabinetHref} className="transition hover:text-white sm:hidden">
-          {user ? "ЛК" : "Войти"}
+          Кабинет
         </Link>
       </nav>
     </header>

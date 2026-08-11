@@ -7,20 +7,23 @@ import { LoadingSphere } from "./LoadingSphere";
 export function NavigationLoader() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [, startTransition] = useTransition();
 
-  // Brief splash on first paint so the brand preloader is visible.
   useEffect(() => {
-    const t = window.setTimeout(() => setVisible(false), 1100);
+    setMounted(true);
+    setVisible(true);
+    const t = window.setTimeout(() => setVisible(false), 900);
     return () => window.clearTimeout(t);
   }, []);
 
   useEffect(() => {
+    if (!mounted) return;
     startTransition(() => {
       setVisible(false);
     });
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams, mounted]);
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -38,7 +41,8 @@ export function NavigationLoader() {
     return () => document.removeEventListener("click", onClick, true);
   }, [pathname]);
 
-  if (!visible) return null;
+  // Never SSR a blocking overlay — only after client mount.
+  if (!mounted || !visible) return null;
 
   return <LoadingSphere fullscreen />;
 }

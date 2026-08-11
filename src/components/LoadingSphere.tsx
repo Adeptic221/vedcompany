@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 type LoadingSphereProps = {
   label?: string;
   /** Explicit px size; default ≈ 40% viewport height */
@@ -14,27 +12,22 @@ export function LoadingSphere({
   size,
   fullscreen = false,
 }: LoadingSphereProps) {
-  const px = size ?? undefined;
+  const px = size;
   const sizeStyle = px ? { width: px, height: px } : undefined;
   const sizeClass = px
-    ? ""
-    : "h-[36vh] w-[36vh] min-h-[240px] min-w-[240px] max-h-[520px] max-w-[520px]";
+    ? "relative shrink-0 animate-ved-spin"
+    : "relative h-[240px] w-[240px] shrink-0 animate-ved-spin md:h-[320px] md:w-[320px]";
 
   const sphere = (
-    <div
-      className={`relative ${sizeClass} shrink-0 animate-ved-spin`}
-      style={sizeStyle}
-      role="img"
-      aria-label={label}
-    >
-      <Image
+    <div className={sizeClass} style={sizeStyle} role="img" aria-label={label}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src="/preloader.png"
         alt=""
-        fill
-        priority
-        unoptimized
-        sizes="40vh"
-        className="object-contain"
+        width={px || 320}
+        height={px || 320}
+        className="h-full w-full object-contain"
+        decoding="async"
       />
     </div>
   );

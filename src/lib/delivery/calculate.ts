@@ -2,10 +2,17 @@ import type { Car, CarType } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
 import { getTotalPrice } from "@/data/cars";
 
-/** Local Vladivostok logistics (customs handoff / parking) — no VED margin. */
+/** Local Vladivostok logistics + Moscow auto transport — no VED margin. */
 export const DELIVERY_DEFAULTS = {
-  vladivostokBase: 100_000,
-  /** Auto transport Vladivostok → Moscow by body type (market 2026, no margin). */
+  /** Vladivostok handoff / parking / local logistics by body type. */
+  vladivostokByType: {
+    hatchback: 90_000,
+    sedan: 100_000,
+    coupe: 105_000,
+    crossover: 115_000,
+    suv: 125_000,
+  } as Record<CarType, number>,
+  /** Auto transport Vladivostok → Moscow by body type (market 2026). */
   moscowTransportByType: {
     hatchback: 175_000,
     sedan: 180_000,
@@ -13,7 +20,7 @@ export const DELIVERY_DEFAULTS = {
     crossover: 210_000,
     suv: 230_000,
   } as Record<CarType, number>,
-  /** Cargo insurance for Moscow leg only — % of car cost (no margin). */
+  /** Cargo insurance — % of car cost (Vladivostok and Moscow). */
   insurancePercent: 0.008,
   moscowExtraDays: 20,
 } as const;
@@ -31,11 +38,6 @@ function readNumber(
 
 export function getDeliveryConfig() {
   return {
-    vladivostokBase: readNumber(
-      process.env.NEXT_PUBLIC_DELIVERY_VLADIVOSTOK_BASE,
-      process.env.DELIVERY_VLADIVOSTOK_BASE,
-      DELIVERY_DEFAULTS.vladivostokBase
-    ),
     insurancePercent: readNumber(
       process.env.NEXT_PUBLIC_DELIVERY_INSURANCE_PERCENT,
       process.env.DELIVERY_INSURANCE_PERCENT,
@@ -46,12 +48,23 @@ export function getDeliveryConfig() {
       process.env.DELIVERY_MOSCOW_EXTRA_DAYS,
       DELIVERY_DEFAULTS.moscowExtraDays
     ),
+    vladivostokByType: DELIVERY_DEFAULTS.vladivostokByType,
     moscowTransportByType: DELIVERY_DEFAULTS.moscowTransportByType,
   };
 }
 
+export function getVladivostokLogisticsCost(type: CarType): number {
+  return (
+    getDeliveryConfig().vladivostokByType[type] ??
+    DELIVERY_DEFAULTS.vladivostokByType.sedan
+  );
+}
+
 export function getMoscowTransportCost(type: CarType): number {
-  return getDeliveryConfig().moscowTransportByType[type] ?? DELIVERY_DEFAULTS.moscowTransportByType.sedan;
+  return (
+    getDeliveryConfig().moscowTransportByType[type] ??
+    DELIVERY_DEFAULTS.moscowTransportByType.sedan
+  );
 }
 
 export function getDeliveryInsurance(carPriceRub: number): number {
@@ -61,23 +74,27 @@ export function getDeliveryInsurance(carPriceRub: number): number {
 
 type DeliveryCar = Pick<Car, "type" | "price">;
 
-/** Delivery at cost (no VED profit). Moscow includes type-based auto transport + insurance. */
+/**
+ * Delivery at cost (no VED profit).
+ * Both destinations: body-type rate + insurance from car value.
+ * Moscow adds auto-transport by body type on top of Vladivostok logistics.
+ */
 export function getDeliveryCost(
   destination: DeliveryDestination,
   car: DeliveryCar
 ): number {
   if (destination === "none") return 0;
 
-  const { vladivostokBase } = getDeliveryConfig();
+  const local = getVladivostokLogisticsCost(car.type);
+  const insurance = getDeliveryInsurance(car.price);
 
   if (destination === "vladivostok") {
-    return vladivostokBase;
+    return local + insurance;
   }
 
   if (destination === "moscow") {
     const transport = getMoscowTransportCost(car.type);
-    const insurance = getDeliveryInsurance(car.price);
-    return vladivostokBase + transport + insurance;
+    return local + transport + insurance;
   }
 
   return 0;
@@ -118,12 +135,12 @@ export function getDeliveryOptionMeta(
   if (destination === "vladivostok") {
     return {
       label: "Доставка во Владивосток",
-      hint: `Растаможка и передача на стоянку · ~${daysLabel}`,
+      hint: `По типу кузова + страховка · ~${daysLabel}`,
     };
   }
   return {
     label: "Доставка до Москвы",
-    hint: `Автовоз по типу кузова + страховка · ~${daysLabel}`,
+    hint: `Владивосток + автовоз по типу + страховка · ~${daysLabel}`,
   };
 }
 

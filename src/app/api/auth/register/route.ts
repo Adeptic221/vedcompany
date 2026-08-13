@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     }
     if (!isValidPassword(password)) {
       return NextResponse.json(
-        { error: "Пароль должен быть не короче 6 символов" },
+        { error: "Пароль должен быть не короче 7 символов" },
         { status: 400 }
       );
     }

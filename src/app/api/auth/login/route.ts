@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { verifyPassword } from "@/lib/auth/password";
 import { createSessionToken, userCookieOptions } from "@/lib/auth/session";
 import { findUserByEmail, toPublic } from "@/lib/auth/users-store";
-import { isValidEmail, isValidPassword, normalizeEmail } from "@/lib/auth/validate";
+import { isValidEmail, normalizeEmail } from "@/lib/auth/validate";
 
 export const dynamic = "force-dynamic";
 
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     const email = normalizeEmail(body.email || "");
     const password = body.password || "";
 
-    if (!isValidEmail(email) || !isValidPassword(password)) {
+    if (!isValidEmail(email) || !password) {
       return NextResponse.json(
         { error: "Неверный email или пароль" },
         { status: 400 }

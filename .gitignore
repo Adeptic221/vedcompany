@@ -37,6 +37,7 @@ yarn-error.log*
 /data/sync-log.json
 /data/users.json
 /data/otp.json
+/data/password-resets.json
 
 # typescript
 *.tsbuildinfo

@@ -52,7 +52,11 @@ export async function middleware(request: NextRequest) {
 
   const isCabinet =
     pathname === "/cabinet" || pathname.startsWith("/cabinet/");
-  const isAuthPage = pathname === "/login" || pathname === "/register";
+  const isAuthPage =
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname === "/forgot-password" ||
+    pathname === "/reset-password";
 
   if (isCabinet || isAuthPage) {
     const session = await verifySessionToken(
@@ -83,5 +87,7 @@ export const config = {
     "/cabinet/(.*)",
     "/login",
     "/register",
+    "/forgot-password",
+    "/reset-password",
   ],
 };

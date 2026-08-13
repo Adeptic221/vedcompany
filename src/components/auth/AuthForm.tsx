@@ -8,6 +8,44 @@ import { useAuth } from "@/context/AuthContext";
 type Mode = "login" | "register";
 type Method = "email" | "sms";
 
+function PasswordField({
+  value,
+  onChange,
+  placeholder,
+  autoComplete,
+  minLength,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  placeholder: string;
+  autoComplete: string;
+  minLength?: number;
+}) {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div className="relative">
+      <input
+        type={visible ? "text" : "password"}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="ved-select w-full pr-20"
+        autoComplete={autoComplete}
+        required
+        minLength={minLength}
+      />
+      <button
+        type="button"
+        onClick={() => setVisible((v) => !v)}
+        className="absolute inset-y-0 right-0 px-3 text-[11px] uppercase tracking-wider text-white/45 transition hover:text-white"
+        aria-label={visible ? "Скрыть пароль" : "Показать пароль"}
+      >
+        {visible ? "Скрыть" : "Показать"}
+      </button>
+    </div>
+  );
+}
+
 export function AuthForm({ mode }: { mode: Mode }) {
   const router = useRouter();
   const search = useSearchParams();
@@ -33,6 +71,12 @@ export function AuthForm({ mode }: { mode: Mode }) {
     setLoading(true);
     setError("");
     setInfo("");
+
+    if (isRegister && password.length < 7) {
+      setError("Пароль должен быть не короче 7 символов");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch(
@@ -209,7 +253,9 @@ export function AuthForm({ mode }: { mode: Mode }) {
                 inputMode="numeric"
                 pattern="[0-9]*"
                 value={code}
-                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                onChange={(e) =>
+                  setCode(e.target.value.replace(/\D/g, "").slice(0, 6))
+                }
                 placeholder="Код из SMS"
                 className="ved-select tracking-[0.3em]"
                 autoComplete="one-time-code"
@@ -231,7 +277,8 @@ export function AuthForm({ mode }: { mode: Mode }) {
           {info && <p className="text-sm text-white/60">{info}</p>}
           {devCode && (
             <p className="border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-sm text-amber-100">
-              Dev-код: <span className="font-medium tracking-widest">{devCode}</span>
+              Dev-код:{" "}
+              <span className="font-medium tracking-widest">{devCode}</span>
             </p>
           )}
           {error && <p className="text-sm text-red-300">{error}</p>}
@@ -282,16 +329,26 @@ export function AuthForm({ mode }: { mode: Mode }) {
             autoFocus
             required
           />
-          <input
-            type="password"
+          <PasswordField
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder={isRegister ? "Пароль (от 6 символов)" : "Пароль"}
-            className="ved-select"
+            onChange={setPassword}
+            placeholder={
+              isRegister ? "Пароль (минимум 7 символов)" : "Пароль"
+            }
             autoComplete={isRegister ? "new-password" : "current-password"}
-            required
-            minLength={6}
+            minLength={isRegister ? 7 : undefined}
           />
+
+          {!isRegister && (
+            <div className="flex justify-end">
+              <Link
+                href="/forgot-password"
+                className="text-xs text-white/45 underline-offset-4 hover:text-white hover:underline"
+              >
+                Забыли пароль?
+              </Link>
+            </div>
+          )}
 
           {error && <p className="text-sm text-red-300">{error}</p>}
 

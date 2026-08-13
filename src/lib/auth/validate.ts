@@ -6,8 +6,9 @@ export function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizeEmail(email));
 }
 
+/** New passwords (register / reset): at least 7 characters. */
 export function isValidPassword(password: string): boolean {
-  return password.length >= 6;
+  return password.length >= 7;
 }
 
 export function isValidName(name: string): boolean {

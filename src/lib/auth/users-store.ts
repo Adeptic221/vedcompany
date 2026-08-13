@@ -159,4 +159,20 @@ export async function updateUserProfile(
   return toPublic(users[idx]);
 }
 
+
+export async function updateUserPassword(
+  email: string,
+  passwordHash: string,
+  passwordSalt: string
+): Promise<boolean> {
+  const normalized = email.trim().toLowerCase();
+  const users = await listUsers();
+  const idx = users.findIndex((u) => u.email === normalized);
+  if (idx < 0) return false;
+  users[idx].passwordHash = passwordHash;
+  users[idx].passwordSalt = passwordSalt;
+  if (!users[idx].authProvider) users[idx].authProvider = "email";
+  await saveUsers(users);
+  return true;
+}
 export { toPublic };

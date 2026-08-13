@@ -49,7 +49,8 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
   }
 
   const grandTotal = cartRows.reduce((sum, { item, car }) => {
-    const dest = item.deliveryDestination ?? "none";
+    const dest: DeliveryDestination =
+      item.deliveryDestination === "moscow" ? "moscow" : "none";
     return sum + getTotalPrice(car) + getDeliveryCost(dest, car);
   }, 0);
 
@@ -105,7 +106,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
       <div className="space-y-6">
         {cartRows.map(({ item, car }) => {
           const destination: DeliveryDestination =
-            item.deliveryDestination ?? "none";
+            item.deliveryDestination === "moscow" ? "moscow" : "none";
           const base = getTotalPrice(car);
           const delivery = getDeliveryCost(destination, car);
           const total = base + delivery;
@@ -134,7 +135,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
                     )}
                   </p>
                   <p className="mt-1 text-xs text-white/35">
-                    Срок: ~{formatDeliveryDays(deliveryDays)}
+                    Срок: до {formatDeliveryDays(deliveryDays)}
                   </p>
                 </div>
                 <div className="flex shrink-0 gap-2">

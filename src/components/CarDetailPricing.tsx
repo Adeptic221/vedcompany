@@ -56,15 +56,15 @@ export function CarDetailPricing({ car }: { car: Car }) {
           baseDeliveryDays={car.deliveryDays}
           className="border-t border-white/10 pt-4"
         />
-        <div className="flex justify-between text-sm">
-          <span className="text-white/60">
-            {destination === "none" ? "Логистика до выдачи" : "Доставка"}
-          </span>
-          <span>{formatPrice(delivery)}</span>
-        </div>
+        {delivery > 0 && (
+          <div className="flex justify-between text-sm">
+            <span className="text-white/60">Доставка</span>
+            <span>{formatPrice(delivery)}</span>
+          </div>
+        )}
         {deliveryDays > 0 && (
           <p className="text-xs text-white/40">
-            Срок поставки: ~{formatDeliveryDays(deliveryDays)}
+            Срок поставки: до {formatDeliveryDays(deliveryDays)}
           </p>
         )}
         <div className="flex justify-between border-t border-white/10 pt-3 text-base font-medium">

@@ -56,7 +56,8 @@ export function DeliverySelector({
               <span className="flex-1">
                 <span className="block text-sm">{meta.label}</span>
                 <span className="mt-0.5 block text-xs text-white/50">
-                  {meta.hint} · {formatPrice(cost)}
+                  {meta.hint}
+                  {cost > 0 ? ` · ${formatPrice(cost)}` : ""}
                 </span>
               </span>
             </label>

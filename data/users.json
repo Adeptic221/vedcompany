@@ -1,0 +1,12 @@
+[
+  {
+    "id": "018fb0c9-ba25-4e32-b344-17bcc5a59bfd",
+    "email": "vedcompany@internet.ru",
+    "name": "Трепачук Артем",
+    "phone": "+79155633284",
+    "passwordHash": "025c99bbcfe5ce56739313e178416de61d738466f72999f59eaf8b6b87b7b290",
+    "passwordSalt": "22201450323aefda650f526fe2a6a9b3",
+    "authProvider": "email",
+    "createdAt": "2026-08-13T13:18:39.430Z"
+  }
+]

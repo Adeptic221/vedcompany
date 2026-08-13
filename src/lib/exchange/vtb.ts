@@ -15,7 +15,14 @@ export async function fetchVtbCnyRate(): Promise<VtbExchangeRate> {
       const cny = data.Valute?.CNY;
       if (cny?.Value && cny.Nominal) {
         const cbrRate = cny.Value / cny.Nominal;
-        return { bank: "VTB", currency: "CNY", sellRate: Math.round(cbrRate * 1.025 * 100) / 100, fetchedAt: new Date().toISOString(), source: "cbr-fallback" };
+        // Working rate: CBR + 1.5% buffer (not shown as a separate line to the client).
+        return {
+          bank: "VTB",
+          currency: "CNY",
+          sellRate: Math.round(cbrRate * 1.015 * 100) / 100,
+          fetchedAt: new Date().toISOString(),
+          source: "cbr-fallback",
+        };
       }
     }
   } catch { }

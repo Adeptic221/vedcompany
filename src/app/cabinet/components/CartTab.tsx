@@ -51,7 +51,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
   const grandTotal = cartRows.reduce((sum, { item, car }) => {
     const dest = item.deliveryDestination ?? "none";
     const delivery =
-      dest === "none" ? 0 : getDeliveryCost(dest, car.price);
+      dest === "none" ? 0 : getDeliveryCost(dest, car);
     return sum + getTotalPrice(car) + delivery;
   }, 0);
 
@@ -110,7 +110,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
               ? "vladivostok"
               : item.deliveryDestination;
           const base = getTotalPrice(car);
-          const delivery = getDeliveryCost(destination, car.price);
+          const delivery = getDeliveryCost(destination, car);
           const total = base + delivery;
           const deliveryDays = getDeliveryDays(destination, car.deliveryDays);
 
@@ -162,6 +162,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
                 destination={destination}
                 onChange={(dest) => updateCartDelivery(car.id, dest)}
                 carPriceRub={car.price}
+                carType={car.type}
                 baseDeliveryDays={car.deliveryDays}
               />
             </div>

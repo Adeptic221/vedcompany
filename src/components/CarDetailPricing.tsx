@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { Car } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
-import { formatPrice, getTotalPrice } from "@/data/cars";
+import { formatPrice, getClientCarPrice, getTotalPrice } from "@/data/cars";
 import { getDeliveryCost, getDeliveryDays, formatDeliveryDays } from "@/lib/delivery/calculate";
 import { DeliverySelector } from "@/components/DeliverySelector";
 import { CarDetailActions } from "@/components/CarDetailActions";
@@ -12,8 +12,9 @@ export function CarDetailPricing({ car }: { car: Car }) {
   const [destination, setDestination] =
     useState<DeliveryDestination>("vladivostok");
 
+  const carPrice = getClientCarPrice(car);
   const base = getTotalPrice(car);
-  const delivery = getDeliveryCost(destination, car.price);
+  const delivery = getDeliveryCost(destination, car);
   const total = base + delivery;
   const deliveryDays = getDeliveryDays(destination, car.deliveryDays);
 
@@ -30,16 +31,14 @@ export function CarDetailPricing({ car }: { car: Car }) {
               <span>{car.sync.priceCny.toLocaleString("ru-RU")} CNY</span>
             </div>
             <div className="flex justify-between text-sm">
-              <span className="text-white/60">Курс ВТБ</span>
-              <span>
-                {car.sync.exchangeRate} ₽/CNY
-              </span>
+              <span className="text-white/60">Курс ЦБ (+1,5%)</span>
+              <span>{car.sync.exchangeRate} ₽/CNY</span>
             </div>
           </>
         )}
         <div className="flex justify-between text-sm">
           <span className="text-white/60">Цена авто</span>
-          <span>{formatPrice(car.price)}</span>
+          <span>{formatPrice(carPrice)}</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-white/60">Таможня</span>
@@ -49,6 +48,7 @@ export function CarDetailPricing({ car }: { car: Car }) {
           destination={destination}
           onChange={setDestination}
           carPriceRub={car.price}
+          carType={car.type}
           baseDeliveryDays={car.deliveryDays}
           className="border-t border-white/10 pt-4"
         />

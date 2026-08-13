@@ -1,4 +1,5 @@
 import type { Car } from "@/types/car";
+import { applyProfitBeforeCustoms } from "@/lib/pricing/margins";
 
 export const cars: Car[] = [
   { id: "toyota-camry-2024", brand: "Toyota", brandSlug: "toyota", model: "Camry", year: 2024, type: "sedan", price: 2850000, customsCost: 420000, deliveryDays: 45, country: "Japan", imageColor: "#1a3a5c", specs: { engine: "2.5 L", power: "181 hp", transmission: "Auto", drive: "FWD", fuel: "Petrol", consumption: "7.1 L/100km" }, description: "Reliable business sedan." },
@@ -23,8 +24,14 @@ export function formatPrice(price: number): string {
   return new Intl.NumberFormat("ru-RU").format(price) + " \u20bd";
 }
 
-export function getTotalPrice(car: Car): number {
-  return car.price + car.customsCost;
+/** Car line for the client: cost RUB + hidden 13% margin (before customs). */
+export function getClientCarPrice(car: Pick<Car, "price">): number {
+  return applyProfitBeforeCustoms(car.price);
+}
+
+/** Client total before delivery: car (with margin) + customs. */
+export function getTotalPrice(car: Pick<Car, "price" | "customsCost">): number {
+  return getClientCarPrice(car) + car.customsCost;
 }
 
 export type CatalogSort = "price-asc" | "price-desc" | "year-desc" | "year-asc" | "newest";

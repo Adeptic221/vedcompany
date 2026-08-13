@@ -1,5 +1,6 @@
 "use client";
 
+import type { CarType } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
 import {
   DELIVERY_DESTINATIONS,
@@ -12,15 +13,19 @@ export function DeliverySelector({
   destination,
   onChange,
   carPriceRub,
+  carType,
   baseDeliveryDays,
   className = "",
 }: {
   destination: DeliveryDestination;
   onChange: (value: DeliveryDestination) => void;
   carPriceRub: number;
+  carType: CarType;
   baseDeliveryDays: number;
   className?: string;
 }) {
+  const car = { price: carPriceRub, type: carType };
+
   return (
     <div className={className}>
       <p className="mb-2 text-xs uppercase tracking-[0.2em] text-white/60">
@@ -29,7 +34,7 @@ export function DeliverySelector({
       <div className="space-y-2">
         {DELIVERY_DESTINATIONS.map((value) => {
           const meta = getDeliveryOptionMeta(value, baseDeliveryDays);
-          const cost = getDeliveryCost(value, carPriceRub);
+          const cost = getDeliveryCost(value, car);
           const selected = destination === value;
           return (
             <label

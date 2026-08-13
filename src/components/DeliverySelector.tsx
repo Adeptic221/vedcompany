@@ -29,7 +29,7 @@ export function DeliverySelector({
   return (
     <div className={className}>
       <p className="mb-2 text-xs uppercase tracking-[0.2em] text-white/60">
-        Доставка
+        Получение
       </p>
       <div className="space-y-2">
         {DELIVERY_DESTINATIONS.map((value) => {

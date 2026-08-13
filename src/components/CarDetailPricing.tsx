@@ -10,7 +10,7 @@ import { CarDetailActions } from "@/components/CarDetailActions";
 
 export function CarDetailPricing({ car }: { car: Car }) {
   const [destination, setDestination] =
-    useState<DeliveryDestination>("vladivostok");
+    useState<DeliveryDestination>("none");
 
   const carPrice = getClientCarPrice(car);
   const base = getTotalPrice(car);
@@ -22,8 +22,11 @@ export function CarDetailPricing({ car }: { car: Car }) {
     <>
       <div className="mt-8 space-y-3 border border-white/10 bg-white/5 p-6">
         <h2 className="text-xs uppercase tracking-[0.2em] text-white/60">
-          Расчёт стоимости
+          Ориентировочный расчёт
         </h2>
+        <p className="text-xs text-white/40">
+          Финальную стоимость менеджер уточнит с вами при оформлении.
+        </p>
         {car.sync && (
           <>
             <div className="flex justify-between text-sm">
@@ -52,19 +55,19 @@ export function CarDetailPricing({ car }: { car: Car }) {
           baseDeliveryDays={car.deliveryDays}
           className="border-t border-white/10 pt-4"
         />
-        {delivery > 0 && (
-          <div className="flex justify-between text-sm">
-            <span className="text-white/60">Доставка</span>
-            <span>{formatPrice(delivery)}</span>
-          </div>
-        )}
+        <div className="flex justify-between text-sm">
+          <span className="text-white/60">
+            {destination === "none" ? "Логистика до выдачи" : "Доставка"}
+          </span>
+          <span>{formatPrice(delivery)}</span>
+        </div>
         {deliveryDays > 0 && (
           <p className="text-xs text-white/40">
             Срок поставки: ~{formatDeliveryDays(deliveryDays)}
           </p>
         )}
         <div className="flex justify-between border-t border-white/10 pt-3 text-base font-medium">
-          <span>Итого</span>
+          <span>Итого ориентировочно</span>
           <span>{formatPrice(total)}</span>
         </div>
       </div>

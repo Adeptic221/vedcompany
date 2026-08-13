@@ -50,9 +50,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
 
   const grandTotal = cartRows.reduce((sum, { item, car }) => {
     const dest = item.deliveryDestination ?? "none";
-    const delivery =
-      dest === "none" ? 0 : getDeliveryCost(dest, car);
-    return sum + getTotalPrice(car) + delivery;
+    return sum + getTotalPrice(car) + getDeliveryCost(dest, car);
   }, 0);
 
   async function handleCheckout(car: Car, total: number) {
@@ -98,7 +96,8 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
   return (
     <div>
       <p className="mb-4 text-sm text-white/45">
-        «Оформить» создаёт заказ в кабинете и отправляет заявку менеджеру VED.
+        Суммы ориентировочные — менеджер уточнит при оформлении. «Оформить»
+        создаёт заказ и отправляет заявку в VED.
       </p>
       {error && <p className="mb-4 text-sm text-red-300">{error}</p>}
       {info && <p className="mb-4 text-sm text-emerald-300/90">{info}</p>}
@@ -106,9 +105,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
       <div className="space-y-6">
         {cartRows.map(({ item, car }) => {
           const destination: DeliveryDestination =
-            item.deliveryDestination === "none" || !item.deliveryDestination
-              ? "vladivostok"
-              : item.deliveryDestination;
+            item.deliveryDestination ?? "none";
           const base = getTotalPrice(car);
           const delivery = getDeliveryCost(destination, car);
           const total = base + delivery;
@@ -170,7 +167,7 @@ export function CartTab({ cars, onOrdered }: CartTabProps) {
         })}
       </div>
       <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
-        <span className="text-sm text-white/60">Итого в корзине</span>
+        <span className="text-sm text-white/60">Итого ориентировочно</span>
         <span className="text-lg font-light">{formatPrice(grandTotal)}</span>
       </div>
     </div>

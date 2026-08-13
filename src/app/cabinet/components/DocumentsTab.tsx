@@ -5,6 +5,8 @@ import { useCart } from "@/context/CartContext";
 import { formatDateTime } from "@/lib/cabinet/format";
 import {
   CLIENT_DOC_SLOTS,
+  REQUIRED_DOC_SLOTS,
+  countUploadedRequiredDocs,
   type CabinetDocKind,
   type DocSlotDef,
 } from "@/lib/cabinet/documents";
@@ -15,6 +17,36 @@ function formatSize(bytes?: number): string {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+function DocWhyTip({ title, why }: { title: string; why: string }) {
+  return (
+    <span
+      className="group/tip relative inline-flex max-w-full items-center gap-1.5 outline-none"
+      tabIndex={0}
+    >
+      <span className="border-b border-dotted border-white/35 text-sm text-white/90 transition group-hover/tip:border-white/70 group-hover/tip:text-white group-focus-within/tip:border-white/70 group-focus-within/tip:text-white">
+        {title}
+      </span>
+      <span
+        className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/25 text-[10px] leading-none text-white/55 transition group-hover/tip:border-white/50 group-hover/tip:text-white/85 group-focus-within/tip:border-white/50 group-focus-within/tip:text-white/85"
+        aria-hidden
+      >
+        i
+      </span>
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute left-0 top-full z-30 mt-2 w-[min(20rem,calc(100vw-3rem))] origin-top translate-y-1 scale-[0.98] opacity-0 transition duration-200 group-hover/tip:translate-y-0 group-hover/tip:scale-100 group-hover/tip:opacity-100 group-focus-within/tip:translate-y-0 group-focus-within/tip:scale-100 group-focus-within/tip:opacity-100"
+      >
+        <span className="block border border-white/15 bg-ved-navy/95 px-3.5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-md">
+          <span className="mb-1.5 block text-[10px] uppercase tracking-[0.18em] text-white/40">
+            Зачем это нужно
+          </span>
+          <span className="block text-xs leading-relaxed text-white/75">{why}</span>
+        </span>
+      </span>
+    </span>
+  );
 }
 
 function SlotCard({
@@ -36,27 +68,29 @@ function SlotCard({
   const done = Boolean(doc);
 
   return (
-    <li className="border border-white/10 bg-white/[0.03] p-4">
+    <li className="border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <p className="text-sm text-white/90">{slot.title}</p>
+            <DocWhyTip title={slot.title} why={slot.why} />
             <span
               className={`text-[10px] uppercase tracking-wider ${
-                done ? "text-emerald-300/90" : "text-amber-200/80"
+                done
+                  ? "text-emerald-300/90"
+                  : slot.optional
+                    ? "text-white/35"
+                    : "text-amber-200/80"
               }`}
             >
-              {done
-                ? "\u0417\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u043e"
-                : "\u041d\u0443\u0436\u043d\u043e"}
+              {done ? "Загружено" : slot.optional ? "Опционально" : "Нужно"}
             </span>
           </div>
           <p className="mt-1 text-xs text-white/40">{slot.hint}</p>
           {doc && (
             <p className="mt-2 truncate text-xs text-white/55">
               {doc.name}
-              {doc.size ? ` \u00b7 ${formatSize(doc.size)}` : ""}
-              {` \u00b7 ${formatDateTime(doc.uploadedAt)}`}
+              {doc.size ? ` · ${formatSize(doc.size)}` : ""}
+              {` · ${formatDateTime(doc.uploadedAt)}`}
             </p>
           )}
         </div>
@@ -68,7 +102,7 @@ function SlotCard({
               rel="noopener noreferrer"
               className="border border-white/20 px-3 py-2 text-xs uppercase tracking-wider text-white/70 transition hover:border-white/40 hover:text-white"
             >
-              {"\u0421\u043a\u0430\u0447\u0430\u0442\u044c"}
+              Скачать
             </a>
           )}
           <button
@@ -77,9 +111,7 @@ function SlotCard({
             onClick={() => inputRef.current?.click()}
             className="border border-white/30 px-3 py-2 text-xs uppercase tracking-wider transition hover:bg-white hover:text-ved-navy disabled:opacity-50"
           >
-            {done
-              ? "\u0417\u0430\u043c\u0435\u043d\u0438\u0442\u044c"
-              : "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c"}
+            {done ? "Заменить" : "Загрузить"}
           </button>
           {doc?.hasFile && (
             <button
@@ -87,7 +119,7 @@ function SlotCard({
               onClick={onOpen}
               className="border border-white/20 px-3 py-2 text-xs uppercase tracking-wider text-white/70 transition hover:border-white/40 hover:text-white"
             >
-              {"\u041e\u0442\u043a\u0440\u044b\u0442\u044c"}
+              Открыть
             </button>
           )}
           {doc && (
@@ -96,7 +128,7 @@ function SlotCard({
               onClick={onRemove}
               className="border border-white/15 px-3 py-2 text-xs uppercase tracking-wider text-white/45 transition hover:border-red-400/40 hover:text-red-300"
             >
-              {"\u0423\u0434\u0430\u043b\u0438\u0442\u044c"}
+              Удалить
             </button>
           )}
           <input
@@ -136,51 +168,67 @@ export function DocumentsTab() {
     [documents]
   );
 
+  const progress = useMemo(
+    () => countUploadedRequiredDocs(byKind.keys()),
+    [byKind]
+  );
+
   async function handleUpload(kind: CabinetDocKind, file: File) {
     setError("");
     if (file.size > 12 * 1024 * 1024) {
-      setError(
-        "\u0424\u0430\u0439\u043b \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0431\u043e\u043b\u044c\u0448\u043e\u0439 (\u043c\u0430\u043a\u0441. 12 \u041c\u0411)."
-      );
+      setError("Файл слишком большой (макс. 12 МБ).");
       return;
     }
     setBusyKind(kind);
     try {
       await addDocument(file, kind);
     } catch {
-      setError(
-        "\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u0444\u0430\u0439\u043b. \u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437."
-      );
+      setError("Не удалось сохранить файл. Попробуйте ещё раз.");
     } finally {
       setBusyKind(null);
     }
   }
 
-  const doneCount = CLIENT_DOC_SLOTS.filter(
-    (s) => s.kind === "other" || byKind.has(s.kind)
-  ).length;
+  const requiredSlots = CLIENT_DOC_SLOTS.filter((s) => !s.optional && s.kind !== "other");
+  const optionalSlots = CLIENT_DOC_SLOTS.filter(
+    (s) => s.optional && s.kind !== "other"
+  );
+  const otherSlot = CLIENT_DOC_SLOTS.find((s) => s.kind === "other")!;
 
   return (
     <div>
       <p className="mb-2 text-sm leading-relaxed text-white/50">
-        {
-          "\u0417\u0434\u0435\u0441\u044c \u0432\u044b \u0441\u043a\u0430\u0447\u0438\u0432\u0430\u0435\u0442\u0435 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u044b VED, \u043f\u043e\u0434\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442\u0435 \u0438 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0435\u0442\u0435 \u043e\u0431\u0440\u0430\u0442\u043d\u043e, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u044f\u0435\u0442\u0435 \u0441\u043a\u0430\u043d\u044b \u043f\u0430\u0441\u043f\u043e\u0440\u0442\u0430 \u0438 \u043f\u0440\u043e\u043f\u0438\u0441\u043a\u0438."
-        }
+        Загрузите пакет документов для сделки и таможни. Наведите на название
+        документа — кратко объясним, зачем он нужен.
       </p>
       <p className="mb-6 text-xs text-white/35">
-        {
-          "\u041f\u043e\u043a\u0430 \u0444\u0430\u0439\u043b\u044b \u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u0432 \u0432\u0430\u0448\u0435\u043c \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435. \u0421\u0435\u0440\u0432\u0435\u0440\u043d\u043e\u0435 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0435 \u0434\u043b\u044f \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0430 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0438\u043c \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u043c \u0448\u0430\u0433\u043e\u043c."
-        }
+        Пока файлы хранятся в вашем браузере. Серверное хранилище для менеджера
+        подключим следующим шагом.
       </p>
-      <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/45">
-        {`\u0413\u043e\u0442\u043e\u0432\u043e: ${Math.min(doneCount, CLIENT_DOC_SLOTS.length - 1)} / ${CLIENT_DOC_SLOTS.length - 1}`}
-        {otherDocs.length > 0 ? ` + ${otherDocs.length}` : ""}
-      </p>
+
+      <div className="mb-5">
+        <div className="mb-2 flex items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-white/45">
+          <span>
+            Обязательные: {progress.done} / {progress.total}
+          </span>
+          <span className="normal-case tracking-normal text-white/30">
+            этап «Документы» в отслеживании
+          </span>
+        </div>
+        <div className="h-1 overflow-hidden bg-white/10">
+          <div
+            className="h-full bg-white/70 transition-all duration-500"
+            style={{
+              width: `${progress.total ? (progress.done / progress.total) * 100 : 0}%`,
+            }}
+          />
+        </div>
+      </div>
 
       {error && <p className="mb-4 text-sm text-red-300">{error}</p>}
 
       <ul className="space-y-3">
-        {CLIENT_DOC_SLOTS.filter((s) => s.kind !== "other").map((slot) => (
+        {requiredSlots.map((slot) => (
           <SlotCard
             key={slot.kind}
             slot={slot}
@@ -199,12 +247,39 @@ export function DocumentsTab() {
         ))}
       </ul>
 
+      {optionalSlots.length > 0 && (
+        <div className="mt-8 border-t border-white/10 pt-6">
+          <p className="mb-3 text-xs uppercase tracking-[0.2em] text-white/45">
+            По запросу
+          </p>
+          <ul className="space-y-3">
+            {optionalSlots.map((slot) => (
+              <SlotCard
+                key={slot.kind}
+                slot={slot}
+                doc={byKind.get(slot.kind)}
+                busy={busyKind === slot.kind}
+                onUpload={(file) => void handleUpload(slot.kind, file)}
+                onOpen={() => {
+                  const doc = byKind.get(slot.kind);
+                  if (doc) void openDocument(doc.id);
+                }}
+                onRemove={() => {
+                  const doc = byKind.get(slot.kind);
+                  if (doc) void removeDocument(doc.id);
+                }}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="mt-8 border-t border-white/10 pt-6">
         <p className="mb-3 text-xs uppercase tracking-[0.2em] text-white/45">
-          {"\u041f\u0440\u043e\u0447\u0438\u0435 \u0444\u0430\u0439\u043b\u044b"}
+          Прочие файлы
         </p>
         <SlotCard
-          slot={CLIENT_DOC_SLOTS.find((s) => s.kind === "other")!}
+          slot={otherSlot}
           busy={busyKind === "other"}
           onUpload={(file) => void handleUpload("other", file)}
           onOpen={() => undefined}
@@ -221,7 +296,7 @@ export function DocumentsTab() {
                   <p className="truncate">{doc.name}</p>
                   <p className="text-xs text-white/35">
                     {formatDateTime(doc.uploadedAt)}
-                    {doc.size ? ` \u00b7 ${formatSize(doc.size)}` : ""}
+                    {doc.size ? ` · ${formatSize(doc.size)}` : ""}
                   </p>
                 </div>
                 {doc.hasFile && (
@@ -230,7 +305,7 @@ export function DocumentsTab() {
                     onClick={() => void openDocument(doc.id)}
                     className="shrink-0 border border-white/20 px-3 py-1.5 text-xs uppercase tracking-wider text-white/60"
                   >
-                    {"\u041e\u0442\u043a\u0440\u044b\u0442\u044c"}
+                    Открыть
                   </button>
                 )}
                 <button
@@ -238,13 +313,18 @@ export function DocumentsTab() {
                   onClick={() => void removeDocument(doc.id)}
                   className="shrink-0 border border-white/15 px-3 py-1.5 text-xs uppercase tracking-wider text-white/50 transition hover:border-red-400/40 hover:text-red-300"
                 >
-                  {"\u0423\u0434\u0430\u043b\u0438\u0442\u044c"}
+                  Удалить
                 </button>
               </li>
             ))}
           </ul>
         )}
       </div>
+
+      <p className="mt-6 text-[11px] text-white/25">
+        Обязательных пунктов в чеклисте: {REQUIRED_DOC_SLOTS.length}. Опциональные
+        не блокируют этап «Документы».
+      </p>
     </div>
   );
 }

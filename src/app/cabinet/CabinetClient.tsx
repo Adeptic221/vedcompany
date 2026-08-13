@@ -111,7 +111,11 @@ function CabinetContent() {
             {tab === "chat" && <ChatTab />}
             {tab === "documents" && <DocumentsTab />}
             {tab === "tracking" && (
-              <TrackingTab cars={cars} highlightOrderId={highlightOrderId} />
+              <TrackingTab
+                cars={cars}
+                highlightOrderId={highlightOrderId}
+                onGoToDocuments={() => handleTabChange("documents")}
+              />
             )}
             {tab === "finance" && <FinanceTab />}
             {tab === "aftersales" && <AfterSalesTab />}

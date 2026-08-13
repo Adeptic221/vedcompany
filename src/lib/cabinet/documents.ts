@@ -1,10 +1,18 @@
+import type { OrderStatus } from "@/types/cart";
+
 /** Document kinds for client cabinet workflow. */
 export type CabinetDocKind =
   | "passport_main"
   | "passport_registration"
+  | "passport_pages"
   | "passport_notarized"
+  | "inn"
+  | "snils"
   | "signed_services_contract"
   | "signed_agency_contract"
+  | "broker_poa"
+  | "pdn_consent"
+  | "driver_license"
   | "other";
 
 export type CabinetDocStatus = "required" | "uploaded" | "signed_by_client";
@@ -12,50 +20,133 @@ export type CabinetDocStatus = "required" | "uploaded" | "signed_by_client";
 export interface DocSlotDef {
   kind: CabinetDocKind;
   title: string;
+  /** Short line under the title */
   hint: string;
+  /** Full explanation shown in hover tip */
+  why: string;
   /** blank template from VED (optional) */
   templateHref?: string;
   accept: string;
+  optional?: boolean;
+  /** Tracking stage where this doc is most relevant */
+  trackingStage?: OrderStatus;
 }
 
 /** Client uploads these; VED templates are downloaded where templateHref is set. */
 export const CLIENT_DOC_SLOTS: DocSlotDef[] = [
   {
     kind: "passport_main",
-    title: "\u041f\u0430\u0441\u043f\u043e\u0440\u0442 \u2014 \u0440\u0430\u0437\u0432\u043e\u0440\u043e\u0442 \u0441 \u0444\u043e\u0442\u043e",
-    hint: "\u041f\u0435\u0440\u0432\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 (\u0444\u043e\u0442\u043e + \u0444.\u0438.\u043e.)",
+    title: "Паспорт — разворот с фото",
+    hint: "Первая страница (фото + Ф.И.О.)",
+    why: "Нужен, чтобы подтвердить личность владельца автомобиля и корректно заполнить договор, поручение и таможенные документы.",
     accept: "image/*,.pdf",
+    trackingStage: "documents",
   },
   {
     kind: "passport_registration",
-    title: "\u041f\u0430\u0441\u043f\u043e\u0440\u0442 \u2014 \u043f\u0440\u043e\u043f\u0438\u0441\u043a\u0430",
-    hint: "\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0435\u0439 (\u043f\u0440\u043e\u043f\u0438\u0441\u043a\u043e\u0439)",
+    title: "Паспорт — прописка",
+    hint: "Страница с регистрацией",
+    why: "Адрес регистрации указывают в договорах и передают брокеру для декларации и идентификации владельца.",
     accept: "image/*,.pdf",
+    trackingStage: "documents",
+  },
+  {
+    kind: "passport_pages",
+    title: "Паспорт — полные страницы",
+    hint: "Скан остальных заполненных страниц одним файлом или архивом страниц",
+    why: "Полный комплект страниц снимает дозапросы: брокеру видны все отметки и данные паспорта без повторных просьб прислать «ещё одну страницу».",
+    accept: "image/*,.pdf",
+    trackingStage: "documents",
   },
   {
     kind: "passport_notarized",
-    title: "\u041d\u043e\u0442\u0430\u0440\u0438\u0430\u043b\u044c\u043d\u043e \u0437\u0430\u0432\u0435\u0440\u0435\u043d\u043d\u044b\u0439 \u043f\u0430\u0441\u043f\u043e\u0440\u0442",
-    hint: "\u0417\u0430\u0432\u0435\u0440\u0435\u043d\u043d\u0430\u044f \u043a\u043e\u043f\u0438\u044f \u043f\u0430\u0441\u043f\u043e\u0440\u0442\u0430 \u0444\u0438\u0437\u043b\u0438\u0446\u0430 (\u0441\u043a\u0430\u043d/\u0444\u043e\u0442\u043e). \u041d\u0443\u0436\u043d\u0430 \u0431\u0440\u043e\u043a\u0435\u0440\u0443",
+    title: "Нотариально заверенный паспорт",
+    hint: "Скан сюда; бумажный экземпляр — брокеру",
+    why: "Бумажная нотариальная копия хранится у таможенного брокера и нужна для оформления без вашего личного присутствия. В кабинет загрузите скан — так менеджер видит, что документ готов; оригинал отправьте брокеру (СДЭК и т.п.).",
     accept: "image/*,.pdf",
+    trackingStage: "customs",
+  },
+  {
+    kind: "inn",
+    title: "ИНН",
+    hint: "Свидетельство или скрин из ФНС / Госуслуг",
+    why: "ИНН физлица используют при уплате таможенных платежей и идентификации владельца в системах таможни и брокера.",
+    accept: "image/*,.pdf",
+    trackingStage: "documents",
+  },
+  {
+    kind: "snils",
+    title: "СНИЛС",
+    hint: "Карточка или скрин из Госуслуг",
+    why: "СНИЛС часто требуется в пакете документов владельца для сопоставления данных и заполнения анкет брокера.",
+    accept: "image/*,.pdf",
+    trackingStage: "documents",
   },
   {
     kind: "signed_services_contract",
-    title: "\u041f\u043e\u0434\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0439 \u0434\u043e\u0433\u043e\u0432\u043e\u0440 \u043d\u0430 \u0443\u0441\u043b\u0443\u0433\u0438 VED",
-    hint: "\u0421\u043a\u0430\u0447\u0430\u0439\u0442\u0435 \u0448\u0430\u0431\u043b\u043e\u043d, \u043f\u043e\u0434\u043f\u0438\u0448\u0438\u0442\u0435 \u0438 \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u0441\u043a\u0430\u043d/\u0444\u043e\u0442\u043e",
+    title: "Подписанный договор на услуги VED",
+    hint: "Скачайте шаблон, подпишите и загрузите скан",
+    why: "Фиксирует, какие услуги оказывает VED и на каких условиях (в том числе вознаграждение). Без подписанного договора мы не запускаем оплату и логистику.",
     templateHref: "/docs/ved-services-contract.html",
     accept: "image/*,.pdf",
+    trackingStage: "manager",
   },
   {
     kind: "signed_agency_contract",
-    title: "\u041f\u043e\u0434\u043f\u0438\u0441\u0430\u043d\u043d\u044b\u0439 \u0430\u0433\u0435\u043d\u0442\u0441\u043a\u0438\u0439 \u0434\u043e\u0433\u043e\u0432\u043e\u0440",
-    hint: "\u0414\u043e\u0433\u043e\u0432\u043e\u0440 \u043d\u0430 \u043f\u043e\u0434\u0431\u043e\u0440 \u0438 \u0441\u043e\u043f\u0440\u043e\u0432\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u0438\u043c\u043f\u043e\u0440\u0442\u0430",
+    title: "Подписанный агентский договор",
+    hint: "Даёт VED право действовать от вашего имени",
+    why: "Это не «второй договор услуг», а поручение: заказывать и оплачивать авто, передавать документы брокеру, принимать авто на СВХ и сопровождать импорт без вашего присутствия на каждом шаге.",
     templateHref: "/docs/ved-agency-contract.html",
     accept: "image/*,.pdf",
+    trackingStage: "manager",
+  },
+  {
+    kind: "broker_poa",
+    title: "Доверенность на брокера",
+    hint: "Скачайте шаблон, подпишите и загрузите скан",
+    why: "Отдельная доверенность таможенному брокеру: подача декларации, представление интересов на таможне, получение документов. Агентский договор VED её не заменяет.",
+    templateHref: "/docs/broker-poa.html",
+    accept: "image/*,.pdf",
+    trackingStage: "customs",
+  },
+  {
+    kind: "pdn_consent",
+    title: "Согласие на обработку персональных данных",
+    hint: "Скачайте, подпишите и загрузите скан",
+    why: "Юридическое основание обрабатывать паспорт, ИНН, СНИЛС и связанные данные в рамках сделки, передачи брокеру и таможенного оформления.",
+    templateHref: "/docs/pdn-consent.html",
+    accept: "image/*,.pdf",
+    trackingStage: "documents",
+  },
+  {
+    kind: "driver_license",
+    title: "Водительское удостоверение",
+    hint: "По запросу менеджера",
+    why: "Не всегда обязательно. Может понадобиться при выдаче автомобиля или отдельных процедурах регистрации — менеджер скажет, если потребуется.",
+    accept: "image/*,.pdf",
+    optional: true,
+    trackingStage: "shipping",
   },
   {
     kind: "other",
-    title: "\u041f\u0440\u043e\u0447\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b",
-    hint: "\u0412\u0423, \u0418\u041d\u041d, \u0434\u043e\u043f.\u0441\u043a\u0430\u043d\u044b \u2014 \u043f\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0443 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0430",
+    title: "Прочие документы",
+    hint: "Доп. сканы по запросу менеджера",
+    why: "Сюда можно прикрепить любые дополнительные файлы, которые попросил менеджер и для которых нет отдельного пункта в списке.",
     accept: "image/*,.pdf,.doc,.docx",
+    optional: true,
   },
 ];
+
+export const REQUIRED_DOC_SLOTS = CLIENT_DOC_SLOTS.filter(
+  (s) => !s.optional && s.kind !== "other"
+);
+
+export function countUploadedRequiredDocs(
+  uploadedKinds: Iterable<CabinetDocKind | undefined>
+): { done: number; total: number } {
+  const set = new Set(
+    [...uploadedKinds].filter((k): k is CabinetDocKind => Boolean(k) && k !== "other")
+  );
+  const done = REQUIRED_DOC_SLOTS.filter((s) => set.has(s.kind)).length;
+  return { done, total: REQUIRED_DOC_SLOTS.length };
+}

@@ -1,18 +1,29 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import type { Car } from "@/types/car";
 import { useCart } from "@/context/CartContext";
 import { statusLabels, statusSteps } from "@/lib/cabinet/constants";
+import { countUploadedRequiredDocs } from "@/lib/cabinet/documents";
 
 interface TrackingTabProps {
   cars: Car[];
   highlightOrderId: string | null;
+  onGoToDocuments?: () => void;
 }
 
-export function TrackingTab({ cars, highlightOrderId }: TrackingTabProps) {
-  const { orders } = useCart();
+export function TrackingTab({
+  cars,
+  highlightOrderId,
+  onGoToDocuments,
+}: TrackingTabProps) {
+  const { orders, documents } = useCart();
   const highlightRef = useRef<HTMLDivElement>(null);
+
+  const docsProgress = useMemo(
+    () => countUploadedRequiredDocs(documents.map((d) => d.kind)),
+    [documents]
+  );
 
   useEffect(() => {
     if (highlightOrderId && highlightRef.current) {
@@ -62,6 +73,8 @@ export function TrackingTab({ cars, highlightOrderId }: TrackingTabProps) {
                 const isDone = i < stepIndex;
                 const isCurrent = i === stepIndex;
                 const isLast = i === statusSteps.length - 1;
+                const showDocsProgress =
+                  step === "documents" && (isCurrent || isDone || stepIndex < i);
 
                 return (
                   <div key={step} className="relative flex gap-4 pb-8 last:pb-0">
@@ -83,8 +96,18 @@ export function TrackingTab({ cars, highlightOrderId }: TrackingTabProps) {
                         }`}
                       >
                         {isDone ? (
-                          <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          <svg
+                            className="h-3 w-3"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2.5}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M4.5 12.75l6 6 9-13.5"
+                            />
                           </svg>
                         ) : (
                           <span className="text-[10px] font-medium">{i + 1}</span>
@@ -105,6 +128,46 @@ export function TrackingTab({ cars, highlightOrderId }: TrackingTabProps) {
                       </p>
                       {isCurrent && (
                         <p className="mt-1 text-xs text-white/45">Текущий этап</p>
+                      )}
+                      {step === "documents" && (
+                        <div
+                          className={`mt-2 max-w-sm ${
+                            isCurrent || isDone ? "opacity-100" : "opacity-50"
+                          }`}
+                        >
+                          <div className="mb-1.5 flex items-center justify-between gap-2 text-[11px] text-white/45">
+                            <span>
+                              Пакет документов: {docsProgress.done} /{" "}
+                              {docsProgress.total}
+                            </span>
+                            {docsProgress.done >= docsProgress.total ? (
+                              <span className="text-emerald-300/80">готов</span>
+                            ) : (
+                              <span className="text-amber-200/70">в работе</span>
+                            )}
+                          </div>
+                          <div className="h-0.5 overflow-hidden bg-white/10">
+                            <div
+                              className="h-full bg-white/65 transition-all"
+                              style={{
+                                width: `${
+                                  docsProgress.total
+                                    ? (docsProgress.done / docsProgress.total) * 100
+                                    : 0
+                                }%`,
+                              }}
+                            />
+                          </div>
+                          {onGoToDocuments && (isCurrent || showDocsProgress) && (
+                            <button
+                              type="button"
+                              onClick={onGoToDocuments}
+                              className="mt-2 text-[11px] uppercase tracking-wider text-white/55 underline-offset-2 transition hover:text-white hover:underline"
+                            >
+                              Перейти к документам
+                            </button>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>

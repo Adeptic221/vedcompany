@@ -1,5 +1,8 @@
 import type { Car } from "@/types/car";
-import { applyProfitBeforeCustoms } from "@/lib/pricing/margins";
+import {
+  applyProfitBeforeCustoms,
+  applyProfitToCny,
+} from "@/lib/pricing/margins";
 
 export const cars: Car[] = [
   { id: "toyota-camry-2024", brand: "Toyota", brandSlug: "toyota", model: "Camry", year: 2024, type: "sedan", price: 2850000, customsCost: 420000, deliveryDays: 45, country: "Japan", imageColor: "#1a3a5c", specs: { engine: "2.5 L", power: "181 hp", transmission: "Auto", drive: "FWD", fuel: "Petrol", consumption: "7.1 L/100km" }, description: "Reliable business sedan." },
@@ -24,13 +27,38 @@ export function formatPrice(price: number): string {
   return new Intl.NumberFormat("ru-RU").format(price) + " \u20bd";
 }
 
-/** Car line for the client: cost RUB + hidden 13% margin (before customs). */
-export function getClientCarPrice(car: Pick<Car, "price">): number {
+/**
+ * CNY shown to the client: cost yuan + hidden 13% (so CNY x rate = car RUB).
+ * Returns null when the car has no sync CNY.
+ */
+export function getClientPriceCny(
+  car: Pick<Car, "sync">
+): number | null {
+  const costCny = car.sync?.priceCny;
+  if (typeof costCny !== "number" || !(costCny > 0)) return null;
+  return applyProfitToCny(costCny);
+}
+
+/**
+ * Car line for the client (before customs).
+ * With sync: (costCny + 13%) x working rate — matches the yuan figure on the page.
+ * Without sync: cost RUB + 13%.
+ */
+export function getClientCarPrice(
+  car: Pick<Car, "price" | "sync">
+): number {
+  const clientCny = getClientPriceCny(car);
+  const rate = car.sync?.exchangeRate;
+  if (clientCny != null && typeof rate === "number" && rate > 0) {
+    return Math.round(clientCny * rate);
+  }
   return applyProfitBeforeCustoms(car.price);
 }
 
 /** Client total before delivery: car (with margin) + customs. */
-export function getTotalPrice(car: Pick<Car, "price" | "customsCost">): number {
+export function getTotalPrice(
+  car: Pick<Car, "price" | "customsCost" | "sync">
+): number {
   return getClientCarPrice(car) + car.customsCost;
 }
 

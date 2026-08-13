@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { Car } from "@/types/car";
 import type { DeliveryDestination } from "@/types/cart";
-import { formatPrice, getClientCarPrice, getTotalPrice } from "@/data/cars";
+import { formatPrice, getClientCarPrice, getClientPriceCny, getTotalPrice } from "@/data/cars";
 import { getDeliveryCost, getDeliveryDays, formatDeliveryDays } from "@/lib/delivery/calculate";
 import { DeliverySelector } from "@/components/DeliverySelector";
 import { CarDetailActions } from "@/components/CarDetailActions";
@@ -13,6 +13,7 @@ export function CarDetailPricing({ car }: { car: Car }) {
     useState<DeliveryDestination>("none");
 
   const carPrice = getClientCarPrice(car);
+  const clientCny = getClientPriceCny(car);
   const base = getTotalPrice(car);
   const delivery = getDeliveryCost(destination, car);
   const total = base + delivery;
@@ -27,14 +28,14 @@ export function CarDetailPricing({ car }: { car: Car }) {
         <p className="text-xs text-white/40">
           Финальную стоимость менеджер уточнит с вами при оформлении.
         </p>
-        {car.sync && (
+        {clientCny != null && car.sync && (
           <>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Цена в юанях</span>
-              <span>{car.sync.priceCny.toLocaleString("ru-RU")} CNY</span>
+              <span>{clientCny.toLocaleString("ru-RU")} CNY</span>
             </div>
             <div className="flex justify-between text-sm">
-              <span className="text-white/60">Курс ЦБ (+1,5%)</span>
+              <span className="text-white/60">Курс</span>
               <span>{car.sync.exchangeRate} ₽/CNY</span>
             </div>
           </>

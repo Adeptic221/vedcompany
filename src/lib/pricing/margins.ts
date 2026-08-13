@@ -1,15 +1,13 @@
-/** Client-facing pricing: 13% is baked into the yuan figure the client sees. */
-export const CBR_RATE_BUFFER = 0.015; // +1.5% over CBR (in working rate, not a separate line)
-export const PROFIT_MARGIN_BEFORE_CUSTOMS = 0.13; // +13% on car cost before customs
+/** Client pricing: VED fee is a separate "services" line, never baked into CNY. */
+export const CBR_RATE_BUFFER = 0.015; // +1.5% over CBR (in working rate)
+export const VED_SERVICES_RATE = 0.13; // 13% of car cost (before customs)
 
-/** Inflate cost CNY so client CNY x rate = client RUB (no visible margin line). */
-export function applyProfitToCny(costCny: number): number {
-  return Math.round(costCny * (1 + PROFIT_MARGIN_BEFORE_CUSTOMS));
-}
+/** @deprecated Use VED_SERVICES_RATE / getVedServicesFee */
+export const PROFIT_MARGIN_BEFORE_CUSTOMS = VED_SERVICES_RATE;
 
-/** @deprecated Prefer applyProfitToCny + rate; kept for cars without sync meta. */
-export function applyProfitBeforeCustoms(carCostRub: number): number {
-  return Math.round(carCostRub * (1 + PROFIT_MARGIN_BEFORE_CUSTOMS));
+/** VED services fee in RUB from car cost (before customs). */
+export function getVedServicesFeeFromCost(carCostRub: number): number {
+  return Math.round(carCostRub * VED_SERVICES_RATE);
 }
 
 /** Working FX rate: CBR * (1 + buffer). */

@@ -1,8 +1,5 @@
 import type { Car } from "@/types/car";
-import {
-  applyProfitBeforeCustoms,
-  applyProfitToCny,
-} from "@/lib/pricing/margins";
+import { getVedServicesFeeFromCost } from "@/lib/pricing/margins";
 
 export const cars: Car[] = [
   { id: "toyota-camry-2024", brand: "Toyota", brandSlug: "toyota", model: "Camry", year: 2024, type: "sedan", price: 2850000, customsCost: 420000, deliveryDays: 45, country: "Japan", imageColor: "#1a3a5c", specs: { engine: "2.5 L", power: "181 hp", transmission: "Auto", drive: "FWD", fuel: "Petrol", consumption: "7.1 L/100km" }, description: "Reliable business sedan." },
@@ -28,7 +25,7 @@ export function formatPrice(price: number): string {
 }
 
 /**
- * CNY shown to the client: cost yuan + hidden 13% (so CNY x rate = car RUB).
+ * CNY shown to the client: purchase cost in yuan (no VED fee inside).
  * Returns null when the car has no sync CNY.
  */
 export function getClientPriceCny(
@@ -36,30 +33,45 @@ export function getClientPriceCny(
 ): number | null {
   const costCny = car.sync?.priceCny;
   if (typeof costCny !== "number" || !(costCny > 0)) return null;
-  return applyProfitToCny(costCny);
+  return Math.round(costCny);
 }
 
 /**
- * Car line for the client (before customs).
- * With sync: (costCny + 13%) x working rate — matches the yuan figure on the page.
- * Without sync: cost RUB + 13%.
+ * Car line for the client (before customs / before VED services).
+ * With sync: costCny x working rate. Without sync: catalog cost RUB.
  */
 export function getClientCarPrice(
   car: Pick<Car, "price" | "sync">
 ): number {
-  const clientCny = getClientPriceCny(car);
+  const cny = getClientPriceCny(car);
   const rate = car.sync?.exchangeRate;
-  if (clientCny != null && typeof rate === "number" && rate > 0) {
-    return Math.round(clientCny * rate);
+  if (cny != null && typeof rate === "number" && rate > 0) {
+    return Math.round(cny * rate);
   }
-  return applyProfitBeforeCustoms(car.price);
+  return Math.round(car.price);
 }
 
-/** Client total before delivery: car (with margin) + customs. */
-export function getTotalPrice(
+/** VED services (client-facing label) — 13% of car cost, not shown as margin. */
+export function getVedServicesFee(
+  car: Pick<Car, "price" | "sync">
+): number {
+  return getVedServicesFeeFromCost(getClientCarPrice(car));
+}
+
+/** Car + customs (no services, no delivery). */
+export function getGoodsTotal(
   car: Pick<Car, "price" | "customsCost" | "sync">
 ): number {
   return getClientCarPrice(car) + car.customsCost;
+}
+
+/**
+ * Client deal before delivery: car + customs + VED services.
+ */
+export function getTotalPrice(
+  car: Pick<Car, "price" | "customsCost" | "sync">
+): number {
+  return getGoodsTotal(car) + getVedServicesFee(car);
 }
 
 export type CatalogSort = "price-asc" | "price-desc" | "year-desc" | "year-asc" | "newest";

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { Car } from "@/types/car";
-import { carTypeLabels, formatPrice, getClientCarPrice, getTotalPrice } from "@/data/cars";
+import { carTypeLabels, formatPrice, getClientCarPrice, getGoodsTotal } from "@/data/cars";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { AddToFavoritesButton } from "@/components/AddToFavoritesButton";
 import { CarPhoto } from "@/components/CarPhoto";
 
 export function CarCard({ car }: { car: Car }) {
-  const total = getTotalPrice(car);
+  const total = getGoodsTotal(car);
   const carPrice = getClientCarPrice(car);
   const photo = car.sync?.photos?.[0];
   return (

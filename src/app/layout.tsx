@@ -95,6 +95,14 @@ export default function RootLayout({
       lang="ru"
       style={{ backgroundColor: "#0a1628", color: "#ffffff" }}
     >
+      <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html:
+              "html,body{background:#0a1628!important;color:#fff!important;margin:0;min-height:100vh}*{box-sizing:border-box}",
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} font-sans antialiased`}
         style={{

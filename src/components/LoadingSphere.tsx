@@ -1,5 +1,7 @@
 "use client";
 
+import { useId } from "react";
+
 type LoadingSphereProps = {
   label?: string;
   /** Explicit px size; default ≈ 40% viewport height */
@@ -7,28 +9,71 @@ type LoadingSphereProps = {
   fullscreen?: boolean;
 };
 
+const GOLD = "#d4af37";
+const GOLD_LIGHT = "#e8c872";
+
 export function LoadingSphere({
   label = "Загрузка",
   size,
   fullscreen = false,
 }: LoadingSphereProps) {
-  const px = size;
-  const sizeStyle = px ? { width: px, height: px } : undefined;
-  const sizeClass = px
-    ? "relative shrink-0 animate-ved-spin"
-    : "relative h-[240px] w-[240px] shrink-0 animate-ved-spin md:h-[320px] md:w-[320px]";
+  const uid = useId().replace(/:/g, "");
+  const blueGrad = `ved-blue-${uid}`;
+
+  const sizeStyle = size ? { width: size, height: size } : undefined;
+  const sizeClass = size
+    ? ""
+    : "h-[40vh] w-[40vh] min-h-[288px] min-w-[288px] max-h-[640px] max-w-[640px]";
 
   const sphere = (
-    <div className={sizeClass} style={sizeStyle} role="img" aria-label={label}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/preloader.png"
-        alt=""
-        width={px || 320}
-        height={px || 320}
-        className="h-full w-full object-contain"
-        decoding="async"
-      />
+    <div
+      className={`relative ${sizeClass} shrink-0 animate-ved-spin`}
+      style={sizeStyle}
+      role="img"
+      aria-label={label}
+    >
+      <svg viewBox="0 0 100 100" className="h-full w-full" aria-hidden>
+        <defs>
+          <radialGradient id={blueGrad} cx="32%" cy="28%" r="68%">
+            <stop offset="0%" stopColor="#3d6a9e" />
+            <stop offset="45%" stopColor="#1e3a5f" />
+            <stop offset="100%" stopColor="#0a1628" />
+          </radialGradient>
+        </defs>
+        <circle cx="50" cy="50" r="44" fill={`url(#${blueGrad})`} />
+        <ellipse
+          cx="50"
+          cy="50"
+          rx="44"
+          ry="14"
+          fill="none"
+          stroke={GOLD}
+          strokeWidth="2.2"
+          opacity="0.95"
+        />
+        <ellipse
+          cx="50"
+          cy="50"
+          rx="14"
+          ry="44"
+          fill="none"
+          stroke={GOLD_LIGHT}
+          strokeWidth="1.8"
+          opacity="0.85"
+        />
+        <ellipse
+          cx="50"
+          cy="50"
+          rx="44"
+          ry="14"
+          fill="none"
+          stroke={GOLD}
+          strokeWidth="1.4"
+          opacity="0.5"
+          transform="rotate(60 50 50)"
+        />
+        <ellipse cx="36" cy="32" rx="10" ry="7" fill="white" opacity="0.22" />
+      </svg>
     </div>
   );
 

@@ -9,9 +9,11 @@ import { CarDetailPricing } from "@/components/CarDetailPricing";
 import { CarRequestSection } from "@/components/CarRequestSection";
 import { CarPhoto } from "@/components/CarPhoto";
 import { carTypeLabels, getTotalPrice } from "@/data/cars";
+import { findAnalogCars } from "@/lib/catalog/analogs";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/seo/site";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 import { normalizeCarPhotoUrl } from "@/lib/catalog/photo-url";
+import { SimilarCars } from "@/components/SimilarCars";
 
 export async function generateMetadata({
   params,
@@ -69,6 +71,12 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
   if (!car) notFound();
   const photo = car.sync?.photos?.[0];
   const baseTotal = getTotalPrice(car);
+  const similarCars = findAnalogCars(cars, {
+    type: car.type,
+    budget: baseTotal,
+    brand: car.brandSlug,
+    excludeId: car.id,
+  }).slice(0, 5);
   const carJsonLd = {
     "@context": "https://schema.org",
     "@type": "Car",
@@ -132,6 +140,8 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
               />
             </div>
           </div>
+
+          <SimilarCars cars={similarCars} />
         </div>
         <SiteFooter />
       </main>

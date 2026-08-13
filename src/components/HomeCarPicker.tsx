@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Car } from "@/types/car";
-import { type CatalogFilterMeta } from "@/data/cars";
+import { getCatalogFilterMeta, type CatalogFilterMeta } from "@/data/cars";
 import { findAnalogCars, findSelectedCar } from "@/lib/catalog/analogs";
 import { CarCardMini } from "@/components/CarCardMini";
 
@@ -14,17 +14,45 @@ const BUDGET_OPTIONS = [
   { value: "10000000", label: "до 10 000 000" },
 ];
 
-export function HomeCarPicker({
-  cars,
-  meta,
-}: {
-  cars: Car[];
-  meta: CatalogFilterMeta;
-}) {
+export function HomeCarPicker() {
+  const [cars, setCars] = useState<Car[]>([]);
+  const [meta, setMeta] = useState<CatalogFilterMeta | null>(null);
+  const [ready, setReady] = useState(false);
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
   const [budget, setBudget] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/cars?lite=1", { cache: "no-store" });
+        if (!res.ok) throw new Error("catalog");
+        const data = (await res.json()) as Car[];
+        if (cancelled) return;
+        setCars(data);
+        setMeta(getCatalogFilterMeta(data));
+      } catch {
+        if (!cancelled) {
+          setCars([]);
+          setMeta({
+            brands: [],
+            years: [],
+            fuels: [],
+            types: [],
+            priceMin: 0,
+            priceMax: 0,
+          });
+        }
+      } finally {
+        if (!cancelled) setReady(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const modelOptions = useMemo(() => {
     if (!brand) return [];
@@ -51,6 +79,24 @@ export function HomeCarPicker({
   }, [cars, budget, selectedCar]);
 
   const showPreview = Boolean(selectedCar && budget);
+
+  if (!ready || !meta) {
+    return (
+      <div className="flex flex-col gap-3" aria-busy="true" aria-label="Загрузка подбора">
+        {[0, 1, 2, 3].map((i) => (
+          <div
+            key={i}
+            className="h-12 w-full border border-white/20 bg-white/5"
+            style={{ backgroundColor: "rgba(255,255,255,0.06)" }}
+          />
+        ))}
+        <div
+          className="mt-4 h-12 w-full border border-white/40"
+          style={{ backgroundColor: "transparent" }}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -101,9 +147,7 @@ export function HomeCarPicker({
           value={year}
           onChange={(e) => setYear(e.target.value)}
         >
-          <option value="" disabled>
-            Год выпуска
-          </option>
+          <option value="">Год выпуска — любой</option>
           {meta.years.map((y) => (
             <option key={y} value={String(y)}>
               {y}

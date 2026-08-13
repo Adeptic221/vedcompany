@@ -6,8 +6,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { HomeHeroSketch } from "@/components/HomeHeroSketch";
 import { PageBackground } from "@/components/PageBackground";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getCatalogFilterMeta } from "@/data/cars";
-import { getCarsCatalog } from "@/lib/storage/cars-store";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/seo/site";
 
 export const metadata: Metadata = {
@@ -36,14 +34,15 @@ const organizationJsonLd = {
   },
 };
 
-export default async function HomePage() {
-  const cars = await getCarsCatalog();
-  const meta = getCatalogFilterMeta(cars);
-
+/** Keep homepage HTML tiny — catalog loads on the client after first paint. */
+export default function HomePage() {
   return (
     <>
       <JsonLd data={organizationJsonLd} />
-      <main className="relative ved-screen overflow-x-clip overflow-y-visible bg-[#0a1628]">
+      <main
+        className="relative ved-screen overflow-x-clip overflow-y-visible bg-[#0a1628]"
+        style={{ backgroundColor: "#0a1628", color: "#ffffff", minHeight: "100vh" }}
+      >
         <PageBackground />
         <Header />
 
@@ -57,7 +56,7 @@ export default async function HomePage() {
               <HomeHeroSketch />
             </div>
 
-            <HomeCarPicker cars={cars} meta={meta} />
+            <HomeCarPicker />
 
             <div className="mt-10 border-t border-white/10 pt-8">
               <p className="mb-3 text-xs uppercase tracking-[0.2em] text-white/50">

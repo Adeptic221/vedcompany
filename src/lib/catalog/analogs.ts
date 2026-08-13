@@ -10,9 +10,9 @@ export interface AnalogSearchParams {
   excludeId?: string;
 }
 
-const MIN_ANALOGS = 1;
-const MAX_ANALOGS = 6;
-const BUDGET_RELAX_FACTOR = 1.15;
+const MIN_ANALOGS = 4;
+const MAX_ANALOGS = 5;
+const BUDGET_RELAX_FACTOR = 1.25;
 
 const SIMILAR_TYPES: Record<CarType, CarType[]> = {
   crossover: ["crossover", "suv"],
@@ -72,7 +72,7 @@ export function findSelectedCar(
   let pool = cars.filter((car) => car.brandSlug === brand);
   if (type) pool = pool.filter((car) => car.type === type);
   if (model && model !== "any") pool = pool.filter((car) => car.model === model);
-  if (year) pool = pool.filter((car) => car.year === Number(year));
+  if (year) pool = pool.filter((car) => Number(car.year) === Number(year));
   if (pool.length === 0) {
     pool = cars.filter((car) => car.brandSlug === brand && (!type || car.type === type));
     if (model && model !== "any") {
@@ -93,9 +93,25 @@ export function findAnalogCars(cars: Car[], params: AnalogSearchParams): Car[] {
   const relaxedBudget = Math.round(budget * BUDGET_RELAX_FACTOR);
   const result: Car[] = [];
   const seen = new Set<string>();
-  collectDiverse(result, seen, filterPool(pool, [type], budget), MAX_ANALOGS, budget);
-  if (result.length < MIN_ANALOGS) collectDiverse(result, seen, filterPool(pool, [type], relaxedBudget), MAX_ANALOGS, budget);
-  if (result.length < MIN_ANALOGS) collectDiverse(result, seen, filterPool(pool, similarTypes, budget), MAX_ANALOGS, budget);
-  if (result.length < MIN_ANALOGS) collectDiverse(result, seen, filterPool(pool, similarTypes, relaxedBudget), MAX_ANALOGS, budget);
+  const fill = (source: Car[]) => {
+    if (result.length < MAX_ANALOGS) {
+      collectDiverse(result, seen, source, MAX_ANALOGS, budget);
+    }
+  };
+
+  fill(filterPool(pool, [type], budget));
+  fill(filterPool(pool, [type], relaxedBudget));
+  fill(filterPool(pool, similarTypes, budget));
+  fill(filterPool(pool, similarTypes, relaxedBudget));
+  // Last resort: same/similar body type, closest by price (no hard budget cap).
+  if (result.length < MIN_ANALOGS) {
+    fill(
+      sortByBudgetFit(
+        pool.filter((car) => similarTypes.includes(car.type)),
+        budget
+      )
+    );
+  }
+
   return result.slice(0, MAX_ANALOGS);
 }

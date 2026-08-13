@@ -14,6 +14,7 @@ import {
   type CatalogSearchParams,
 } from "@/data/cars";
 import { findAnalogCars } from "@/lib/catalog/analogs";
+import { toLiteCars } from "@/lib/catalog/lite-car";
 import { getCarsCatalog } from "@/lib/storage/cars-store";
 import { CarCardMini } from "@/components/CarCardMini";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -39,7 +40,7 @@ export default async function CatalogPage({
   searchParams: Promise<CatalogSearchParams>;
 }) {
   const params = await searchParams;
-  const cars = await getCarsCatalog();
+  const cars = toLiteCars(await getCarsCatalog());
   const meta = getCatalogFilterMeta(cars);
   const filtered = sortCars(filterCars(cars, params), params.sort);
   const activeFilters = countActiveFilters(params);

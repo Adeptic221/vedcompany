@@ -73,20 +73,29 @@ function matchesSearch(car: Car, query: string): boolean {
   );
 }
 
+function asNumber(value: string | number | undefined | null): number | null {
+  if (value === undefined || value === null || value === "") return null;
+  const n = typeof value === "number" ? value : Number(String(value).trim());
+  return Number.isFinite(n) ? n : null;
+}
+
 export function filterCars(items: Car[], filters: CatalogSearchParams): Car[] {
-  const priceMax = filters.priceMax || filters.budget;
-  const priceMin = filters.priceMin;
+  const priceMax = asNumber(filters.priceMax || filters.budget);
+  const priceMin = asNumber(filters.priceMin);
+  const year = asNumber(filters.year);
+  const type = filters.type?.trim().toLowerCase();
 
   return items.filter((car) => {
     if (filters.brand && car.brandSlug !== filters.brand) return false;
     if (filters.model && filters.model !== "any" && car.model.toLowerCase() !== filters.model.toLowerCase()) return false;
-    if (filters.year && car.year !== Number(filters.year)) return false;
+    if (year !== null && Number(car.year) !== year) return false;
+    if (type && car.type !== type) return false;
     if (filters.fuel && car.specs.fuel !== filters.fuel) return false;
     if (filters.q && !matchesSearch(car, filters.q)) return false;
 
     const total = getTotalPrice(car);
-    if (priceMax && total > Number(priceMax)) return false;
-    if (priceMin && total < Number(priceMin)) return false;
+    if (priceMax !== null && total > priceMax) return false;
+    if (priceMin !== null && total < priceMin) return false;
 
     return true;
   });
@@ -168,6 +177,7 @@ export function countActiveFilters(filters: CatalogSearchParams): number {
   if (filters.q?.trim()) count++;
   if (filters.brand) count++;
   if (filters.year) count++;
+  if (filters.type) count++;
   if (filters.fuel) count++;
   if (filters.priceMin || filters.priceMax || filters.budget) count++;
   if (filters.model && filters.model !== "any") count++;

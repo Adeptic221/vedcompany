@@ -47,3 +47,7 @@ next-env.d.ts
 # local build logs
 build-log.txt
 build-log-run.txt
+/data/cabinet-docs.json
+/data/cabinet-files/
+/data/orders.json
+/data/chats.json

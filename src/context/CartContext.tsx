@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, useCallback } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+} from "react";
 import type {
   CartItem,
   DeliveryDestination,
@@ -16,6 +22,7 @@ import {
   getDocFile,
   deleteDocFile,
 } from "@/lib/cabinet/doc-files";
+import { useAuth } from "@/context/AuthContext";
 
 const CART_KEY = "ved-cart";
 const ORDERS_KEY = "ved-orders";
@@ -39,7 +46,7 @@ interface CartContextValue {
   clearCart: () => void;
   cartCount: number;
   isInCart: (carId: string) => boolean;
-  checkout: (carId: string, totalAmount: number) => Order;
+  checkout: (carId: string, totalAmount: number) => Promise<Order>;
   sendMessage: (text: string) => void;
   addDocument: (file: File, kind: CabinetDocKind) => Promise<void>;
   removeDocument: (id: string) => Promise<void>;
@@ -68,11 +75,12 @@ function save(key: string, value: unknown) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    /* Safari private mode, quota exceeded, or storage disabled */
+    /* ignore */
   }
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
+  const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -106,17 +114,49 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
+    if (!ready || !user) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const [docsRes, ordersRes, chatRes] = await Promise.all([
+          fetch("/api/cabinet/docs", { cache: "no-store" }),
+          fetch("/api/cabinet/orders", { cache: "no-store" }),
+          fetch("/api/cabinet/chat", { cache: "no-store" }),
+        ]);
+        if (cancelled) return;
+        if (docsRes.ok) {
+          const data = await docsRes.json();
+          if (Array.isArray(data.documents)) setDocuments(data.documents);
+        }
+        if (ordersRes.ok) {
+          const data = await ordersRes.json();
+          if (Array.isArray(data.orders)) setOrders(data.orders);
+        }
+        if (chatRes.ok) {
+          const data = await chatRes.json();
+          if (Array.isArray(data.messages)) setMessages(data.messages);
+        }
+      } catch {
+        /* keep local */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [ready, user?.id]);
+
+  useEffect(() => {
     if (ready) save(CART_KEY, items);
   }, [items, ready]);
   useEffect(() => {
-    if (ready) save(ORDERS_KEY, orders);
-  }, [orders, ready]);
+    if (ready && !user) save(ORDERS_KEY, orders);
+  }, [orders, ready, user]);
   useEffect(() => {
-    if (ready) save(CHAT_KEY, messages);
-  }, [messages, ready]);
+    if (ready && !user) save(CHAT_KEY, messages);
+  }, [messages, ready, user]);
   useEffect(() => {
-    if (ready) save(DOCS_KEY, documents);
-  }, [documents, ready]);
+    if (ready && !user) save(DOCS_KEY, documents);
+  }, [documents, ready, user]);
   useEffect(() => {
     if (ready) save(PROFILE_KEY, profile);
   }, [profile, ready]);
@@ -143,7 +183,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     (carId: string, destination: DeliveryDestination) => {
       setItems((prev) =>
         prev.map((item) =>
-          item.carId === carId ? { ...item, deliveryDestination: destination } : item
+          item.carId === carId
+            ? { ...item, deliveryDestination: destination }
+            : item
         )
       );
     },
@@ -161,47 +203,111 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     [items]
   );
 
-  const checkout = useCallback((carId: string, totalAmount: number) => {
-    const order: Order = {
-      id: `ord-${Date.now()}`,
-      carId,
-      status: "new",
-      createdAt: new Date().toISOString(),
-      paidAmount: Math.round(totalAmount * 0.3),
-      totalAmount,
-    };
-    setOrders((prev) => [order, ...prev]);
-    setItems((prev) => prev.filter((i) => i.carId !== carId));
-    return order;
-  }, []);
-
-  const sendMessage = useCallback((text: string) => {
-    const trimmed = text.trim();
-    if (!trimmed) return;
-    setMessages((prev) => [
-      ...prev,
-      {
-        id: `msg-${Date.now()}`,
-        text: trimmed,
-        from: "client",
+  const checkout = useCallback(
+    async (carId: string, totalAmount: number) => {
+      let order: Order = {
+        id: `ord-${Date.now()}`,
+        carId,
+        status: "new",
         createdAt: new Date().toISOString(),
-      },
-    ]);
-    setTimeout(() => {
+        paidAmount: Math.round(totalAmount * 0.3),
+        totalAmount,
+      };
+
+      if (user) {
+        const res = await fetch("/api/cabinet/orders", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ carId, totalAmount }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.order) order = data.order as Order;
+        }
+      }
+
+      setOrders((prev) => [order, ...prev.filter((o) => o.id !== order.id)]);
+      setItems((prev) => prev.filter((i) => i.carId !== carId));
+      return order;
+    },
+    [user]
+  );
+
+  const sendMessage = useCallback(
+    (text: string) => {
+      const trimmed = text.trim();
+      if (!trimmed) return;
+
+      if (user) {
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: `msg-local-${Date.now()}`,
+            text: trimmed,
+            from: "client",
+            createdAt: new Date().toISOString(),
+          },
+        ]);
+        void fetch("/api/cabinet/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: trimmed }),
+        })
+          .then((r) => r.json())
+          .then((data) => {
+            if (Array.isArray(data.messages)) setMessages(data.messages);
+          })
+          .catch(() => undefined);
+        return;
+      }
+
       setMessages((prev) => [
         ...prev,
         {
-          id: `msg-${Date.now()}-r`,
-          text: "Спасибо за сообщение! Скоро отвечу. Если вопрос срочный — позвоните по телефону на сайте.",
-          from: "manager",
+          id: `msg-${Date.now()}`,
+          text: trimmed,
+          from: "client",
           createdAt: new Date().toISOString(),
         },
       ]);
-    }, 1200);
-  }, []);
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: `msg-${Date.now()}-r`,
+            text: "Спасибо за сообщение! Скоро отвечу. Если вопрос срочный — позвоните по телефону на сайте.",
+            from: "manager",
+            createdAt: new Date().toISOString(),
+          },
+        ]);
+      }, 1200);
+    },
+    [user]
+  );
 
   const addDocument = useCallback(
     async (file: File, kind: CabinetDocKind) => {
+      if (user) {
+        const form = new FormData();
+        form.append("file", file);
+        form.append("kind", kind);
+        const res = await fetch("/api/cabinet/docs", {
+          method: "POST",
+          body: form,
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          throw new Error(data.error || "upload failed");
+        }
+        const doc = data.document as UploadedDoc;
+        setDocuments((prev) => {
+          const withoutSameKind =
+            kind === "other" ? prev : prev.filter((d) => d.kind !== kind);
+          return [...withoutSameKind, doc];
+        });
+        return;
+      }
+
       const id = `doc-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
       await saveDocFile(id, file);
       setDocuments((prev) => {
@@ -221,25 +327,44 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         ];
       });
     },
-    []
+    [user]
   );
 
-  const removeDocument = useCallback(async (id: string) => {
-    try {
-      await deleteDocFile(id);
-    } catch {
-      /* ignore missing blob */
-    }
-    setDocuments((prev) => prev.filter((d) => d.id !== id));
-  }, []);
+  const removeDocument = useCallback(
+    async (id: string) => {
+      if (user) {
+        await fetch(`/api/cabinet/docs/${id}`, { method: "DELETE" });
+        setDocuments((prev) => prev.filter((d) => d.id !== id));
+        return;
+      }
+      try {
+        await deleteDocFile(id);
+      } catch {
+        /* ignore */
+      }
+      setDocuments((prev) => prev.filter((d) => d.id !== id));
+    },
+    [user]
+  );
 
-  const openDocument = useCallback(async (id: string) => {
-    const blob = await getDocFile(id);
-    if (!blob) return;
-    const url = URL.createObjectURL(blob);
-    window.open(url, "_blank", "noopener,noreferrer");
-    setTimeout(() => URL.revokeObjectURL(url), 60_000);
-  }, []);
+  const openDocument = useCallback(
+    async (id: string) => {
+      if (user) {
+        window.open(
+          `/api/cabinet/docs/${id}/file`,
+          "_blank",
+          "noopener,noreferrer"
+        );
+        return;
+      }
+      const blob = await getDocFile(id);
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      window.open(url, "_blank", "noopener,noreferrer");
+      setTimeout(() => URL.revokeObjectURL(url), 60_000);
+    },
+    [user]
+  );
 
   const updateProfile = useCallback((next: UserProfile) => {
     setProfile(next);

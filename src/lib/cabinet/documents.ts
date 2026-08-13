@@ -12,6 +12,7 @@ export type CabinetDocKind =
   | "signed_agency_contract"
   | "broker_poa"
   | "pdn_consent"
+  | "client_requisites"
   | "driver_license"
   | "other";
 
@@ -116,6 +117,15 @@ export const CLIENT_DOC_SLOTS: DocSlotDef[] = [
     why: "Юридическое основание обрабатывать паспорт, ИНН, СНИЛС и связанные данные в рамках сделки, передачи брокеру и таможенного оформления.",
     templateHref: "/docs/pdn-consent.html",
     accept: "image/*,.pdf",
+    trackingStage: "documents",
+  },
+  {
+    kind: "client_requisites",
+    title: "Реквизиты (ИП / ООО)",
+    hint: "Карточка предприятия, счёт или PDF с реквизитами — если покупатель не физлицо",
+    why: "Нужны, если автомобиль оформляется на ИП или компанию: для договора, счёта и передачи данных брокеру. Физлицу этот пункт обычно не обязателен — можно пропустить.",
+    accept: "image/*,.pdf,.doc,.docx",
+    optional: true,
     trackingStage: "documents",
   },
   {

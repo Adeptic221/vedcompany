@@ -23,6 +23,9 @@ export interface Order {
   createdAt: string;
   paidAmount: number;
   totalAmount: number;
+  userId?: string;
+  userEmail?: string;
+  userName?: string;
 }
 
 export interface ChatMessage {
@@ -30,6 +33,7 @@ export interface ChatMessage {
   text: string;
   from: "client" | "manager";
   createdAt: string;
+  userId?: string;
 }
 
 export interface UploadedDoc {
@@ -40,6 +44,11 @@ export interface UploadedDoc {
   mime?: string;
   size?: number;
   hasFile?: boolean;
+  userId?: string;
+  userEmail?: string;
+  url?: string;
+  storage?: "blob" | "github" | "local";
+  storagePath?: string;
 }
 
 export interface UserProfile {

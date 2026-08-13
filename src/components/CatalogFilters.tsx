@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
-  carTypeLabels,
   countActiveFilters,
   fuelLabels,
   sortLabels,
@@ -104,20 +103,6 @@ function FilterFields({
           ))}
         </select>
       </label>
-
-      {meta.types.length > 0 && (
-        <label className="block">
-          <span className="mb-1 block text-xs text-white/50">Тип кузова</span>
-          <select className="ved-select" value={current.type ?? ""} onChange={(e) => updateFilter("type", e.target.value)}>
-            <option value="">Любой</option>
-            {meta.types.map((type) => (
-              <option key={type} value={type}>
-                {carTypeLabels[type] ?? type}
-              </option>
-            ))}
-          </select>
-        </label>
-      )}
 
       {meta.fuels.length > 0 && (
         <label className="block">

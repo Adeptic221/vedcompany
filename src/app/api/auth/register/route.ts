@@ -78,6 +78,16 @@ export async function POST(request: Request) {
       );
     }
     console.error("[auth/register]", err);
+    const detail = err instanceof Error ? err.message : "";
+    if (detail.includes("GitHub") || detail.includes("not configured")) {
+      return NextResponse.json(
+        {
+          error:
+            "Не удалось сохранить аккаунт (хранилище пользователей). Проверьте GITHUB_TOKEN на сервере.",
+        },
+        { status: 500 }
+      );
+    }
     return NextResponse.json(
       { error: "Не удалось зарегистрироваться" },
       { status: 500 }

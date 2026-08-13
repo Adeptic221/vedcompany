@@ -34,8 +34,11 @@ async function writeLocal(users: UserRecord[]): Promise<void> {
   await fs.writeFile(USERS_FILE, JSON.stringify(users, null, 2), "utf-8");
 }
 
+function useGithubUsers(): boolean {
+  return Boolean(process.env.VERCEL || process.env.AUTH_USE_GITHUB === "1");
+}
 export async function listUsers(): Promise<UserRecord[]> {
-  if (process.env.VERCEL || process.env.AUTH_USE_GITHUB === "1") {
+  if (useGithubUsers()) {
     try {
       const fromGh = await fetchUsersFromGithub();
       if (fromGh) return fromGh.users;
@@ -46,15 +49,20 @@ export async function listUsers(): Promise<UserRecord[]> {
   return readLocal();
 }
 
+
 export async function saveUsers(users: UserRecord[]): Promise<void> {
-  await writeLocal(users);
-  if (process.env.VERCEL || process.env.AUTH_USE_GITHUB === "1") {
+  // On Vercel the deploy filesystem is read-only — local write would throw
+  // and break registration. Persist to GitHub there; keep local for dev.
+  if (useGithubUsers()) {
+    await pushUsersToGithub(users, "chore: update users store");
     try {
-      await pushUsersToGithub(users, "chore: update users store");
+      await writeLocal(users);
     } catch (err) {
-      console.warn("[users] GitHub write failed:", err);
+      console.warn("[users] local write skipped on serverless:", err);
     }
+    return;
   }
+  await writeLocal(users);
 }
 
 export async function findUserByEmail(

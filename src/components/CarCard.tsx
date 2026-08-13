@@ -21,7 +21,12 @@ export function CarCard({ car }: { car: Car }) {
             fallbackColor={car.imageColor}
             fallbackLabel={car.brand}
           />
-          <span className="absolute bottom-3 left-3 rounded bg-black/40 px-2 py-1 text-xs text-white/80">{carTypeLabels[car.type]}</span>
+          <span className="absolute bottom-3 left-3 rounded bg-black/40 px-2 py-1 text-xs text-white/80">
+            {carTypeLabels[car.type]}
+          </span>
+          <span className="absolute bottom-3 right-3 rounded bg-black/40 px-2 py-1 text-xs text-white/80">
+            {car.year}
+          </span>
         </div>
       </Link>
       <div className="flex flex-1 flex-col p-5">

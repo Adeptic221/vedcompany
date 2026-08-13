@@ -75,8 +75,9 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
     type: car.type,
     budget: baseTotal,
     brand: car.brandSlug,
+    model: car.model,
     excludeId: car.id,
-  }).slice(0, 5);
+  });
   const carJsonLd = {
     "@context": "https://schema.org",
     "@type": "Car",

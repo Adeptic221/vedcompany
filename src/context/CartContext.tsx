@@ -10,6 +10,12 @@ import type {
   UserProfile,
   FavoriteItem,
 } from "@/types/cart";
+import type { CabinetDocKind } from "@/lib/cabinet/documents";
+import {
+  saveDocFile,
+  getDocFile,
+  deleteDocFile,
+} from "@/lib/cabinet/doc-files";
 
 const CART_KEY = "ved-cart";
 const ORDERS_KEY = "ved-orders";
@@ -35,8 +41,9 @@ interface CartContextValue {
   isInCart: (carId: string) => boolean;
   checkout: (carId: string, totalAmount: number) => Order;
   sendMessage: (text: string) => void;
-  addDocument: (name: string) => void;
-  removeDocument: (id: string) => void;
+  addDocument: (file: File, kind: CabinetDocKind) => Promise<void>;
+  removeDocument: (id: string) => Promise<void>;
+  openDocument: (id: string) => Promise<void>;
   updateProfile: (profile: UserProfile) => void;
   toggleFavorite: (carId: string) => void;
   removeFavorite: (carId: string) => void;
@@ -193,15 +200,45 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }, 1200);
   }, []);
 
-  const addDocument = useCallback((name: string) => {
-    setDocuments((prev) => [
-      ...prev,
-      { id: `doc-${Date.now()}`, name, uploadedAt: new Date().toISOString() },
-    ]);
+  const addDocument = useCallback(
+    async (file: File, kind: CabinetDocKind) => {
+      const id = `doc-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+      await saveDocFile(id, file);
+      setDocuments((prev) => {
+        const withoutSameKind =
+          kind === "other" ? prev : prev.filter((d) => d.kind !== kind);
+        return [
+          ...withoutSameKind,
+          {
+            id,
+            name: file.name,
+            uploadedAt: new Date().toISOString(),
+            kind,
+            mime: file.type || undefined,
+            size: file.size,
+            hasFile: true,
+          },
+        ];
+      });
+    },
+    []
+  );
+
+  const removeDocument = useCallback(async (id: string) => {
+    try {
+      await deleteDocFile(id);
+    } catch {
+      /* ignore missing blob */
+    }
+    setDocuments((prev) => prev.filter((d) => d.id !== id));
   }, []);
 
-  const removeDocument = useCallback((id: string) => {
-    setDocuments((prev) => prev.filter((d) => d.id !== id));
+  const openDocument = useCallback(async (id: string) => {
+    const blob = await getDocFile(id);
+    if (!blob) return;
+    const url = URL.createObjectURL(blob);
+    window.open(url, "_blank", "noopener,noreferrer");
+    setTimeout(() => URL.revokeObjectURL(url), 60_000);
   }, []);
 
   const updateProfile = useCallback((next: UserProfile) => {
@@ -244,6 +281,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         sendMessage,
         addDocument,
         removeDocument,
+        openDocument,
         updateProfile,
         toggleFavorite,
         removeFavorite,

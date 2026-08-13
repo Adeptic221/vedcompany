@@ -1,3 +1,5 @@
+import type { CabinetDocKind } from "@/lib/cabinet/documents";
+
 export type DeliveryDestination = "none" | "vladivostok" | "moscow";
 
 export interface CartItem {
@@ -34,6 +36,10 @@ export interface UploadedDoc {
   id: string;
   name: string;
   uploadedAt: string;
+  kind?: CabinetDocKind;
+  mime?: string;
+  size?: number;
+  hasFile?: boolean;
 }
 
 export interface UserProfile {
